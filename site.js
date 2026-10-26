@@ -74,7 +74,7 @@ if(mobileNav){
  const header=document.querySelector('.header'),source=document.querySelector('#main-nav');
  if(!header||!source)return;
  const dock=document.createElement('nav');dock.className='mobile-quick-nav';dock.hidden=true;dock.setAttribute('aria-label','Quick navigation');
- dock.innerHTML='<a href="index.html">Home</a><button type="button" data-top>Top <span aria-hidden="true">↑</span></button><button type="button" data-menu aria-haspopup="dialog" aria-controls="mobile-quick-dialog">Menu <span aria-hidden="true">☰</span></button>';
+ dock.innerHTML='<a href="index.html" aria-label="Museum home"><img class="quick-nav-tree" src="assets/oak-tree.svg" alt="" width="30" height="34"><span>Home</span></a><button type="button" data-top>Top <span aria-hidden="true">↑</span></button><button type="button" data-menu aria-haspopup="dialog" aria-controls="mobile-quick-dialog">Menu <span aria-hidden="true">☰</span></button>';
  const panel=document.createElement('dialog');panel.id='mobile-quick-dialog';panel.className='mobile-quick-dialog';panel.setAttribute('aria-labelledby','mobile-quick-title');
  panel.innerHTML='<div class="mobile-quick-heading"><h2 id="mobile-quick-title">Explore the museum</h2><button type="button" class="mobile-quick-close" aria-label="Close menu">✕</button></div>';
  const links=source.cloneNode(true);links.removeAttribute('id');links.className='mobile-quick-links';links.setAttribute('aria-label','Museum pages');links.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));links.querySelectorAll('details').forEach(e=>{e.open=false;e.removeAttribute('name');});panel.append(links);
@@ -87,15 +87,8 @@ if(mobileNav){
  panel.addEventListener('close',()=>{document.documentElement.classList.remove('mobile-menu-modal');if(phone.matches&&!dock.hidden)menu.focus({preventScroll:true});});
  panel.addEventListener('click',e=>{if(e.target===panel){const r=panel.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)panel.close();}if(e.target.closest('a'))panel.close();});
  links.querySelectorAll('details').forEach(group=>group.addEventListener('toggle',()=>{if(group.open)links.querySelectorAll('details').forEach(other=>{if(other!==group)other.open=false;});}));
- let anchor=scrollY,passed=false,queued=false,observer;
- function updateDock(){queued=false;const y=scrollY,below=header.getBoundingClientRect().bottom<-32;
-  if(!phone.matches||!below){dock.hidden=true;passed=false;anchor=y;return;}
-  if(!passed){dock.hidden=false;passed=true;anchor=y;return;}
-  if(panel.open||dock.contains(document.activeElement))return;
-  if(Math.abs(y-anchor)>16){dock.hidden=y>anchor;anchor=y;}
- }
- let scrollIdle;
- window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateDock);}clearTimeout(scrollIdle);scrollIdle=setTimeout(()=>{if(phone.matches&&header.getBoundingClientRect().bottom<-32)dock.hidden=false;},300);},{passive:true});
+ let observer;
+ function updateDock(){dock.hidden=!phone.matches;}
  const seen=new WeakSet();
  function reveals(){observer?.disconnect();document.querySelectorAll('.mobile-reveal').forEach(e=>e.classList.remove('mobile-reveal'));
   if(!phone.matches||motion.matches||!('IntersectionObserver' in window))return;

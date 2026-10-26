@@ -132,3 +132,12 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 .home-identity-preview .heritage-landscape::before{mask-image:linear-gradient(to bottom,#000 0%,#000 96%,transparent)}
 
 
+
+/* Persistent mobile navigation with the museum oak. */
+.mobile-quick-nav .quick-nav-tree{width:30px;height:34px;flex-shrink:0;object-fit:contain}
+.mobile-quick-nav:not([hidden]){max-width:calc(100vw - 24px)}
+.mobile-quick-nav a{padding-inline:10px;gap:6px}
+body:has(.mobile-quick-nav){padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+/* Nearly full-width mobile dock with evenly spaced controls. */
+.mobile-quick-nav:not([hidden]){width:calc(100% - 24px);max-width:560px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.mobile-quick-nav a,.mobile-quick-nav button{min-width:0;width:100%;padding-inline:8px}
