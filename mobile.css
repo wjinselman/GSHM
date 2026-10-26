@@ -12,3 +12,6 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 .page-heading h1{font-size:clamp(32px,8.2vw,46px)}.page-heading .intro{font-size:17px}.page-tagline{font-size:23px}.page-heading-inner{padding-inline:5%}.page-layout{padding-inline:5%;gap:24px}.page-content,.visit-aside{min-width:0}.content-section h2{font-size:28px;overflow-wrap:anywhere}.inner-landscape .page-content{padding:24px 18px}.visit-aside{padding:24px}.closing{padding:36px 5%}.closing h2{font-size:32px}.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px}.footer-links a{line-height:1.45}footer a{overflow-wrap:anywhere}dialog{width:94vw;padding:14px}
 @media(max-width:360px){.hero .actions{grid-template-columns:1fr}.visit-strip>div{flex-wrap:wrap;gap:4px 12px}.slide-navigation{max-width:155px}.slideshow-controls .slide-toggle{padding-inline:10px}.museum-slide figcaption{padding:18px}.footer-links{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.js .museum-slide,.js .museum-slide[hidden]{transition:none}}
+
+/* Richer antique gold on phones and tablets; desktop palette stays unchanged. */
+:root[data-theme="heritage"]{--gold-text:#f0ca79;--gold-button:#d9a746;--gold-line:#c99b40}
