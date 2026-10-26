@@ -3,7 +3,7 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 .header.mobile-nav-ready{padding:14px 5%;gap:12px}.mobile-nav-ready .mobile-menu-toggle{border-radius:24px;font-size:14px;min-height:44px}.topbar{font-size:11px}.header nav .nav-panel a{overflow-wrap:anywhere}
 /* Architecture stays visible, fading vertically into a solid reading area. */
 [data-theme=heritage] .hero{display:flex;padding:0 0 22px;background:#194032}[data-theme=heritage] .hero-image{position:relative;inset:auto;z-index:0;width:100%;height:auto;aspect-ratio:1.9;object-fit:cover;object-position:center 65%}[data-theme=heritage] .hero-shade{inset:0 0 auto;height:auto;aspect-ratio:1.9;z-index:1;background:linear-gradient(180deg,transparent 55%,#194032 100%);pointer-events:none}[data-theme=heritage] .hero-masthead{margin:4px 5% 0;width:90%}[data-theme=heritage] .hero-brandmark{width:100%;max-width:500px}[data-theme=heritage] .hero-brandmark>p{font-size:10px;letter-spacing:.12em;margin-bottom:0}[data-theme=heritage] .hero-copy{width:90%;margin:22px auto 18px}[data-theme=heritage] .hero h1{font-size:clamp(32px,8vw,44px);margin-bottom:16px}[data-theme=heritage] .hero-copy>p:not(.eyebrow){font-size:17px;line-height:1.6}.hero .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.hero .button{min-height:48px;padding:12px 10px;font-size:14px;gap:8px}.hero-foot a{display:inline-flex;align-items:center;min-height:44px}
-.visit-strip{grid-template-columns:1fr;padding:18px 5%;gap:0}.visit-strip>div{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-left:0;border-bottom:1px solid var(--line)}.visit-strip>div:last-child{border-bottom:0}.visit-strip span{max-width:none;font-size:10px;margin:0}.visit-strip strong,.visit-strip a{font-size:14px}.heritage-landscape::before,.inner-landscape::before{opacity:.065;background-size:auto 1100px}
+.visit-strip{grid-template-columns:1fr;padding:18px 5%;gap:0}.visit-strip>div{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0;border-left:0;border-bottom:1px solid var(--line)}.visit-strip>div:last-child{border-bottom:0}.visit-strip span{max-width:none;font-size:10px;margin:0}.visit-strip strong,.visit-strip a{font-size:14px}.heritage-landscape::before,.inner-landscape::before{opacity:.24;background-size:auto 850px}
 /* Stable slide stack and crossfade; hidden slides remain hidden to assistive tech. */
 .museum-slideshow{padding-bottom:12px}.slideshow-heading{margin-bottom:20px}.slideshow-heading>p{font-size:16px;margin-top:12px}.museum-slide{padding:0;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px #17382a0b}.museum-slide img{height:auto;aspect-ratio:3/2;object-fit:cover}.museum-slide figcaption{padding:20px;min-height:0}.museum-slide h3{font-size:25px;margin-bottom:10px}.museum-slide figcaption p{font-size:16px;line-height:1.55}.js .slides{display:grid;isolation:isolate}.js .museum-slide,.js .museum-slide[hidden]{display:block;grid-area:1/1;margin:0;opacity:1;visibility:visible;animation:none;transition:opacity .4s ease,visibility 0s}.js .museum-slide[hidden]{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .4s ease,visibility 0s .4s}
 /* One quiet toolbar with native button names and 44px touch targets. */
@@ -14,8 +14,7 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 @media(prefers-reduced-motion:reduce){.js .museum-slide,.js .museum-slide[hidden]{transition:none}}
 
 /* Richer antique gold on phones and tablets; desktop palette stays unchanged. */
-:root[data-theme="heritage"]{--gold-text:#f0ca79;--gold-button:#d5ae60;--gold-line:#c99b40}
-
+:root[data-theme="heritage"]{--gold-text:#e2c69b;--gold-button:#c69c65;--gold-line:#ac8554}
 
 /* Mobile motion: reveal once, leave the opening screen and slideshow controls immediate. */
 .slideshow-heading,.section-heading,.card,.photo-frame,.story>div:last-child,.program-grid article,.support,.home-mission,.content-section,.visit-aside,.gallery figure{transition:opacity .45s ease,transform .45s ease}
@@ -38,3 +37,98 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 .mobile-quick-links .nav-panel a{display:flex;align-items:center;min-height:48px;padding:10px;font-size:16px;line-height:1.4;text-decoration:none}
 @keyframes quick-nav-in{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
 @media(prefers-reduced-motion:reduce){.mobile-reveal{opacity:1;transform:none}.mobile-quick-nav:not([hidden]){animation:none}}
+
+
+.mobile-nav-ready .mobile-menu-toggle{border-radius:9px}
+
+/* Mobile identity focus and a recognizable map between content cards. */
+[data-theme=heritage] .hero-masthead{width:94%;margin:-12px 3% 0;position:relative;z-index:2}
+[data-theme=heritage] .hero-brandmark{width:100%;max-width:560px}
+[data-theme=heritage] .hero .museum-name{margin:0;line-height:1}
+[data-theme=heritage] .hero-brandmark>p{font-size:clamp(9px,2.6vw,12px);letter-spacing:.08em;margin-top:20px}
+[data-theme=heritage] .hero-copy{margin-top:20px}
+.heritage-landscape::before,.inner-landscape::before{mask-image:linear-gradient(to bottom,transparent,#000 2%,#000 96%,transparent)}
+/* Homepage only: utility bar, identity, photograph, then introduction. */
+.home-identity-preview .topbar,.home-identity-preview .header .brand{display:none}
+.home-identity-preview .header.mobile-nav-ready{background:#194032;padding:6px 5%;border-bottom:1px solid #ffffff26;gap:8px}
+.home-identity-preview .home-mobile-admission{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:12px;letter-spacing:.03em;text-decoration:none}
+.home-identity-preview .mobile-menu-toggle{min-height:44px;background:transparent;border-color:#ffffff40;padding:8px 12px;font-size:13px}
+.home-identity-preview .header nav.compact-nav.mobile-open{background:var(--paper);padding:14px;border-radius:8px}
+[data-theme=heritage] .home-identity-preview .hero{display:grid;grid-template-columns:minmax(0,1fr);min-height:0;gap:0}
+[data-theme=heritage] .home-identity-preview .hero-masthead{grid-area:1/1;width:90%;margin:24px auto 22px;z-index:auto}
+[data-theme=heritage] .home-identity-preview .hero-brandmark{margin:auto;max-width:480px}
+[data-theme=heritage] .home-identity-preview .hero-brandmark>p{margin-top:14px}
+.home-identity-preview .hero-brandmark>p::after{display:block;width:86%;margin:18px auto 0}
+[data-theme=heritage] .home-identity-preview .hero-image{grid-area:2/1;aspect-ratio:1.8;object-position:center 65%}
+[data-theme=heritage] .home-identity-preview .hero-shade{grid-area:2/1;position:relative;inset:auto;width:100%;height:100%;aspect-ratio:auto;background:linear-gradient(180deg,#19403218,transparent 18%,transparent 60%,#194032);z-index:1}
+[data-theme=heritage] .home-identity-preview .hero-copy{grid-area:3/1;margin:12px auto 18px}
+.home-identity-preview .hero-foot{grid-area:4/1}
+/* Mobile homepage: menu sits within the identity area, without a utility bar. */
+.home-identity-preview .header.mobile-nav-ready{position:absolute;top:12px;left:0;width:100%;max-width:none;z-index:10;background:transparent;border:0;padding:0 5%;display:flex;justify-content:flex-end}
+.home-identity-preview .home-mobile-admission{display:none}
+[data-theme=heritage] .home-identity-preview .hero-masthead{margin:68px auto 22px}
+.home-identity-preview .header nav.compact-nav.mobile-open{flex-basis:100%;max-height:75vh;overflow:auto;box-shadow:0 12px 30px #0003}
+/* Three homepage actions beneath the identity and gold divider. */
+[data-theme=heritage] .home-identity-preview .hero-masthead{margin:24px auto 0}
+.home-identity-preview .hero .header.mobile-nav-ready{grid-area:2/1;position:relative;inset:auto;display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1fr);gap:8px;width:90%;margin:18px auto 22px;padding:0;align-items:stretch}
+.home-identity-preview .hero .header .actions{display:contents}
+.home-identity-preview .hero .header .button,.home-identity-preview .hero .header .mobile-menu-toggle{min-height:48px;padding:10px 7px;font-size:12px;line-height:1.3;gap:5px;border-radius:9px;justify-content:center;text-align:center}
+.home-identity-preview .hero .header .button span[aria-hidden]{display:none}
+.home-identity-preview .hero .header nav.compact-nav{grid-column:1/-1}
+[data-theme=heritage] .home-identity-preview .hero-image,[data-theme=heritage] .home-identity-preview .hero-shade{grid-area:3/1}
+[data-theme=heritage] .home-identity-preview .hero-copy{grid-area:4/1}
+.home-identity-preview .hero-foot{grid-area:5/1}
+/* A balanced, unified mobile action row. */
+.home-identity-preview .hero .header.mobile-nav-ready{grid-template-columns:repeat(3,minmax(0,1fr))}
+.home-identity-preview .hero .header .button,.home-identity-preview .hero .header .mobile-menu-toggle{height:56px;min-height:56px;background:#eee8db;color:#194032;border:1px solid #d8ceba;box-shadow:inset 0 1px 0 #ffffff70;font:650 12px/1.3 system-ui;white-space:normal}
+.home-identity-preview .hero .header .button:hover,.home-identity-preview .hero .header .mobile-menu-toggle:hover{background:#faf5e9;border-color:#c69c65;filter:none}
+.home-identity-preview .hero .header .button:active,.home-identity-preview .hero .header .mobile-menu-toggle:active{background:#ded3bd}
+.home-identity-preview .hero .header .button:focus-visible,.home-identity-preview .hero .header .mobile-menu-toggle:focus-visible{outline:2px solid #e2c69b;outline-offset:4px}
+/* Mobile homepage: photo, museum identity, action row, introduction. */
+[data-theme=heritage] .home-identity-preview .hero-image,[data-theme=heritage] .home-identity-preview .hero-shade{grid-area:1/1}
+[data-theme=heritage] .home-identity-preview .hero-masthead{grid-area:2/1;margin:8px auto 0}
+.home-identity-preview .hero .header.mobile-nav-ready{grid-area:3/1;margin-bottom:12px}
+/* Mobile hero actions: forest green, muted gold outlines, warm white labels. */
+.home-identity-preview .hero .header .button,.home-identity-preview .hero .header .mobile-menu-toggle{background:#194032;color:#fffaf0;border-color:#b99a67;box-shadow:none}
+.home-identity-preview .hero .header .button:hover,.home-identity-preview .hero .header .mobile-menu-toggle:hover{background:#234e3e;border-color:#e2c69b}
+.home-identity-preview .hero .header .button:active,.home-identity-preview .hero .header .mobile-menu-toggle:active{background:#102f24;border-color:#e2c69b}
+/* One shared navigation strip with equal, touch-friendly sections. */
+.home-identity-preview .hero .header.mobile-nav-ready{gap:0;border-radius:10px;background:#2b5143;box-shadow:0 2px 8px #102f2414}
+.home-identity-preview .hero .header .button,.home-identity-preview .hero .header .mobile-menu-toggle{background:transparent;color:#fffaf0;border:0;border-radius:0;box-shadow:none;margin:0}
+.home-identity-preview .hero .header .mobile-menu-toggle{border-radius:10px 0 0 10px}
+.home-identity-preview .hero .header .actions .button:last-child{border-radius:0 10px 10px 0}
+.home-identity-preview .hero .header .button{position:relative}
+.home-identity-preview .hero .header .button::before{content:'';position:absolute;left:0;top:16px;bottom:16px;width:1px;background:#ffffff26}
+.home-identity-preview .hero .header .button:hover,.home-identity-preview .hero .header .mobile-menu-toggle:hover{background:#365e4f}
+.home-identity-preview .hero .header .button:active,.home-identity-preview .hero .header .mobile-menu-toggle:active{background:#234438}
+.home-identity-preview .hero .header nav.compact-nav.mobile-open{margin-top:8px}
+/* Mobile welcome: introduction first, one clear primary action. */
+[data-theme=heritage] .home-identity-preview .hero-copy{grid-area:3/1;margin:18px auto 8px}
+.home-identity-preview .hero-copy>p{margin-bottom:0}
+.home-identity-preview .hero .header.mobile-nav-ready{grid-area:4/1;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;background:transparent;box-shadow:none;margin:16px auto 8px}
+.home-identity-preview .hero .header .actions .button:first-child{grid-column:1/-1;grid-row:1;background:#d4b786;color:#173c2f;border-radius:9px;font-size:15px;min-height:52px;height:52px}
+.home-identity-preview .hero .header .mobile-menu-toggle{grid-row:2;grid-column:1;border-radius:7px}
+.home-identity-preview .hero .header .actions .button:last-child{grid-row:2;grid-column:2;border-radius:7px}
+.home-identity-preview .hero .header .button::before{display:none}
+.home-identity-preview .hero .header .actions .button:first-child:hover{background:#e0c79f}
+.home-identity-preview .hero .header .actions .button:first-child:active{background:#c5a572}
+.home-identity-preview .hero .header .mobile-menu-toggle,.home-identity-preview .hero .header .actions .button:last-child{height:44px;min-height:44px;font-size:13px}
+.home-identity-preview .hero .header nav.compact-nav{grid-row:3}
+.home-identity-preview .hero-foot{display:none}
+/* Keep navigation immediately available over the opening photograph. */
+[data-theme=heritage] .home-identity-preview .hero{position:relative}
+.home-identity-preview .hero .header.mobile-nav-ready{position:static}
+.home-identity-preview .hero .header .mobile-menu-toggle{position:absolute;top:14px;right:5%;z-index:12;min-width:86px;height:44px;padding:10px 12px;background:#12382ce8;border:1px solid #ffffff38;border-radius:8px;box-shadow:0 2px 8px #0002}
+.home-identity-preview .hero .header .mobile-menu-toggle:hover{background:#194032}
+.home-identity-preview .hero .header .actions .button:last-child{grid-column:1/-1}
+.home-identity-preview .hero .header nav.compact-nav.mobile-open{position:absolute;top:64px;left:5%;width:90%;z-index:13;margin:0;max-height:70vh;overflow:auto}
+.home-identity-preview .hero .header .mobile-menu-toggle{grid-area:auto}
+.home-identity-preview .hero .header nav.compact-nav.mobile-open{grid-area:auto}
+/* A quieter primary action with a comfortable touch target. */
+.home-identity-preview .hero .header .actions .button:first-child{width:67%;justify-self:center;min-height:48px;height:48px}
+/* Carry the mobile map texture up through visitor details to the hero edge. */
+.home-identity-preview .visit-strip{position:relative;isolation:isolate;background:var(--paper)}
+.home-identity-preview .visit-strip::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:var(--map-image);background-size:auto 850px;background-position:center top;background-repeat:repeat-y;opacity:.24;filter:sepia(.18) saturate(.65)}
+.home-identity-preview .heritage-landscape::before{mask-image:linear-gradient(to bottom,#000 0%,#000 96%,transparent)}
+
+

@@ -81,7 +81,7 @@ if(mobileNav){
  document.body.append(dock,panel);
  const menu=dock.querySelector('[data-menu]');
  const smooth=()=>motion.matches?'instant':'smooth';
- dock.querySelector('[data-top]').addEventListener('click',()=>{window.scrollTo({top:0,behavior:smooth()});const brand=header.querySelector('.brand');brand?.focus({preventScroll:true});});
+ dock.querySelector('[data-top]').addEventListener('click',()=>{window.scrollTo({top:0,behavior:smooth()});const brand=header.querySelector(document.body.classList.contains('home-identity-preview')&&phone.matches?'.mobile-menu-toggle':'.brand');brand?.focus({preventScroll:true});});
  menu.addEventListener('click',()=>{if(typeof panel.showModal==='function'){panel.showModal();document.documentElement.classList.add('mobile-menu-modal');}else{window.scrollTo({top:0,behavior:smooth()});document.querySelector('.mobile-menu-toggle')?.click();}});
  panel.querySelector('.mobile-quick-close').addEventListener('click',()=>panel.close());
  panel.addEventListener('close',()=>{document.documentElement.classList.remove('mobile-menu-modal');if(phone.matches&&!dock.hidden)menu.focus({preventScroll:true});});
@@ -105,3 +105,23 @@ if(mobileNav){
  function sync(){if(!phone.matches&&panel.open)panel.close();updateDock();reveals();}
  phone.addEventListener('change',sync);motion.addEventListener('change',reveals);sync();
 })();
+
+/* Homepage mobile composition; existing desktop and interior headers stay intact. */
+if(document.querySelector('.hero .museum-name')){
+ document.body.classList.add('home-identity-preview');
+ const admission=document.createElement('a');
+ admission.className='home-mobile-admission';admission.href='visit.html';admission.textContent='Free admission';
+ document.querySelector('.header').prepend(admission);
+}
+/* Keep the same navigation controls while arranging homepage actions for phones. */
+if(document.body.classList.contains('home-identity-preview')){
+ const homeHeader=document.querySelector('.header'),hero=document.querySelector('.hero'),actions=hero.querySelector('.actions'),nav=homeHeader.querySelector('nav');
+ const headerSlot=document.createComment('Desktop header position'),actionSlot=document.createComment('Desktop hero actions position');
+ homeHeader.before(headerSlot);actions.before(actionSlot);
+ const phoneLayout=matchMedia('(max-width:800px)');
+ function arrangeHomeActions(){
+  if(phoneLayout.matches){hero.querySelector('.hero-masthead').after(homeHeader);nav.before(actions);}
+  else{headerSlot.after(homeHeader);actionSlot.after(actions);}
+ }
+ phoneLayout.addEventListener('change',arrangeHomeActions);arrangeHomeActions();
+}
