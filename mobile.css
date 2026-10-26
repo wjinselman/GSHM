@@ -15,3 +15,26 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 
 /* Richer antique gold on phones and tablets; desktop palette stays unchanged. */
 :root[data-theme="heritage"]{--gold-text:#f0ca79;--gold-button:#d9a746;--gold-line:#c99b40}
+
+
+/* Mobile motion: reveal once, leave the opening screen and slideshow controls immediate. */
+.slideshow-heading,.section-heading,.card,.photo-frame,.story>div:last-child,.program-grid article,.support,.home-mission,.content-section,.visit-aside,.gallery figure{transition:opacity .45s ease,transform .45s ease}
+.mobile-reveal{opacity:0;transform:translateY(14px)}
+.mobile-reveal:focus-within{opacity:1;transform:none}
+.mobile-quick-nav:not([hidden]){position:fixed;z-index:40;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);display:flex;align-items:center;padding:5px;background:#fffffbf5;border:1px solid #d5ded3;border-radius:30px;box-shadow:0 5px 24px #102c2530;animation:quick-nav-in .18s ease-out}
+.mobile-quick-nav a,.mobile-quick-nav button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;min-width:76px;padding:10px 14px;background:transparent;border:0;border-radius:24px;color:var(--green);font:600 14px/1.2 system-ui;text-decoration:none}
+.mobile-quick-nav a:hover,.mobile-quick-nav button:hover{background:var(--soft)}
+.mobile-quick-nav button+button{border-left:1px solid var(--line)}
+.mobile-quick-nav :focus-visible{outline:2px solid var(--green);outline-offset:0}
+.mobile-menu-modal{overflow:hidden}
+.mobile-quick-dialog{position:fixed;inset:auto 0 0;width:100%;max-width:600px;max-height:82dvh;margin:0 auto;padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px));border:1px solid var(--line);border-radius:22px 22px 0 0;overflow:auto;overscroll-behavior:contain;background:var(--surface)}
+.mobile-quick-dialog::backdrop{background:#102c2580}
+.mobile-quick-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.mobile-quick-heading h2{font-size:26px;margin:0}
+.mobile-quick-close{flex-shrink:0;min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:50%;background:var(--soft);color:var(--green)}
+.mobile-quick-links{display:grid;gap:4px}
+.mobile-quick-links>a,.mobile-quick-links summary{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:12px;font:600 16px/1.45 system-ui;text-decoration:none;color:var(--green);border-bottom:1px solid var(--line);white-space:normal}
+.mobile-quick-links .nav-panel{position:static;width:100%;margin:0 0 8px;padding:4px 12px;border:0;border-left:2px solid var(--gold-line);box-shadow:none}
+.mobile-quick-links .nav-panel a{display:flex;align-items:center;min-height:48px;padding:10px;font-size:16px;line-height:1.4;text-decoration:none}
+@keyframes quick-nav-in{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){.mobile-reveal{opacity:1;transform:none}.mobile-quick-nav:not([hidden]){animation:none}}

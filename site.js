@@ -66,3 +66,41 @@ if(mobileNav){
  mobileNav.addEventListener('click',event=>{if(phone.matches&&event.target.closest('a'))closeMenu();});
  phone.addEventListener('change',()=>{const focusInside=mobileNav.contains(document.activeElement);closeMenu(phone.matches&&focusInside);});
 }
+
+
+/* Mobile scroll reveals and contextual navigation. No content depends on these enhancements. */
+(()=>{
+ const phone=matchMedia('(max-width:800px)'),motion=matchMedia('(prefers-reduced-motion:reduce)');
+ const header=document.querySelector('.header'),source=document.querySelector('#main-nav');
+ if(!header||!source)return;
+ const dock=document.createElement('nav');dock.className='mobile-quick-nav';dock.hidden=true;dock.setAttribute('aria-label','Quick navigation');
+ dock.innerHTML='<a href="index.html">Home</a><button type="button" data-top>Top <span aria-hidden="true">↑</span></button><button type="button" data-menu aria-haspopup="dialog" aria-controls="mobile-quick-dialog">Menu <span aria-hidden="true">☰</span></button>';
+ const panel=document.createElement('dialog');panel.id='mobile-quick-dialog';panel.className='mobile-quick-dialog';panel.setAttribute('aria-labelledby','mobile-quick-title');
+ panel.innerHTML='<div class="mobile-quick-heading"><h2 id="mobile-quick-title">Explore the museum</h2><button type="button" class="mobile-quick-close" aria-label="Close menu">✕</button></div>';
+ const links=source.cloneNode(true);links.removeAttribute('id');links.className='mobile-quick-links';links.setAttribute('aria-label','Museum pages');links.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));links.querySelectorAll('details').forEach(e=>{e.open=false;e.removeAttribute('name');});panel.append(links);
+ document.body.append(dock,panel);
+ const menu=dock.querySelector('[data-menu]');
+ const smooth=()=>motion.matches?'instant':'smooth';
+ dock.querySelector('[data-top]').addEventListener('click',()=>{window.scrollTo({top:0,behavior:smooth()});const brand=header.querySelector('.brand');brand?.focus({preventScroll:true});});
+ menu.addEventListener('click',()=>{if(typeof panel.showModal==='function'){panel.showModal();document.documentElement.classList.add('mobile-menu-modal');}else{window.scrollTo({top:0,behavior:smooth()});document.querySelector('.mobile-menu-toggle')?.click();}});
+ panel.querySelector('.mobile-quick-close').addEventListener('click',()=>panel.close());
+ panel.addEventListener('close',()=>{document.documentElement.classList.remove('mobile-menu-modal');if(phone.matches&&!dock.hidden)menu.focus({preventScroll:true});});
+ panel.addEventListener('click',e=>{if(e.target===panel){const r=panel.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)panel.close();}if(e.target.closest('a'))panel.close();});
+ links.querySelectorAll('details').forEach(group=>group.addEventListener('toggle',()=>{if(group.open)links.querySelectorAll('details').forEach(other=>{if(other!==group)other.open=false;});}));
+ let anchor=scrollY,passed=false,queued=false,observer;
+ function updateDock(){queued=false;const y=scrollY,below=header.getBoundingClientRect().bottom<-32;
+  if(!phone.matches||!below){dock.hidden=true;passed=false;anchor=y;return;}
+  if(!passed){dock.hidden=false;passed=true;anchor=y;return;}
+  if(panel.open||dock.contains(document.activeElement))return;
+  if(Math.abs(y-anchor)>16){dock.hidden=y>anchor;anchor=y;}
+ }
+ window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateDock);}},{passive:true});
+ const seen=new WeakSet();
+ function reveals(){observer?.disconnect();document.querySelectorAll('.mobile-reveal').forEach(e=>e.classList.remove('mobile-reveal'));
+  if(!phone.matches||motion.matches||!('IntersectionObserver' in window))return;
+  observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('mobile-reveal');seen.add(entry.target);observer.unobserve(entry.target);}}),{threshold:0,rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll('.slideshow-heading,.section-heading,.card,.photo-frame,.story>div:last-child,.program-grid article,.support,.home-mission,.content-section,.visit-aside,.gallery figure').forEach(e=>{if(!seen.has(e)&&e.getBoundingClientRect().top>innerHeight){e.classList.add('mobile-reveal');observer.observe(e);}});
+ }
+ function sync(){if(!phone.matches&&panel.open)panel.close();updateDock();reveals();}
+ phone.addEventListener('change',sync);motion.addEventListener('change',reveals);sync();
+})();
