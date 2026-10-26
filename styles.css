@@ -375,3 +375,13 @@ footer{background:var(--paper)}
 [data-theme=heritage] .hero-brandmark{width:min(1000px,92%)}
 [data-theme=heritage] .hero-brandmark>p{font-size:14px;letter-spacing:.17em}
 .home-mobile-admission{display:none}
+
+/* Desktop-only hero actions: one primary button and a quiet secondary link. */
+@media(min-width:801px){
+ [data-theme=heritage] .hero .actions{align-items:center;gap:28px}
+ [data-theme=heritage] .hero .actions>.button:first-child{background:#d4b786;color:#173c2f;border:1px solid #d4b786;border-radius:9px;min-height:48px;padding:13px 24px;box-shadow:none}
+ [data-theme=heritage] .hero .actions>.button:first-child:hover{background:#e0c79f;border-color:#e0c79f;filter:none}
+ [data-theme=heritage] .hero .actions>.button.outline{background:transparent;color:#fffaf0;border:0;border-radius:4px;min-height:48px;padding:13px 0;box-shadow:none}
+ [data-theme=heritage] .hero .actions>.button.outline:hover{filter:none;text-decoration:underline;text-underline-offset:5px}
+ [data-theme=heritage] .hero .hero-foot>a{display:none}
+}
