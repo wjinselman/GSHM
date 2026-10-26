@@ -14,7 +14,7 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 @media(prefers-reduced-motion:reduce){.js .museum-slide,.js .museum-slide[hidden]{transition:none}}
 
 /* Richer antique gold on phones and tablets; desktop palette stays unchanged. */
-:root[data-theme="heritage"]{--gold-text:#f0ca79;--gold-button:#d9a746;--gold-line:#c99b40}
+:root[data-theme="heritage"]{--gold-text:#f0ca79;--gold-button:#d5ae60;--gold-line:#c99b40}
 
 
 /* Mobile motion: reveal once, leave the opening screen and slideshow controls immediate. */
