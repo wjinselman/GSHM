@@ -48,3 +48,21 @@ navigationGroups.forEach(group=>{
 });
 document.addEventListener('click',event=>navigationGroups.forEach(group=>{if(!group.contains(event.target))group.open=false;}));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){const opened=navigationGroups.find(group=>group.open);if(opened){opened.open=false;opened.querySelector('summary').focus();}}});
+
+// Enhance the mobile header without hiding navigation when JavaScript is unavailable.
+const mobileNav=document.querySelector('.header .compact-nav');
+if(mobileNav){
+ const header=mobileNav.closest('.header'),phone=matchMedia('(max-width: 800px)');
+ const trigger=document.createElement('button');
+ trigger.type='button';trigger.className='mobile-menu-toggle';
+ trigger.setAttribute('aria-controls',mobileNav.id);trigger.setAttribute('aria-expanded','false');
+ trigger.innerHTML='<span aria-hidden="true" class="mobile-menu-icon"></span><span>Menu</span>';
+ header.insertBefore(trigger,mobileNav);header.classList.add('mobile-nav-ready');
+ function closeMenu(returnFocus=false){mobileNav.classList.remove('mobile-open');trigger.setAttribute('aria-expanded','false');navigationGroups.forEach(group=>group.open=false);if(returnFocus)trigger.focus();}
+ trigger.addEventListener('click',()=>{const open=trigger.getAttribute('aria-expanded')==='true';if(open)closeMenu();else{mobileNav.classList.add('mobile-open');trigger.setAttribute('aria-expanded','true');}});
+ document.addEventListener('click',event=>{if(phone.matches&&!header.contains(event.target))closeMenu();});
+ // Capture Escape so one keypress returns the visitor to the compact header.
+ header.addEventListener('keydown',event=>{if(event.key==='Escape'&&phone.matches&&mobileNav.classList.contains('mobile-open')){event.preventDefault();event.stopPropagation();closeMenu(true);}});
+ mobileNav.addEventListener('click',event=>{if(phone.matches&&event.target.closest('a'))closeMenu();});
+ phone.addEventListener('change',()=>{const focusInside=mobileNav.contains(document.activeElement);closeMenu(phone.matches&&focusInside);});
+}
