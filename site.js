@@ -94,7 +94,8 @@ if(mobileNav){
   if(panel.open||dock.contains(document.activeElement))return;
   if(Math.abs(y-anchor)>16){dock.hidden=y>anchor;anchor=y;}
  }
- window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateDock);}},{passive:true});
+ let scrollIdle;
+ window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateDock);}clearTimeout(scrollIdle);scrollIdle=setTimeout(()=>{if(phone.matches&&header.getBoundingClientRect().bottom<-32)dock.hidden=false;},300);},{passive:true});
  const seen=new WeakSet();
  function reveals(){observer?.disconnect();document.querySelectorAll('.mobile-reveal').forEach(e=>e.classList.remove('mobile-reveal'));
   if(!phone.matches||motion.matches||!('IntersectionObserver' in window))return;
