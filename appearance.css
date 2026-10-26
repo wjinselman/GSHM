@@ -1,0 +1,13 @@
+:root[data-theme="heritage"]{--paper:#f8f9f4;--surface:#fffffb;--green:#123f34;--ink:#20392f;--muted:#4f6257;--line:#d5ded3;--soft:#edf1e8;--accent:#b59660;}
+:root{--map-image:url("assets/ardmore-map.jpg");--map-opacity:0.22}.page-heading-photo[data-page="visit"] .heading-photo{object-fit:cover;object-position:center 78%}
+.page-heading-photo[data-page="about"] .heading-photo{object-fit:cover;object-position:center 78%}
+.page-heading-photo[data-page="explore"] .heading-photo{object-fit:cover;object-position:center center}
+.page-heading-photo[data-page="military-museum"] .heading-photo{object-fit:cover;object-position:center top}
+.page-heading-photo[data-page="genealogical-library"] .heading-photo{object-fit:cover;object-position:center center}
+.page-heading-photo[data-page="store"] .heading-photo{object-fit:cover;object-position:center center}
+.page-heading-photo[data-page="rent"] .heading-photo{object-fit:contain;object-position:center center}
+.page-heading-photo[data-page="membership"] .heading-photo{object-fit:contain;object-position:center center}
+.page-heading-photo[data-page="contribute"] .heading-photo{object-fit:contain;object-position:center center}
+.page-heading-photo[data-page="education"] .heading-photo{object-fit:cover;object-position:center center}
+.page-heading-photo[data-page="santas-house"] .heading-photo{object-fit:cover;object-position:center center}
+.page-heading-photo[data-page="scavenger-hunt"] .heading-photo{object-fit:cover;object-position:center center}

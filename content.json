@@ -1,0 +1,898 @@
+{
+  "name": "Greater Southwest Historical Museum",
+  "tagline": "Strong roots. Remarkable stories.",
+  "address": "35 Sunset Drive SW, Ardmore, OK 73401",
+  "phone": "580-226-3857",
+  "hours": "Tuesday–Saturday · 10 a.m.–5 p.m.",
+  "closed": "Closed Sundays, Mondays and holidays.",
+  "admission": "Free admission",
+  "mission": "To collect, preserve and interpret the social, cultural and economic history of South Central Oklahoma with a special emphasis on Ardmore and Carter County.",
+  "contacts": [
+    [
+      "General & research inquiries",
+      "thegreatersouthwest@gshm.org"
+    ],
+    [
+      "Director",
+      "whull@gshm.org"
+    ],
+    [
+      "Curator · Cassandra",
+      "cnormile@gshm.org"
+    ],
+    [
+      "Gift Shop Manager",
+      "officemanager@gshm.org"
+    ]
+  ],
+  "board": [
+    [
+      "Keisha Lemons",
+      "President"
+    ],
+    [
+      "Casey Draper",
+      "Vice President"
+    ],
+    [
+      "Daniel Gibbs",
+      "Secretary"
+    ],
+    [
+      "Cary Williamson",
+      "Treasurer"
+    ],
+    [
+      "Jim Matlack",
+      "Trustee"
+    ],
+    [
+      "Sandy Babcock",
+      "Advisory Trustee"
+    ],
+    [
+      "Bob Bates",
+      "Trustee"
+    ],
+    [
+      "Dixie Harper",
+      "Trustee"
+    ],
+    [
+      "Dennis Morris",
+      "Trustee"
+    ],
+    [
+      "Bonnie Watson",
+      "Trustee"
+    ],
+    [
+      "Jana Howard",
+      "Trustee"
+    ],
+    [
+      "Tom Hayes",
+      "Trustee"
+    ],
+    [
+      "Brenna Gaik",
+      "Trustee"
+    ],
+    [
+      "Drew Butler",
+      "Trustee"
+    ],
+    [
+      "Jessica Scott",
+      "Trustee"
+    ]
+  ],
+  "hero": {
+    "src": "assets/about.jpg",
+    "alt": "The limestone armory that houses the museum",
+    "position": "center"
+  },
+  "pages": [
+    {
+      "id": "visit",
+      "title": "A little time. A whole lot of history.",
+      "label": "Plan your visit",
+      "eyebrow": "Make yourself at home",
+      "intro": "Discover the people, places and everyday objects that tell the story of South Central Oklahoma. Start with a warm welcome in our historic armory.",
+      "image": "about.jpg",
+      "sections": [
+        {
+          "title": "Come on in",
+          "text": "Admission is free. We are open Tuesday through Saturday, 10 a.m. to 5 p.m., and closed Sundays, Mondays and holidays."
+        },
+        {
+          "title": "Find us in Ardmore",
+          "text": "35 Sunset Drive SW, Ardmore, OK 73401. Call 580-226-3857 for help planning your visit.",
+          "links": [
+            [
+              "Get directions",
+              "https://www.google.com/maps/search/?api=1&query=35+Sunset+Drive+SW+Ardmore+OK+73401"
+            ],
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ]
+          ]
+        },
+        {
+          "title": "Visiting with a group?",
+          "text": "Reserve group tours and programs well in advance to help secure your preferred date, with at least one week’s notice for all groups. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park is available for those bringing lunches. Tell us about any access needs so we can help you plan.",
+          "links": [
+            [
+              "Explore learning programs",
+              "education.html"
+            ],
+            [
+              "Contact our team",
+              "contact.html"
+            ]
+          ]
+        },
+        {
+          "title": "Research visits",
+          "text": "The Genealogical Library has separate hours: Wednesdays, 10 a.m. to 3 p.m., and by special appointment. Please call ahead.",
+          "links": [
+            [
+              "Visit the library",
+              "genealogical-library.html"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/about.jpg",
+          "alt": "Plan your visit at the Greater Southwest Historical Museum",
+          "caption": "Plan your visit"
+        }
+      ],
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center 78%",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "about",
+      "title": "Rooted in this place.",
+      "label": "About the museum",
+      "eyebrow": "Our story",
+      "intro": "The museum shares the history of South Central Oklahoma through artifacts collected from around the area, from an early electric car to one of the earliest examples of a steam-pumper fire engine.",
+      "image": "about.jpg",
+      "sections": [
+        {
+          "title": "Our largest artifact is the building itself",
+          "text": "Built in 1935–1936 by the Works Progress Administration, this limestone armory originally served the local National Guard. Today, its walls hold the stories of our region."
+        },
+        {
+          "title": "Our mission",
+          "text": "To collect, preserve and interpret the social, cultural and economic history of South Central Oklahoma with a special emphasis on Ardmore and Carter County."
+        },
+        {
+          "title": "Many stories under one roof",
+          "text": "Major exhibits are housed in three main wings. The north wing’s Transportation and Industry Gallery explores railroads, cotton and oil, with early carriages, saddles, soapbox derby cars and a working model of oil-field equipment. The south wing includes From the Ashes, the Fonville Gallery, the Genealogical Library and items found in early homes of the area. Ardmore’s first steam-powered fire engine is among its highlights."
+        },
+        {
+          "title": "Tools of Our Land",
+          "text": "Completed in May 2017, two 5,000-square-foot buildings explore the farming and ranching history of the area."
+        },
+        {
+          "title": "Honoring those who served",
+          "text": "The Military Memorial Museum preserves military history from the American Revolution to the Gulf Wars and honors our nation’s veterans. Its displays include everyday items used by soldiers, models and uniforms representing all eight uniformed services.",
+          "links": [
+            [
+              "Military Memorial Museum",
+              "military-museum.html"
+            ],
+            [
+              "Meet the board",
+              "board.html"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/about.jpg",
+          "alt": "About the museum at the Greater Southwest Historical Museum",
+          "caption": "About the museum"
+        }
+      ],
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center 78%",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "explore",
+      "title": "Every object has a story.",
+      "label": "Explore the museum",
+      "eyebrow": "Step into the past",
+      "intro": "Follow your curiosity through the galleries, from life on the land to the industries and people that shaped the region.",
+      "image": "home.jpg",
+      "sections": [
+        {
+          "title": "Transportation & industry",
+          "text": "Explore early carriages, saddles, soapbox derby cars and a working model of oil-field equipment. Discover how railroads, cotton and oil helped shape South Central Oklahoma."
+        },
+        {
+          "title": "From the Ashes",
+          "text": "Discover the region’s history and see Ardmore’s first steam-powered fire engine."
+        },
+        {
+          "title": "Tools of Our Land",
+          "text": "Explore the machinery and tools of the region’s farming and ranching heritage."
+        },
+        {
+          "title": "Keep exploring",
+          "text": "Discover military history, family research and something to remember your visit by.",
+          "links": [
+            [
+              "Military Memorial Museum",
+              "military-museum.html"
+            ],
+            [
+              "Genealogical Library",
+              "genealogical-library.html"
+            ],
+            [
+              "Gift Shop",
+              "store.html"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/home.jpg",
+          "alt": "Explore the museum at the Greater Southwest Historical Museum",
+          "caption": "Explore the museum"
+        }
+      ],
+      "headingPhoto": "assets/home.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "military-museum",
+      "title": "Honoring those who served.",
+      "label": "Military Memorial Museum",
+      "eyebrow": "The west wing",
+      "intro": "Preserving military history and honoring the people of all service branches who have served this country in war and peace.",
+      "image": "military-museum.jpg",
+      "sections": [
+        {
+          "title": "History",
+          "text": "The Military Memorial Museum is housed in the west wing of the building that once served as a National Guard Armory for Oklahoma’s historic, battle-proven 45th Division. Built by the Works Progress Administration in 1935–1936, the building itself is a monument to that period in Oklahoma’s and the nation’s history. The men and women who serve as guides, or “Charge of Quarters,” are volunteers."
+        },
+        {
+          "title": "Exhibits",
+          "text": "Displays in the museum represent all eras: the Civil War, the Spanish-American War, the Indian Wars, World War I, World War II, the Korean Conflict, Vietnam, the Gulf War and the Iraqi Freedom War. The displays include artifacts, documents, photographs, uniforms, weapons, knives, models, medals and a great deal of personal memorabilia from veterans all over the United States."
+        },
+        {
+          "title": "Mission",
+          "text": "Our mission from the beginning has been to preserve and display military history, and to honor those persons of all service branches who have served this country in war and peace."
+        },
+        {
+          "title": "Funding",
+          "text": "Although the Military Memorial Museum is located in the Greater Southwest Historical Museum, it is self-supporting and does not share in the gifts or donations made to the larger museum. Memberships and Hall of Honor donations are important sources of support."
+        },
+        {
+          "title": "Annual membership",
+          "items": [
+            "One person — $15",
+            "Couple (husband and wife) — $25"
+          ]
+        },
+        {
+          "title": "Life membership",
+          "items": [
+            "One person — $100"
+          ]
+        },
+        {
+          "title": "Hall of Honor",
+          "text": "A donation of $50 purchases an engraved plate showing the donor’s name and the name of the recipient being honored. Memorials may be made “In Memory Of” a veteran family member or veteran friend from any state or branch of service. The entrance and main corridor of the Military Memorial Museum are recognized as the Hall of Honor.",
+          "links": [
+            [
+              "Ask about membership or a memorial",
+              "tel:+15802263857"
+            ]
+          ]
+        },
+        {
+          "title": "Ardmore Army Air Field history",
+          "text": "Explore the history of Ardmore Army Air Field (1942–1946) and Ardmore Air Force Base (1953–1959). This memorial website is dedicated to the men and women who served with distinction at Ardmore Army Air Field, a training base for the U.S. Army Air Forces.",
+          "links": [
+            [
+              "Visit the airfield history website",
+              "https://home.brightok.net/~gsimmons/"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/military-museum.jpg",
+          "alt": "Golden eagle above the Military Memorial Museum entrance",
+          "caption": "Military Memorial Museum"
+        }
+      ],
+      "headingPhoto": "assets/military-museum.jpg",
+      "headingPhotoPosition": "center top",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "genealogical-library",
+      "title": "Discover your family’s story.",
+      "label": "Genealogical Library",
+      "eyebrow": "Research & discovery",
+      "intro": "Explore family and genealogical history through books, city directories, obituaries, census records, internet research and original documents.",
+      "image": "library.jpg",
+      "sections": [
+        {
+          "title": "Library hours",
+          "text": "Wednesdays, 10 a.m.–3 p.m., and by special appointment. Please call ahead if possible before visiting."
+        },
+        {
+          "title": "Let us help you begin",
+          "text": "Contact the museum with your research questions or to plan an appointment.",
+          "links": [
+            [
+              "Email research inquiries",
+              "mailto:thegreatersouthwest@gshm.org"
+            ],
+            [
+              "Call 580-226-3857",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/library.jpg",
+          "alt": "Genealogical Library at the Greater Southwest Historical Museum",
+          "caption": "Genealogical Library"
+        }
+      ],
+      "headingPhoto": "assets/library.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "store",
+      "title": "Take a little history home.",
+      "label": "Gift Shop",
+      "eyebrow": "Something to remember",
+      "intro": "Stop by the museum’s gift shop during your visit for gifts and souvenirs.",
+      "image": "store.jpg",
+      "sections": [
+        {
+          "title": "Find something thoughtful",
+          "text": "The existing shop selection includes old-fashioned toys, books, Oklahoma souvenirs, pottery, jewelry and handmade crafts. Looking for a birthday gift or holiday keepsake? Contact the Gift Shop Manager for current items and availability."
+        },
+        {
+          "title": "Visit the shop",
+          "text": "Tuesday–Saturday, 10 a.m.–5 p.m. Closed Sundays, Mondays and holidays.",
+          "links": [
+            [
+              "Email the Gift Shop Manager",
+              "mailto:officemanager@gshm.org"
+            ],
+            [
+              "Plan your visit",
+              "visit.html"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/store.jpg",
+          "alt": "Gift Shop at the Greater Southwest Historical Museum",
+          "caption": "Gift Shop"
+        }
+      ],
+      "headingPhoto": "assets/store.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "rent",
+      "title": "Gather somewhere memorable.",
+      "label": "Rent the museum",
+      "eyebrow": "A place to come together",
+      "intro": "The museum and its grounds may be available for non-commercial, private functions in a setting surrounded by the history of South Central Oklahoma.",
+      "image": "sign.jpg",
+      "sections": [
+        {
+          "title": "Noble Hall",
+          "text": "A setting for receptions, business meetings, holiday parties and special events. Noble Hall is available outside the museum’s operating hours."
+        },
+        {
+          "title": "The Education Room",
+          "text": "Located in the north wing, the Education Room suits small meetings, birthday parties, wedding and baby showers, and workshops. It is available during operating hours. A $50 reservation deposit is required. Half-day rental time slots are 10 a.m.–1:30 p.m. or 1:30–5 p.m. Please confirm availability when booking."
+        },
+        {
+          "title": "Tools of Our Land",
+          "text": "Ask about gathering in the Tools of Our Land exhibit. Rentals may be arranged Monday through Saturday."
+        },
+        {
+          "title": "Plan your event with us",
+          "text": "Contact the museum to discuss your date, group size, current rental rates and guidelines, and request the rental brochure and Guidelines for Private Functions. Rates and documents are being reviewed; confirm the applicable fees and requirements before booking.",
+          "links": [
+            [
+              "Call about a rental",
+              "tel:+15802263857"
+            ],
+            [
+              "Email the museum",
+              "mailto:thegreatersouthwest@gshm.org"
+            ]
+          ]
+        },
+        {
+          "title": "Paranormal investigation inquiries",
+          "text": "Interested in arranging a paranormal investigation? Contact the museum to ask about availability, requirements and pricing.",
+          "links": [
+            [
+              "Ask about an investigation",
+              "mailto:thegreatersouthwest@gshm.org"
+            ],
+            [
+              "Call 580-226-3857",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/sign.jpg",
+          "alt": "Rent the museum at the Greater Southwest Historical Museum",
+          "caption": "Rent the museum"
+        }
+      ],
+      "headingPhoto": "assets/sign.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "contain"
+    },
+    {
+      "id": "membership",
+      "title": "Be part of the story.",
+      "label": "Membership",
+      "eyebrow": "Support your museum",
+      "intro": "Membership helps keep local history alive through exhibits, education and community programs.",
+      "image": "sign.jpg",
+      "sections": [
+        {
+          "title": "Stay connected",
+          "text": "All membership levels receive quarterly newsletters and invitations to special events. Some levels include additional rental benefits. Contact the museum to join."
+        },
+        {
+          "title": "Membership levels",
+          "items": [
+            "Student / Senior — $15: standard benefits",
+            "Individual — $25: standard benefits",
+            "Couple — $35: standard benefits for two people",
+            "Family — $50: standard benefits for all family members, plus a 5% rental discount",
+            "Business — $100: standard benefits, plus a 10% business discount on museum rentals",
+            "Sustaining — $100: individual benefits, plus a 10% discount on museum rentals",
+            "Patron — $250: Sustaining benefits, plus one Education Room rental fee waiver",
+            "Benefactor — $500: Patron benefits, plus one Noble Hall rental fee waiver"
+          ]
+        },
+        {
+          "title": "Join or renew",
+          "text": "Contact the museum for a membership application and to confirm current benefits, rental terms and availability. Patron includes Sustaining benefits; Benefactor includes Patron benefits.",
+          "links": [
+            [
+              "Ask about membership",
+              "mailto:thegreatersouthwest@gshm.org"
+            ],
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/sign.jpg",
+          "alt": "Membership at the Greater Southwest Historical Museum",
+          "caption": "Membership"
+        }
+      ],
+      "headingPhoto": "assets/sign.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "contain"
+    },
+    {
+      "id": "board",
+      "title": "Caring for our shared history.",
+      "label": "Board of Trustees",
+      "eyebrow": "Our people",
+      "intro": "Meet the community members who help guide the Greater Southwest Historical Museum.",
+      "sections": [],
+      "photos": []
+    },
+    {
+      "id": "contribute",
+      "title": "Help history live on.",
+      "label": "Contribute",
+      "eyebrow": "Give with purpose",
+      "intro": "Your support helps the museum share the stories of South Central Oklahoma with future generations.",
+      "image": "sign.jpg",
+      "sections": [
+        {
+          "title": "Museum General Fund",
+          "text": "Contributions support educational and public programming, exhibits and other museum activities."
+        },
+        {
+          "title": "Memorial gifts",
+          "text": "Commemorate someone special with a gift to the museum. Contact our team to discuss your dedication."
+        },
+        {
+          "title": "Santa’s House on the Prairie",
+          "text": "Tree sponsorship helps support Santa’s House on the Prairie. Your name is displayed on a tree in the Holiday Forest, where children listen to stories and watch the Daube Puppets. You may decorate your tree or have museum staff decorate it for an additional fee. Staff will do their best to use your chosen colors or theme. Contact the curator for current sponsorship prices and display dates.",
+          "links": [
+            [
+              "Email Cassandra, Curator",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Explore Santa’s House",
+              "santas-house.html"
+            ]
+          ]
+        },
+        {
+          "title": "Considering an artifact donation?",
+          "text": "Please speak with the curator before mailing or bringing an item. Unsolicited donations cannot be accepted. Contact Cassandra to discuss the object and request current donation requirements and forms.",
+          "links": [
+            [
+              "Email Cassandra, Curator",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/sign.jpg",
+          "alt": "Contribute at the Greater Southwest Historical Museum",
+          "caption": "Contribute"
+        }
+      ],
+      "headingPhoto": "assets/sign.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "contain"
+    },
+    {
+      "id": "education",
+      "title": "History comes to life.",
+      "label": "Learning & programs",
+      "eyebrow": "Curiosity welcome",
+      "intro": "Give young visitors a chance to discover the past through stories, objects and shared experiences.",
+      "image": "education.jpg",
+      "sections": [
+        {
+          "title": "Learning throughout the museum",
+          "text": "The museum teaches the history and culture of the area through three-dimensional artifacts, archives and photographs. Educational opportunities are available for groups of all ages. Programs may take place inside the museum, at the 700 Ranch House or in Neustadt Park. Contact us to discuss a setting and program for your group."
+        },
+        {
+          "title": "Santa’s House on the Prairie",
+          "text": "An event for schoolchildren ages three to seven. Children decorate ornaments, explore the Holiday Forest and listen to stories read by Mr. and Mrs. Claus.",
+          "links": [
+            [
+              "Plan a Santa’s House visit",
+              "santas-house.html"
+            ]
+          ]
+        },
+        {
+          "title": "Scavenger hunts",
+          "text": "Follow clues through the museum and discover the stories behind its artifacts. Recommended for grades 3–8.",
+          "links": [
+            [
+              "Explore the scavenger hunt",
+              "scavenger-hunt.html"
+            ]
+          ]
+        },
+        {
+          "title": "Arrange a group visit",
+          "text": "Reserve tours and programs well in advance to help secure your preferred date, and give at least one week’s notice for all group visits. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park is available for groups wishing to bring lunches.",
+          "links": [
+            [
+              "Email the curator",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/education.jpg",
+          "alt": "Learning & programs at the Greater Southwest Historical Museum",
+          "caption": "Learning & programs"
+        }
+      ],
+      "headingPhoto": "assets/education.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "santas-house",
+      "title": "A little holiday wonder.",
+      "label": "Santa’s House on the Prairie",
+      "eyebrow": "Every December",
+      "intro": "Santa’s House on the Prairie is an event designed for schoolchildren ages three to seven years old. Participating children enjoy decorating ornaments, exploring our Holiday Forest, and listening to stories read by Mr. and Mrs. Claus.",
+      "image": "santas-house.jpg",
+      "sections": [
+        {
+          "title": "A memorable morning",
+          "text": "Begin in the Holiday Forest, enjoy stories with Mr. and Mrs. Claus, decorate an ornament and receive cookies. Allow about 30 minutes for the activities."
+        },
+        {
+          "title": "Plan your group’s visit",
+          "text": "The program takes place during the first two weeks of December. Please call between August and October to schedule. Appointments are offered at 15-minute intervals from 9 to 11:30 a.m. The listed cost is $2 per child; confirm current availability and pricing when booking. Spaces fill quickly, so please reserve early."
+        },
+        {
+          "title": "Help make the magic",
+          "text": "Volunteers help keep the program running throughout its two-week season. Roles include movie attendant, playing Mr. or Mrs. Claus, group attendant and crafting assistant. Contact Cassandra, our curator, by email or call the museum to volunteer.",
+          "links": [
+            [
+              "Email Cassandra",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Call to arrange a visit",
+              "tel:+15802263857"
+            ],
+            [
+              "Support the program",
+              "contribute.html"
+            ]
+          ]
+        },
+        {
+          "title": "Sponsor a Holiday Forest tree",
+          "text": "Tree sponsorship helps offset program costs. Sponsors’ names are displayed on the trees. The existing program lists a display period from the beginning of November through January 1; confirm this season’s dates with the curator. Small and large trees are available. Decorate your own tree or ask staff to decorate it for an additional fee; staff will do their best to use your chosen colors or theme. Contact Cassandra for current prices.",
+          "links": [
+            [
+              "Ask about tree sponsorship",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/santas-house.jpg",
+          "alt": "Santa’s House on the Prairie at the Greater Southwest Historical Museum",
+          "caption": "Santa’s House on the Prairie"
+        }
+      ],
+      "headingPhoto": "assets/santas-house.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "scavenger-hunt",
+      "title": "Follow a clue. Find a story.",
+      "label": "Scavenger hunt",
+      "eyebrow": "Learning through discovery",
+      "intro": "Explore the museum through clues that encourage students to look closely, read exhibit signs and think about life in Oklahoma.",
+      "image": "scavenger-hunt.jpg",
+      "sections": [
+        {
+          "title": "An adventure through history",
+          "text": "Groups follow clues to artifacts and gallery areas, discovering stories from territorial days to the present."
+        },
+        {
+          "title": "Plan your hunt",
+          "text": "Allow 45 minutes to one hour. Recommended for grades 3–8. The scavenger hunt is wheelchair accessible. Contact the museum to discuss your group’s needs.",
+          "links": [
+            [
+              "Arrange a group visit",
+              "mailto:cnormile@gshm.org"
+            ],
+            [
+              "Call 580-226-3857",
+              "tel:+15802263857"
+            ]
+          ]
+        }
+      ],
+      "photos": [
+        {
+          "src": "assets/scavenger-hunt.jpg",
+          "alt": "Scavenger hunt at the Greater Southwest Historical Museum",
+          "caption": "Scavenger hunt"
+        }
+      ],
+      "headingPhoto": "assets/scavenger-hunt.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover"
+    },
+    {
+      "id": "contact",
+      "title": "We’re glad to help.",
+      "label": "Contact us",
+      "eyebrow": "Let’s talk",
+      "intro": "Planning a visit, researching your family, or looking for the right person to ask? Reach our team directly.",
+      "sections": [
+        {
+          "title": "Visit or call",
+          "text": "35 Sunset Drive SW, Ardmore, OK 73401. Tuesday–Saturday, 10 a.m.–5 p.m.",
+          "links": [
+            [
+              "Call 580-226-3857",
+              "tel:+15802263857"
+            ],
+            [
+              "Get directions",
+              "https://www.google.com/maps/search/?api=1&query=35+Sunset+Drive+SW+Ardmore+OK+73401"
+            ]
+          ]
+        }
+      ],
+      "photos": []
+    }
+  ],
+  "review": [],
+  "home": {
+    "eyebrow": "Greater Southwest Historical Museum · Ardmore, Oklahoma",
+    "titleLines": [
+      "Deep roots.",
+      "Living history."
+    ],
+    "intro": "Step into the stories of South Central Oklahoma—and discover a little of your own.",
+    "heroCaption": "Our historic home · The 1935–1936 armory",
+    "welcomeTitleLines": [
+      "The past feels",
+      "closer here."
+    ],
+    "welcomeText": "Behind these limestone walls are the objects, memories and people that shaped our home. Take your time. There’s a story around every corner.",
+    "cards": [
+      [
+        "explore",
+        "Inside the museum",
+        "Ordinary objects. Extraordinary stories.",
+        "home.jpg",
+        "Explore the galleries"
+      ],
+      [
+        "military-museum",
+        "Honoring service",
+        "Remembering the people who served.",
+        "military-museum.jpg",
+        "Visit the military museum"
+      ],
+      [
+        "genealogical-library",
+        "Find your roots",
+        "Your family’s history starts with a question.",
+        "library.jpg",
+        "Discover the library"
+      ]
+    ],
+    "storyPhoto": {
+      "src": "assets/about.jpg",
+      "alt": "Historic limestone museum building"
+    },
+    "programs": [
+      {
+        "id": "santas-house",
+        "eyebrow": "For ages 3–7 · December",
+        "title": "Santa’s House on the Prairie",
+        "text": "Ornaments, stories and a little holiday wonder.",
+        "photo": "assets/edu-santas-house.jpg",
+        "alt": "Santa’s House holiday program",
+        "linkLabel": "Discover Santa’s House"
+      },
+      {
+        "id": "scavenger-hunt",
+        "eyebrow": "For grades 3–8",
+        "title": "Small clues. Big discoveries.",
+        "text": "A museum scavenger hunt for curious young minds.",
+        "photo": "assets/edu-scavenger-hunts.jpg",
+        "alt": "Historic fire engine exhibit",
+        "linkLabel": "Explore the scavenger hunt"
+      }
+    ],
+    "slideshow": {
+      "eyebrow": "A few of our favorite stories",
+      "title": "Take a look around.",
+      "intervalMs": 8000,
+      "slides": [
+        {
+          "src": "assets/about.jpg",
+          "alt": "Limestone armory with historic equipment outside the museum",
+          "title": "Our historic armory",
+          "caption": "A landmark home for South Central Oklahoma’s stories."
+        },
+        {
+          "src": "assets/home.jpg",
+          "alt": "Historic tractors and equipment displayed inside Tools of Our Land",
+          "title": "Tools of Our Land",
+          "caption": "Discover the region’s farming and ranching heritage."
+        },
+        {
+          "src": "assets/scavenger-hunt.jpg",
+          "alt": "Ardmore’s historic steam-powered fire engine on display",
+          "title": "Ardmore’s first fire engine",
+          "caption": "A closer look at the objects that shaped everyday life."
+        },
+        {
+          "src": "assets/military-museum.jpg",
+          "alt": "Eagle above the Military Memorial Museum entrance",
+          "title": "Honoring those who served",
+          "caption": "Personal stories and artifacts in the museum’s west wing."
+        }
+      ]
+    },
+    "mastheadCaption": "Strong roots · South Central Oklahoma"
+  },
+  "appearance": {
+    "paper": "#f8f9f4",
+    "surface": "#fffffb",
+    "green": "#123f34",
+    "ink": "#20392f",
+    "muted": "#4f6257",
+    "line": "#d5ded3",
+    "soft": "#edf1e8",
+    "accent": "#b59660",
+    "mapImage": "assets/ardmore-map.jpg",
+    "mapOpacity": 0.22
+  },
+  "navigation": {
+    "groups": [
+      {
+        "title": "Visit & explore",
+        "pages": [
+          "visit",
+          "explore",
+          "military-museum",
+          "genealogical-library",
+          "store"
+        ]
+      },
+      {
+        "title": "Programs & rentals",
+        "pages": [
+          "education",
+          "santas-house",
+          "scavenger-hunt",
+          "rent"
+        ]
+      },
+      {
+        "title": "About & support",
+        "pages": [
+          "about",
+          "board",
+          "membership",
+          "contribute"
+        ]
+      }
+    ]
+  }
+}

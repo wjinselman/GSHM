@@ -1,0 +1,14 @@
+{
+  "name": "gshm-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Greater Southwest Historical Museum website review build",
+  "scripts": {
+    "build": "node build.cjs",
+    "start": "node serve.cjs",
+    "test": "node scripts/check.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
