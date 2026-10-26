@@ -268,7 +268,7 @@ footer{background:var(--paper)}
 .page-heading-photo[data-page="rent"] .heading-photo,.page-heading-photo[data-page="membership"] .heading-photo,.page-heading-photo[data-page="contribute"] .heading-photo{mask-image:linear-gradient(90deg,transparent,black 14%,black 86%,transparent)}
 
 /* Slightly richer antique gold across the heritage accents. */
-:root{--gold-text:#e5ca85;--gold-button:#e8d197;--gold-line:#c7a454}
+:root{--gold-text:#e5ca85;--gold-button:#d5ae60;--gold-line:#c7a454}
 [data-theme=heritage] .hero .eyebrow,[data-theme=heritage] .hero-brandmark>p,[data-theme=heritage] .page-heading .eyebrow,[data-theme=heritage] .page-tagline{color:var(--gold-text)}
 [data-theme=heritage] .hero .button:not(.outline){background:var(--gold-button);border-color:var(--gold-button);color:#173f31}
 [data-theme=heritage] .hero-masthead::before{background:linear-gradient(90deg,transparent,var(--gold-line))}
