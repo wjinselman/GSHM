@@ -35,3 +35,7 @@ No deployment workflow or GitHub Pages configuration is included. Before launch,
 ## Assets
 
 Existing museum images, map and logo were sourced from gshm.org for this museum project. No open-source license is granted for museum branding or photography.
+
+## Nearby-community visitor guides
+
+Ten town guides and nearby-communities.html are generated from regional entries in content.json. They have individual titles/descriptions and origin-specific map links. Only the community hub appears in the footer. No travel-time promises, unverified ZIP lists or town-based museum branches are claimed. Preview noindex remains in place until approved production launch; these pages are not yet intended to rank.
