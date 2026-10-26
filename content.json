@@ -755,6 +755,708 @@
         }
       ],
       "photos": []
+    },
+    {
+      "id": "nearby-communities",
+      "regional": true,
+      "label": "Visiting from nearby communities",
+      "title": "Make Ardmore part of your day.",
+      "eyebrow": "Plan a museum visit",
+      "intro": "Find directions and a suggested museum visit from your community. Every guide leads to the Greater Southwest Historical Museum at 35 Sunset Drive SW in Ardmore.",
+      "description": "Plan your visit to GSHM in Ardmore from nearby Oklahoma communities and Gainesville, Texas. Find town-specific directions, museum hours and visit ideas.",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Choose your starting point",
+          "text": "Choose a community below for a route you can adjust to your exact starting address and ideas for exploring the museum.",
+          "links": [
+            [
+              "Ringling, OK",
+              "visit-from-ringling.html"
+            ],
+            [
+              "Davis, OK",
+              "visit-from-davis.html"
+            ],
+            [
+              "Lone Grove, OK",
+              "visit-from-lone-grove.html"
+            ],
+            [
+              "Sulphur, OK",
+              "visit-from-sulphur.html"
+            ],
+            [
+              "Marietta, OK",
+              "visit-from-marietta.html"
+            ],
+            [
+              "Kingston, OK",
+              "visit-from-kingston.html"
+            ],
+            [
+              "Madill, OK",
+              "visit-from-madill.html"
+            ],
+            [
+              "Gainesville, TX",
+              "visit-from-gainesville.html"
+            ],
+            [
+              "Wynnewood, OK",
+              "visit-from-wynnewood.html"
+            ],
+            [
+              "Tishomingo, OK",
+              "visit-from-tishomingo.html"
+            ]
+          ]
+        },
+        {
+          "title": "Coming from somewhere else?",
+          "text": "Use the directions link to enter your town, street address or ZIP code. Admission is free. The museum is open Tuesday–Saturday, 10 a.m.–5 p.m., and closed Sundays, Mondays and holidays.",
+          "links": [
+            [
+              "Directions to the museum",
+              "https://www.google.com/maps/dir/?api=1&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401"
+            ],
+            [
+              "Plan your visit",
+              "visit.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-ringling",
+      "regional": true,
+      "label": "Visit GSHM from Ringling",
+      "title": "Land, work and everyday life",
+      "eyebrow": "Ringling, Oklahoma to Ardmore",
+      "intro": "For a visit from Ringling, consider starting with Tools of Our Land. Its farming and ranching displays offer a way to talk about how work, equipment and everyday life changed across South Central Oklahoma. Continue into the Transportation and Industry Gallery to follow the railroad, cotton and oil stories.",
+      "description": "Plan a museum visit from Ringling, OK to GSHM in Ardmore: directions, free admission, hours and land, work and everyday life.",
+      "headingPhoto": "assets/home.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Ringling",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Ringling, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Ringling",
+              "https://www.google.com/maps/dir/?api=1&origin=Ringling%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "A suggested route through the exhibits",
+          "text": "Begin with the farming and ranching displays, then look for the working model of oil-field equipment and the early carriages. Finish with the historic armory itself: the museum building was constructed by the Works Progress Administration in 1935–1936.",
+          "links": [
+            [
+              "Read more before your visit",
+              "explore.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Ringling.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-davis",
+      "regional": true,
+      "label": "Visit GSHM from Davis",
+      "title": "A history stop for your next outing",
+      "eyebrow": "Davis, Oklahoma to Ardmore",
+      "intro": "Planning an outing from Davis? The museum offers an indoor visit built around real objects, from an early electric car to Ardmore’s steam-powered fire engine. Admission is free, so you can choose a few galleries that interest your group rather than trying to see everything in one visit.",
+      "description": "Plan a museum visit from Davis, OK to GSHM in Ardmore: directions, free admission, hours and a history stop for your next outing.",
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Davis",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Davis, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Davis",
+              "https://www.google.com/maps/dir/?api=1&origin=Davis%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Make it a family discovery visit",
+          "text": "Start with transportation and the fire engine. Ask younger visitors to choose an object and think about what people used before its modern replacement. For a more structured school visit, the museum’s scavenger hunt is recommended for grades 3–8 and takes 45 minutes to an hour. Arrange group visits ahead.",
+          "links": [
+            [
+              "Read more before your visit",
+              "scavenger-hunt.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Davis.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-lone-grove",
+      "regional": true,
+      "label": "Visit GSHM from Lone Grove",
+      "title": "Make local history part of your day",
+      "eyebrow": "Lone Grove, Oklahoma to Ardmore",
+      "intro": "Visitors from Lone Grove can use the museum as a starting point for exploring the history of South Central Oklahoma, with particular emphasis on Ardmore and Carter County. Choose an exhibit visit or plan a separate research appointment if family history is your main interest.",
+      "description": "Plan a museum visit from Lone Grove, OK to GSHM in Ardmore: directions, free admission, hours and make local history part of your day.",
+      "headingPhoto": "assets/library.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Lone Grove",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Lone Grove, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Lone Grove",
+              "https://www.google.com/maps/dir/?api=1&origin=Lone%20Grove%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "An exhibit visit or a research visit?",
+          "text": "The main museum and Genealogical Library have different schedules. The museum opens Tuesday–Saturday, while library research is available Wednesdays, 10 a.m.–3 p.m., and by special appointment. Before a research trip, contact the museum with the names, dates and places you are interested in so staff can discuss your inquiry.",
+          "links": [
+            [
+              "Read more before your visit",
+              "genealogical-library.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Lone Grove.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-sulphur",
+      "regional": true,
+      "label": "Visit GSHM from Sulphur",
+      "title": "Discover the stories behind the objects",
+      "eyebrow": "Sulphur, Oklahoma to Ardmore",
+      "intro": "Add an Ardmore museum visit to your plans from Sulphur. The Greater Southwest Historical Museum introduces the region through photographs, archives and three-dimensional artifacts. The indoor galleries offer a change of pace, with opportunities to explore transportation, home life and the people who served.",
+      "description": "Plan a museum visit from Sulphur, OK to GSHM in Ardmore: directions, free admission, hours and discover the stories behind the objects.",
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Sulphur",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Sulphur, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Sulphur",
+              "https://www.google.com/maps/dir/?api=1&origin=Sulphur%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Choose your own pace",
+          "text": "Begin with the gallery that most interests you, then make time for From the Ashes and Ardmore’s first steam-powered fire engine. The Military Memorial Museum is in the west wing. If your group has particular access needs, call before setting out so museum staff can help you plan.",
+          "links": [
+            [
+              "Read more before your visit",
+              "explore.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Sulphur.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-marietta",
+      "regional": true,
+      "label": "Visit GSHM from Marietta",
+      "title": "Bring the generations together",
+      "eyebrow": "Marietta, Oklahoma to Ardmore",
+      "intro": "A trip from Marietta can be a chance to share family memories through the objects on display. Early carriages, household items and farming equipment give different generations something concrete to explore together. The museum is in Ardmore; the directions below lead to its Sunset Drive SW address.",
+      "description": "Plan a museum visit from Marietta, OK to GSHM in Ardmore: directions, free admission, hours and bring the generations together.",
+      "headingPhoto": "assets/home.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Marietta",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Marietta, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Marietta",
+              "https://www.google.com/maps/dir/?api=1&origin=Marietta%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Turn a visit into a conversation",
+          "text": "Look for an object that someone in your group remembers using, then compare it with the tools and machines in Tools of Our Land. For family-history questions that need more than an exhibit visit, arrange time with the Genealogical Library and check its separate Wednesday hours.",
+          "links": [
+            [
+              "Read more before your visit",
+              "genealogical-library.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Marietta.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-kingston",
+      "regional": true,
+      "label": "Visit GSHM from Kingston",
+      "title": "An indoor stop with a different perspective",
+      "eyebrow": "Kingston, Oklahoma to Ardmore",
+      "intro": "If you are coming from Kingston, plan an indoor history stop at the museum in Ardmore. Transportation, farming and ranching exhibits show how people worked and moved through South Central Oklahoma. You can also visit the Military Memorial Museum in the west wing.",
+      "description": "Plan a museum visit from Kingston, OK to GSHM in Ardmore: directions, free admission, hours and an indoor stop with a different perspective.",
+      "headingPhoto": "assets/military-museum.jpg",
+      "headingPhotoPosition": "center top",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Kingston",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Kingston, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Kingston",
+              "https://www.google.com/maps/dir/?api=1&origin=Kingston%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Include the Military Memorial Museum",
+          "text": "Military displays include documents, photographs, uniforms, models, medals and personal memorabilia. Its mission is to preserve military history and honor those who served in war and peace. It is separately supported, so specify the military museum if you want to ask about its memberships or memorial donations.",
+          "links": [
+            [
+              "Read more before your visit",
+              "military-museum.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Kingston.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-madill",
+      "regional": true,
+      "label": "Visit GSHM from Madill",
+      "title": "Follow the tools that changed daily life",
+      "eyebrow": "Madill, Oklahoma to Ardmore",
+      "intro": "For visitors from Madill who enjoy machinery and working history, Tools of Our Land is a useful place to begin. Two 5,000-square-foot buildings explore farming and ranching history. The main museum continues the story with transportation and industry displays.",
+      "description": "Plan a museum visit from Madill, OK to GSHM in Ardmore: directions, free admission, hours and follow the tools that changed daily life.",
+      "headingPhoto": "assets/home.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Madill",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Madill, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Madill",
+              "https://www.google.com/maps/dir/?api=1&origin=Madill%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "From the land to the gallery",
+          "text": "Pair Tools of Our Land with early carriages, saddles, soapbox derby cars and the working model of oil-field equipment. The objects offer a practical way to discuss how people traveled and earned a living. For an organized club or school visit, contact the museum at least one week ahead.",
+          "links": [
+            [
+              "Read more before your visit",
+              "explore.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Madill.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-gainesville",
+      "regional": true,
+      "label": "Visit GSHM from Gainesville, Texas",
+      "title": "An Oklahoma history visit from North Texas",
+      "eyebrow": "Gainesville, Texas to Ardmore",
+      "intro": "Traveling from Gainesville, Texas? Make the Greater Southwest Historical Museum in Ardmore your destination for a look at South Central Oklahoma history. The museum is housed in a former National Guard armory and brings together regional industry, everyday life and military exhibits.",
+      "description": "Plan a museum visit from Gainesville, TX to GSHM in Ardmore: directions, free admission, hours and an oklahoma history visit from north texas.",
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Gainesville",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Gainesville, TX as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Gainesville",
+              "https://www.google.com/maps/dir/?api=1&origin=Gainesville%2C%20TX&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Build your visit around the armory",
+          "text": "Start with the limestone building, constructed in 1935–1936 by the Works Progress Administration, then explore the collections inside. An early electric car and the steam-powered fire engine show different sides of the area’s past. Check the museum’s Tuesday–Saturday schedule before making the trip; it is closed Sundays, Mondays and holidays.",
+          "links": [
+            [
+              "Read more before your visit",
+              "about.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Gainesville.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-wynnewood",
+      "regional": true,
+      "label": "Visit GSHM from Wynnewood",
+      "title": "Give curious minds a history outing",
+      "eyebrow": "Wynnewood, Oklahoma to Ardmore",
+      "intro": "Organizing a visit from Wynnewood? The museum offers both independent exploring and educational programs. A scavenger hunt encourages students to read exhibit signs and think critically, while the collections give adults plenty to discover alongside them.",
+      "description": "Plan a museum visit from Wynnewood, OK to GSHM in Ardmore: directions, free admission, hours and give curious minds a history outing.",
+      "headingPhoto": "assets/scavenger-hunt.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Wynnewood",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Wynnewood, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Wynnewood",
+              "https://www.google.com/maps/dir/?api=1&origin=Wynnewood%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Planning a school or family group",
+          "text": "The scavenger hunt is recommended for grades 3–8, takes 45 minutes to one hour and is described by the museum as wheelchair accessible. School groups need at least one adult chaperone for every 15 students. Reserve at least one week ahead; Neustadt Park is available for groups bringing lunches.",
+          "links": [
+            [
+              "Read more before your visit",
+              "education.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Wynnewood.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit-from-tishomingo",
+      "regional": true,
+      "label": "Visit GSHM from Tishomingo",
+      "title": "Explore another part of the region’s story",
+      "eyebrow": "Tishomingo, Oklahoma to Ardmore",
+      "intro": "Visitors coming from Tishomingo can explore the museum’s focus on the social, cultural and economic history of South Central Oklahoma, especially Ardmore and Carter County. Its galleries bring that focus to life through artifacts, photographs and the historic building itself.",
+      "description": "Plan a museum visit from Tishomingo, OK to GSHM in Ardmore: directions, free admission, hours and explore another part of the region’s story.",
+      "headingPhoto": "assets/about.jpg",
+      "headingPhotoPosition": "center center",
+      "headingPhotoFit": "cover",
+      "photos": [],
+      "sections": [
+        {
+          "title": "Directions from Tishomingo",
+          "text": "The museum is at 35 Sunset Drive SW, Ardmore, OK 73401. Open the route below with Tishomingo, OK as the starting point, or change the starting address to your home or hotel. Check the map when you travel for current route options and traffic; driving time depends on your starting point and road conditions.",
+          "links": [
+            [
+              "Get directions from Tishomingo",
+              "https://www.google.com/maps/dir/?api=1&origin=Tishomingo%2C%20OK&destination=35%20Sunset%20Drive%20SW%2C%20Ardmore%2C%20OK%2073401&travelmode=driving"
+            ]
+          ]
+        },
+        {
+          "title": "Match the visit to your interests",
+          "text": "For industry and transportation, explore the north wing. For From the Ashes, the Fonville Gallery and family research, look to the south wing, noting that library visits have separate hours. The west wing houses the Military Memorial Museum. Call ahead for group programs or a research appointment rather than relying on general museum hours.",
+          "links": [
+            [
+              "Read more before your visit",
+              "explore.html"
+            ]
+          ]
+        },
+        {
+          "title": "Hours and admission",
+          "text": "Free admission. Tuesday–Saturday · 10 a.m.–5 p.m.. Closed Sundays, Mondays and holidays. Call 580-226-3857 before traveling for a holiday visit, group program or special appointment. The museum is in Ardmore, not in Tishomingo.",
+          "links": [
+            [
+              "Call the museum",
+              "tel:+15802263857"
+            ],
+            [
+              "Visitor information",
+              "visit.html"
+            ]
+          ]
+        },
+        {
+          "title": "Planning for your group",
+          "text": "Tell the museum about your group size, interests and any access needs before your trip. Group reservations need at least one week’s notice. Genealogical research has separate hours, and seasonal programs require their own booking arrangements.",
+          "links": [
+            [
+              "Contact the museum",
+              "contact.html"
+            ],
+            [
+              "Browse all nearby-community guides",
+              "nearby-communities.html"
+            ]
+          ]
+        }
+      ]
     }
   ],
   "review": [],
