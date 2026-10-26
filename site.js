@@ -23,14 +23,14 @@ document.querySelectorAll('.museum-slideshow').forEach(carousel => {
  let index=0,userPaused=motion.matches,hovered=false,visible=false,timer;
  const interval=Math.max(6000,Number(carousel.dataset.interval)||8000);
  function schedule(){clearTimeout(timer);if(!userPaused&&!hovered&&visible&&!document.hidden)timer=setTimeout(()=>{show(index+1,false);schedule();},interval);}
- function label(){toggle.textContent=userPaused?'Play slideshow':'Pause slideshow';}
- function show(next,announce=true){index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>slide.hidden=i!==index);count.textContent=(index+1)+' / '+slides.length;if(announce)status.textContent='Photo '+(index+1)+' of '+slides.length+': '+slides[index].querySelector('h3').textContent;}
+ function label(){toggle.textContent=userPaused?'Play slideshow':'Pause slideshow';toggle.dataset.paused=String(userPaused);toggle.dataset.mobileLabel=userPaused?'Play':'Pause';toggle.setAttribute('aria-label',toggle.textContent);}
+ function show(next,announce=true){index=(next+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.hidden=i!==index;slide.setAttribute('aria-hidden',String(i!==index));});count.textContent=(index+1)+' / '+slides.length;if(announce)status.textContent='Photo '+(index+1)+' of '+slides.length+': '+slides[index].querySelector('h3').textContent;}
  function manual(step){userPaused=true;show(index+step);label();schedule();}
  controls.hidden=false;show(0,false);label();
  toggle.addEventListener('click',()=>{userPaused=!userPaused;label();schedule();});
  carousel.querySelector('.slide-previous').addEventListener('click',()=>manual(-1));
  carousel.querySelector('.slide-next').addEventListener('click',()=>manual(1));
- carousel.addEventListener('mouseenter',()=>{hovered=true;schedule();});
+ carousel.addEventListener('mouseenter',()=>{hovered=matchMedia('(hover: hover)').matches;schedule();});
  carousel.addEventListener('mouseleave',()=>{hovered=false;schedule();});
  carousel.addEventListener('focusin',e=>{if(e.target!==toggle){userPaused=true;label();schedule();}});
  carousel.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();manual(e.key==='ArrowLeft'?-1:1);}});
