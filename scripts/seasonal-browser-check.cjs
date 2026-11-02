@@ -22,7 +22,7 @@ fs.mkdirSync(out,{recursive:true});
      await page.clock.setSystemTime(new Date(`2026-${month}-15T12:00:00Z`));
      await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
      assert.equal(await page.locator('html').getAttribute('data-season'),season);
-     if(file==='index.html') assert.equal(await page.locator('.seasonal-greeting').isVisible(),season==='november','fall greeting only appears in November');
+     if(file==='index.html') {assert(await page.locator('.seasonal-greeting').isVisible());assert.equal(await page.locator('.seasonal-greeting').textContent(),{october:'Happy Halloween',november:'Happy Fall, Y’all',december:'Merry Christmas'}[season]);}
      assert.equal(await page.evaluate(()=>document.body.scrollHeight),baseHeight,'decorations must not change page layout');
      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
      assert(await page.locator('.seasonal-accent').first().isVisible());
