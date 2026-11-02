@@ -16,7 +16,7 @@
  if(typeof document === 'undefined') return;
  // URL-only presentation previews: never saved to storage or applied to others.
  const requested = new URLSearchParams(location.search).get('season');
- const preview = ['none',...Object.values(seasons)].includes(requested) ? requested : null;
+ let preview = ['none',...Object.values(seasons)].includes(requested) ? requested : null;
  if(preview) document.querySelectorAll('a[href]').forEach(link => {
   const target = new URL(link.getAttribute('href'),location.href);
   const siteRoot = new URL('.',location.href).pathname;
@@ -25,6 +25,29 @@
    target.searchParams.set('season',preview);link.href = target.href;
   }
  });
+ const preferenceKey = 'gshm-hide-seasonal-decorations';
+ const readPreference = () => {try {return localStorage.getItem(preferenceKey) === 'true';} catch {return false;}};
+ let hideDecorations = readPreference();
+ const toggle = document.createElement('button');
+ toggle.type = 'button';toggle.className = 'seasonal-toggle';
+ document.querySelector('.footer-bottom')?.append(toggle);
+ toggle.addEventListener('click',() => {
+  hideDecorations = !(hideDecorations || preview === 'none');
+  try {if(hideDecorations)localStorage.setItem(preferenceKey,'true');else localStorage.removeItem(preferenceKey);} catch {}
+  // Showing decorations from the plain preview returns to the automatic schedule.
+  if(!hideDecorations && preview === 'none') {
+   preview = null;
+   const current = new URL(location.href);current.searchParams.delete('season');history.replaceState(null,'',current);
+   document.querySelectorAll('a[href]').forEach(link => {
+    const target = new URL(link.getAttribute('href'),location.href);
+    if(target.origin === location.origin && target.pathname.startsWith(new URL('.',location.href).pathname) && target.searchParams.get('season') === 'none') {
+     target.searchParams.delete('season');link.href = target.href;
+    }
+   });
+  }
+  refresh();
+ });
+ window.addEventListener('storage',event => {if(event.key === preferenceKey || event.key === null){hideDecorations=readPreference();refresh();}});
  const root = document.documentElement;
  const decorations = [];
  const greetings = [];
@@ -51,7 +74,8 @@
  let timer;
  function refresh() {
   clearTimeout(timer);
-  const season = seasonForDate(new Date(),preview || settings.mode);
+  const season = seasonForDate(new Date(),hideDecorations ? 'none' : (preview || settings.mode));
+  toggle.textContent = hideDecorations || preview === 'none' ? 'Show seasonal decorations' : 'Hide seasonal decorations';
   if(season) root.dataset.season = season;
   else delete root.dataset.season;
   decorations.forEach(el => {el.hidden = !season;});
@@ -64,6 +88,6 @@
   if(!document.hidden) timer = setTimeout(refresh, 60000 - Date.now() % 60000);
  }
  document.addEventListener('visibilitychange',refresh);
- window.addEventListener('pageshow',refresh);
+ window.addEventListener('pageshow',() => {hideDecorations=readPreference();refresh();});
  refresh();
 })();

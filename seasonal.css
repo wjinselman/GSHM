@@ -92,3 +92,10 @@
  [data-season=november]{--oak-art:url('assets/season-oak-fall-mobile.svg')}
 }
 @media print, (forced-colors:active){[data-season=october] .hero .museum-name::after,[data-season=november] .hero .museum-name::after{display:none}}
+
+/* A quiet visitor preference, available on every page with JavaScript enabled. */
+.seasonal-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;border:0;background:transparent;color:inherit;font:inherit;text-align:left;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.seasonal-toggle:hover{text-decoration-thickness:2px}
+.seasonal-toggle:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.footer-bottom:has(.seasonal-toggle){gap:12px;flex-wrap:wrap;align-items:center}
+@media print{.seasonal-toggle{display:none}}
