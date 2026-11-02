@@ -4,7 +4,7 @@
 [data-season] .seasonal-accent:not([hidden]){display:block;width:144px;height:80px;right:22px;bottom:12px;background:var(--season-art) center/contain no-repeat;opacity:.9}
 [data-season=october]{--season-art:url('assets/season-october.svg')}
 [data-season=november]{--season-art:url('assets/season-november.svg')}
-[data-season=december]{--season-art:url('assets/season-december.svg')}
+[data-season=december]{--season-art:url('assets/season-december.svg?v=gift1')}
 /* Interior headings reserve their lower edge for a smaller decorative mark. */
 [data-season] .page-heading>.seasonal-accent{width:72px;height:40px;right:16px;bottom:2px;opacity:.75}
 [data-season] .closing>.seasonal-accent{width:90px;height:50px;right:16px;bottom:2px;opacity:.8}
@@ -53,3 +53,19 @@
 [data-season=december]{--season-corner-art:url('assets/season-evergreen.svg')}
 [data-season=december] .seasonal-trim:not([hidden]){height:30px;background-size:240px 30px;opacity:1}
 @media(max-width:800px){[data-season=december] .seasonal-trim:not([hidden]){height:18px;background-size:180px 18px}}
+
+/* Static garlands share the Christmas light position without adding layout or scripts. */
+[data-season=october]{--season-trim-art:url('assets/season-halloween-trim.svg')}
+[data-season=november]{--season-trim-art:url('assets/season-fall-trim.svg')}
+[data-season=october] .seasonal-trim:not([hidden]),[data-season=november] .seasonal-trim:not([hidden]){
+ display:block;inset:0 0 auto;height:40px;background:var(--season-trim-art) center top/360px 44px repeat-x;opacity:1;
+}
+@media(max-width:800px){
+ [data-season=october] .seasonal-trim:not([hidden]),[data-season=november] .seasonal-trim:not([hidden]){height:29px;background-size:270px 33px}
+ /* Leave the homepage Menu button visually clear of the new garlands. */
+ [data-season=october] .hero>.seasonal-trim:not([hidden]),[data-season=november] .hero>.seasonal-trim:not([hidden]){right:110px}
+}
+
+/* Interior garlands stay above breadcrumbs; text-only headers remain uncluttered. */
+[data-season=october] .page-heading>.seasonal-trim:not([hidden]),[data-season=november] .page-heading>.seasonal-trim:not([hidden]){height:26px;background-size:270px 30px}
+[data-season=october] .page-heading:not(.page-heading-photo)>.seasonal-trim,[data-season=november] .page-heading:not(.page-heading-photo)>.seasonal-trim{display:none}
