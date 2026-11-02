@@ -397,3 +397,16 @@ dialog:not([open]){display:none}
  .header{flex-wrap:wrap}
  .header nav.compact-nav,.js .header nav.compact-nav:not(.open){width:100%;justify-content:space-between}
 }
+
+/* A shorter desktop opening and a more compact homepage reading rhythm. */
+@media(min-width:801px){
+ [data-theme=heritage] .hero{min-height:650px}
+ [data-theme=heritage] .hero-masthead{margin-top:36px}
+ [data-theme=heritage] .hero-copy{margin-top:28px;margin-bottom:72px}
+ [data-theme=heritage] .heritage-landscape>.museum-slideshow,
+ [data-theme=heritage] .heritage-landscape>#discover,
+ [data-theme=heritage] .heritage-landscape>.program-section,
+ [data-theme=heritage] .heritage-landscape>.support{padding-top:72px;padding-bottom:72px}
+ [data-theme=heritage] .heritage-landscape>.story{padding-bottom:72px}
+ [data-theme=heritage] .heritage-landscape .section-heading{margin-bottom:36px}
+}

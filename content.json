@@ -470,7 +470,11 @@
       "sections": [
         {
           "title": "Stay connected",
-          "text": "All membership levels receive quarterly newsletters and invitations to special events. Some levels include additional rental benefits. Contact the museum to join."
+          "text": "All membership levels receive quarterly newsletters and invitations to special events. Some levels include additional rental benefits. Contact the museum to join.",
+          "action": {
+            "label": "Contact us to join",
+            "href": "mailto:thegreatersouthwest@gshm.org"
+          }
         },
         {
           "title": "Membership levels",
