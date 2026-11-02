@@ -16,12 +16,21 @@
  if(typeof document === 'undefined') return;
  const root = document.documentElement;
  const decorations = [];
+ const greetings = [];
  // Separate decorative layers never change image sources, layout or link targets.
  document.querySelectorAll('.hero,.page-heading,.closing').forEach(host => {
   const accent = document.createElement('span');
   accent.className = 'seasonal-accent';
   accent.setAttribute('aria-hidden','true');
   host.append(accent);decorations.push(accent);
+  if(host.classList.contains('hero')) {
+   const leaves = document.createElement('span');
+   leaves.className = 'seasonal-leaves';leaves.setAttribute('aria-hidden','true');
+   host.append(leaves);decorations.push(leaves);
+   const greeting = document.createElement('span');
+   greeting.className = 'seasonal-greeting';greeting.textContent = 'Happy Fall, Y’all';
+   host.append(greeting);greetings.push(greeting);
+  }
   if(!host.classList.contains('closing')) {
    const trim = document.createElement('span');
    trim.className = 'seasonal-trim';trim.setAttribute('aria-hidden','true');
@@ -35,6 +44,7 @@
   if(season) root.dataset.season = season;
   else delete root.dataset.season;
   decorations.forEach(el => {el.hidden = !season;});
+  greetings.forEach(el => {el.hidden = season !== 'november';});
   // Check at the next minute boundary, including local midnight. Returning tabs
   // refresh immediately even when the browser suspended their background timers.
   if(!document.hidden) timer = setTimeout(refresh, 60000 - Date.now() % 60000);

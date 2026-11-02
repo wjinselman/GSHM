@@ -22,10 +22,11 @@ fs.mkdirSync(out,{recursive:true});
      await page.clock.setSystemTime(new Date(`2026-${month}-15T12:00:00Z`));
      await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
      assert.equal(await page.locator('html').getAttribute('data-season'),season);
+     if(file==='index.html') assert.equal(await page.locator('.seasonal-greeting').isVisible(),season==='november','fall greeting only appears in November');
      assert.equal(await page.evaluate(()=>document.body.scrollHeight),baseHeight,'decorations must not change page layout');
      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
      assert(await page.locator('.seasonal-accent').first().isVisible());
-     assert(await page.locator('.seasonal-accent,.seasonal-trim').evaluateAll(els=>els.every(e=>e.getAttribute('aria-hidden')==='true'&&getComputedStyle(e).pointerEvents==='none')));
+     assert(await page.locator('.seasonal-accent,.seasonal-trim,.seasonal-leaves').evaluateAll(els=>els.every(e=>e.getAttribute('aria-hidden')==='true'&&getComputedStyle(e).pointerEvents==='none')));
      if(width<801) {await page.locator('.mobile-menu-toggle').click();assert(await page.locator('#main-nav > a[href="membership.html"]').isVisible());await page.keyboard.press('Escape');}
      if(await page.locator('.photo-link').count()) {await page.locator('.photo-link').first().click();assert(await page.locator('.photo-close').isVisible());await page.keyboard.press('Escape');await page.waitForTimeout(50);}
      if([390,1440].includes(width)) {

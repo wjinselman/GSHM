@@ -17,3 +17,34 @@
 }
 @media print{.seasonal-accent,.seasonal-trim{display:none!important}}
 @media(forced-colors:active){.seasonal-accent,.seasonal-trim{display:none!important}}
+
+/* Fuller November corners: a readable greeting above a low autumn arrangement. */
+.seasonal-leaves,.seasonal-greeting{display:none;position:absolute;pointer-events:none;z-index:2}
+[data-season=november] .hero>.seasonal-leaves:not([hidden]){
+ display:block;left:0;bottom:0;width:clamp(220px,23vw,360px);height:110px;
+ background:url('assets/season-autumn-leaves.svg') left bottom/contain no-repeat;
+}
+[data-season=november] .hero>.seasonal-accent{width:230px;height:128px;right:14px;bottom:0;opacity:1}
+[data-season=november] .hero>.seasonal-accent::before{
+ content:'';position:absolute;right:175px;bottom:0;width:230px;height:90px;
+ background:url('assets/season-autumn-leaves.svg') center bottom/contain no-repeat;transform:scaleX(-1);
+}
+[data-season=november] .hero>.seasonal-greeting:not([hidden]){
+ display:block;right:32px;bottom:112px;margin:0;padding:5px 12px;
+ border-radius:5px;background:#173f32e8;color:#f4dbab;
+ font:italic 24px/1.35 Georgia,serif;letter-spacing:.01em;
+}
+@media(min-width:801px){
+ [data-season=november] .hero .hero-foot{bottom:76px}
+ [data-season=november] .hero .hero-foot>span{padding:3px 8px;border-radius:4px;background:#173f32e8}
+}
+@media(max-width:800px){
+ [data-season=november] .hero>.seasonal-leaves:not([hidden]){width:92px;height:42px;opacity:.85}
+ [data-season=november] .hero>.seasonal-accent{width:82px;height:46px;right:2px;bottom:0;opacity:.9}
+ [data-season=november] .hero>.seasonal-accent::before{display:none}
+ [data-season=november] .hero>.seasonal-greeting:not([hidden]){
+  right:8px;bottom:auto;top:clamp(140px,42vw,300px);font-size:16px;padding:4px 8px;
+ }
+}
+@media print{.seasonal-leaves,.seasonal-greeting{display:none!important}}
+@media(forced-colors:active){.seasonal-leaves{display:none!important}}
