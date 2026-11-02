@@ -410,3 +410,27 @@ dialog:not([open]){display:none}
  [data-theme=heritage] .heritage-landscape>.story{padding-bottom:72px}
  [data-theme=heritage] .heritage-landscape .section-heading{margin-bottom:36px}
 }
+
+/* One soft frame around each photograph and its caption, including future cards. */
+:root{--photo-frame-shadow:0 3px 8px rgba(20,48,37,.06),0 14px 30px -10px rgba(20,48,37,.18);--photo-frame-edge:#e4dfd2}
+.cards>.card,.story>.photo-frame,.program-grid>article,.gallery>figure,.slides>.museum-slide{
+ border:1px solid var(--photo-frame-edge);border-radius:10px;
+ box-shadow:var(--photo-frame-shadow);
+}
+.program-grid>article{overflow:hidden}
+.photo-frame img,.gallery>figure img{border-radius:4px}
+@media print{
+ .cards>.card,.story>.photo-frame,.program-grid>article,.gallery>figure,.slides>.museum-slide{box-shadow:none}
+}
+
+/* Gallery slots stay consistent as portrait and landscape photographs are added. */
+.gallery>figure{align-self:start;background:var(--surface)}
+.gallery .photo-link img{width:100%;height:auto;aspect-ratio:3/2;max-height:none;object-fit:contain;background:var(--paper)}
+.gallery .photo-label{position:static;display:table;margin:12px auto 0;border-radius:4px;line-height:1.5}
+.gallery figcaption,.photo-frame>span{overflow-wrap:anywhere}
+/* Keep independent navigation and contact targets comfortable to select. */
+.footer-links>a{display:inline-flex;align-items:center;min-height:44px}
+.contacts a,.breadcrumbs>a{display:inline-flex;align-items:center;min-height:44px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* A lone gallery photo should not expand into an oversized desktop banner. */
+.gallery>figure:only-child{width:100%;max-width:840px;justify-self:center}
