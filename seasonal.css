@@ -81,3 +81,14 @@
 [data-season=december] .hero .museum-name::after{content:'';position:absolute;inset:0;background:url('assets/season-oak-christmas.svg') center/100% 100% no-repeat;pointer-events:none;user-select:none}
 @media(max-width:800px){[data-season=december] .hero .museum-name::after{background-image:url('assets/season-oak-christmas-mobile.svg')}}
 @media print, (forced-colors:active){[data-season=december] .hero .museum-name::after{display:none}}
+
+/* Seasonal oak layers share the original logo's coordinates; lettering stays clear. */
+[data-season=october]{--oak-art:url('assets/season-oak-halloween.svg')}
+[data-season=november]{--oak-art:url('assets/season-oak-fall.svg')}
+[data-season=october] .hero .museum-name,[data-season=november] .hero .museum-name{position:relative}
+[data-season=october] .hero .museum-name::after,[data-season=november] .hero .museum-name::after{content:'';position:absolute;inset:0;background:var(--oak-art) center/100% 100% no-repeat;pointer-events:none;user-select:none}
+@media(max-width:800px){
+ [data-season=october]{--oak-art:url('assets/season-oak-halloween-mobile.svg')}
+ [data-season=november]{--oak-art:url('assets/season-oak-fall-mobile.svg')}
+}
+@media print, (forced-colors:active){[data-season=october] .hero .museum-name::after,[data-season=november] .hero .museum-name::after{display:none}}
