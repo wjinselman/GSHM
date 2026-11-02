@@ -134,15 +134,26 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 
 
 /* Persistent mobile navigation with the museum oak. */
-.mobile-quick-nav .quick-nav-tree{width:30px;height:34px;flex-shrink:0;object-fit:contain}
+.mobile-quick-nav .quick-nav-tree{width:22px;height:26px;flex-shrink:0;object-fit:contain}
 .mobile-quick-nav:not([hidden]){max-width:calc(100vw - 24px)}
 .mobile-quick-nav a{padding-inline:10px;gap:6px}
 body:has(.mobile-quick-nav){padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-/* Nearly full-width mobile dock with evenly spaced controls. */
-.mobile-quick-nav:not([hidden]){width:calc(100% - 24px);max-width:560px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+/* Compact mobile dock with evenly spaced, 44px touch targets. */
+.mobile-quick-nav:not([hidden]){width:272px;max-width:calc(100vw - 24px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .mobile-quick-nav a,.mobile-quick-nav button{min-width:0;width:100%;padding-inline:8px}
 
 /* Keep the opening photograph; trim spare space in the mobile welcome/actions. */
 [data-theme=heritage] .home-identity-preview .hero{padding-bottom:10px}
 [data-theme=heritage] .home-identity-preview .hero-copy{margin:12px auto 0}
 [data-theme=heritage] .home-identity-preview .hero .header.mobile-nav-ready{margin:10px auto 0;gap:4px}
+
+/* Shorter mobile openings keep the existing photograph and readable introduction. */
+html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+.page-heading-photo[data-page] .heading-photo{height:clamp(140px,38vw,220px);object-fit:cover;object-position:center}
+.page-heading-photo .page-heading-inner,.page-heading-inner{padding-top:12px;padding-bottom:22px}
+.page-heading .breadcrumbs{margin-bottom:12px}
+.page-heading h1{margin-bottom:12px;line-height:1.12}
+.page-heading .eyebrow{margin-bottom:8px}
+.page-tagline{font-size:21px;margin-bottom:8px}
+.page-heading .intro{font-size:17px;line-height:1.55}
+.inner-landscape{padding-top:20px}

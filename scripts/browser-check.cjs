@@ -27,7 +27,7 @@ const root=path.join(__dirname,'..'),out=path.resolve(process.env.QA_OUTPUT || p
  await page.keyboard.press('Escape');
  if(width<801){assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'),'false');await page.locator('.mobile-menu-toggle').click();}else assert(!(await groups.nth(i).evaluate(x=>x.open)));
  }
- if(width<801){await page.keyboard.press('Escape');await page.locator('.mobile-quick-nav [data-menu]').click();assert(await page.locator('#mobile-quick-dialog').evaluate(x=>x.open));await page.keyboard.press('Escape');assert(await page.locator('#mobile-quick-dialog').isHidden());await page.waitForTimeout(60);}
+ if(width<801){await page.keyboard.press('Escape');await page.evaluate(()=>{const opening=document.querySelector('.hero,.page-heading')||document.querySelector('.header');scrollTo({top:opening.offsetTop+opening.offsetHeight+50,behavior:'instant'});});await page.locator('.mobile-quick-nav [data-menu]').click();assert(await page.locator('#mobile-quick-dialog').evaluate(x=>x.open));await page.keyboard.press('Escape');assert(await page.locator('#mobile-quick-dialog').isHidden());await page.waitForTimeout(60);}
  const photos=page.locator('.photo-link');
  for(let i=0;i<await photos.count();i++){
  const photo=photos.nth(i);await photo.focus();await page.keyboard.press('Enter');assert(await page.locator('#photo-dialog').evaluate(x=>x.open));assert(await page.locator('.photo-close').evaluate(x=>x===document.activeElement));
