@@ -92,7 +92,20 @@ if(mobileNav){
  panel.addEventListener('click',e=>{if(e.target===panel){const r=panel.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)panel.close();}if(e.target.closest('a'))panel.close();});
  links.querySelectorAll('details').forEach(group=>group.addEventListener('toggle',()=>{if(group.open)links.querySelectorAll('details').forEach(other=>{if(other!==group)other.open=false;});}));
  let observer;
- function updateDock(){dock.hidden=!phone.matches;}
+ const opening=document.querySelector('.hero,.page-heading')||header;
+ function updateDock(){
+  const inUse=dock.contains(document.activeElement)||panel.open;
+  dock.hidden=!phone.matches||(!inUse&&opening.getBoundingClientRect().bottom>0);
+ }
+ addEventListener('scroll',updateDock,{passive:true});
+ addEventListener('resize',updateDock);
+ document.addEventListener('focusin',event=>{
+  if(!phone.matches||dock.hidden||dock.contains(event.target)||event.target.closest('dialog'))return;
+  const target=event.target.getBoundingClientRect(),bar=dock.getBoundingClientRect();
+  if(target.bottom>bar.top-12&&target.top<bar.bottom&&target.right>bar.left&&target.left<bar.right){
+   window.scrollBy({top:target.bottom-bar.top+16,behavior:'instant'});
+  }
+ });
  const seen=new WeakSet();
  function reveals(){observer?.disconnect();document.querySelectorAll('.mobile-reveal').forEach(e=>e.classList.remove('mobile-reveal'));
   if(!phone.matches||motion.matches||!('IntersectionObserver' in window))return;
