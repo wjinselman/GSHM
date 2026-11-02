@@ -385,3 +385,15 @@ footer{background:var(--paper)}
  [data-theme=heritage] .hero .actions>.button.outline:hover{filter:none;text-decoration:underline;text-underline-offset:5px}
  [data-theme=heritage] .hero .hero-foot>a{display:none}
 }
+
+/* Closed dialogs must never expose their controls, including without JS. */
+dialog:not([open]){display:none}
+/* Keep the existing header readable with direct membership and giving links. */
+@media(min-width:801px){
+ .header nav.compact-nav,.js .header nav.compact-nav:not(.open){gap:18px;flex-wrap:wrap}
+ .header nav.compact-nav>.support-link{font-weight:700;white-space:nowrap}
+}
+@media(min-width:801px) and (max-width:1350px){
+ .header{flex-wrap:wrap}
+ .header nav.compact-nav,.js .header nav.compact-nav:not(.open){width:100%;justify-content:space-between}
+}

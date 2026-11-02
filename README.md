@@ -14,6 +14,28 @@ npm start
 
 Open http://127.0.0.1:4175/index.html. The server binds to this computer only.
 
+## Browser checks
+
+With the local server running, run `npm ci`, `npx playwright install chromium`, then
+`npm run test:browser`. This checks all 18 pages at 320, 390, 810, 1024 and 1440
+pixels wide, including navigation, photo dialogs, focus restoration, slideshow
+controls, images, fragment links and overflow. Desktop and phone runs also scan
+WCAG A/AA rules with axe. Results and screenshots go to `work/qa/` (ignored by Git),
+or the folder specified by `QA_OUTPUT`. Automated checks do not replace testing
+with real devices and assistive technology.
+
+## Museum polish preview
+
+The `preview/museum-polish` branch preserves the current design and assets, removes
+the duplicate homepage mission and repeated top-bar/sidebar hours, and exposes
+Membership and Give directly in navigation. Closed photo dialogs are explicitly
+hidden; opening focuses Close, and closing restores focus to the photograph.
+The generator also retains the corrected logo heading markup on rebuild.
+
+Review this branch before merging into the branch configured as the GitHub Pages
+source. This branch does not create a separate hosted preview or change Pages
+settings. After merging, wait for the Pages deployment and check the staging URL.
+
 ## Editing
 
 - content.json: central content, contacts, board order, photographs, palettes and per-page header framing.
