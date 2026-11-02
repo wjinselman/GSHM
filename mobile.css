@@ -141,3 +141,8 @@ body:has(.mobile-quick-nav){padding-bottom:calc(84px + env(safe-area-inset-botto
 /* Nearly full-width mobile dock with evenly spaced controls. */
 .mobile-quick-nav:not([hidden]){width:calc(100% - 24px);max-width:560px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .mobile-quick-nav a,.mobile-quick-nav button{min-width:0;width:100%;padding-inline:8px}
+
+/* Keep the opening photograph; trim spare space in the mobile welcome/actions. */
+[data-theme=heritage] .home-identity-preview .hero{padding-bottom:10px}
+[data-theme=heritage] .home-identity-preview .hero-copy{margin:12px auto 0}
+[data-theme=heritage] .home-identity-preview .hero .header.mobile-nav-ready{margin:10px auto 0;gap:4px}

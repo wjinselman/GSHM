@@ -71,3 +71,13 @@ enlargeable photograph automatically. Update alt text whenever an image changes.
 For interior banners use `headingPhoto`, `headingPhotoPosition`, and
 `headingPhotoFit`. Run `npm run build` and `npm test`, then check desktop and phone
 previews before publishing. No layout rewrite is needed to add or swap images.
+
+Gallery additions automatically receive the shared frame, soft shadow, caption
+styling, and photo viewer. Their 3:2 viewing areas show the complete photograph
+without stretching or cropping, including portrait images. Homepage feature cards
+and banners remain editorial crops; choose landscape images with the subject away
+from the edges and review both screen sizes. Use a distinct file per subject when
+replacing repeated photos. Keep captions concise and describe each image in its alt
+text. Resize and compress new photographs for web use before adding large batches;
+keep full-resolution originals separately. Gallery images load lazily and reserve
+space so adding more photos does not require loading them all at the top of a page.
