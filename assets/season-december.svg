@@ -7,4 +7,10 @@
  <circle cx="66" cy="64" r="12" fill="#bf6650"/><path d="M62 55c-6 6-6 12-1 17" stroke="#e2a48a" stroke-width="2"/>
  <path d="M112 37v13" stroke="#e6cca0"/><circle cx="112" cy="58" r="10" fill="#d4b77a"/><path d="M109 51c-5 5-4 10-1 14" stroke="#f1dfb8" stroke-width="2"/>
  <path d="m150 9 3 8 9 1-7 6 2 9-7-5-8 5 2-9-7-6 10-1Z" fill="#e4cd95"/>
+ <g transform="translate(7 53) rotate(-5 20 20)">
+  <rect x="2" y="13" width="36" height="30" rx="2" fill="#b65f4c" stroke="#e2b88a"/>
+  <rect y="10" width="40" height="9" rx="2" fill="#cc785d"/>
+  <path d="M17 11h6v32h-6Z" fill="#e5c888"/>
+  <path d="M20 11C3 12 6-2 14 3c4 2 6 8 6 8Zm0 0c17 1 14-13 6-8-4 2-6 8-6 8Z" fill="#d9ba78" stroke="#f2dfad" stroke-width="1.2"/>
+ </g>
 </svg>
