@@ -102,3 +102,11 @@ normal museum design remains available.
 
 Run `npm test` for calendar-boundary checks and, with the local server running,
 `npm run test:seasons` for seasonal desktop/mobile checks and midnight transitions.
+
+### Presentation links
+
+Use `?season=october`, `?season=november`, or `?season=december` on the homepage
+URL to preview a seasonal treatment at any time. Use `?season=none` for the normal
+design. The selection follows internal page links in that preview, but is never
+stored or applied to other visitors. Opening the normal site URL restores the
+automatic schedule; invalid preview values also fall back to automatic selection.
