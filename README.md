@@ -57,3 +57,17 @@ No deployment workflow or GitHub Pages configuration is included. Before launch,
 ## Assets
 
 Existing museum images, map and logo were sourced from gshm.org for this museum project. No open-source license is granted for museum branding or photography.
+
+## Adding museum photographs later
+
+Keep image files in `assets/`, using short filenames such as `gallery-tools.jpg`.
+You can replace an existing file with the same name to update every place using it,
+or add a new file and change only the relevant `src`/photo field in `content.json`.
+The homepage uses `hero.src`, `home.slideshow.slides`, `home.cards` (image filename
+at index 3), `home.storyPhoto.src`, and `home.programs[].photo`. Each interior page
+has a `photos` list: add `{ "src": "assets/gallery-tools.jpg", "alt": "Describe the
+actual photograph", "caption": "Optional visible caption" }` to add a framed,
+enlargeable photograph automatically. Update alt text whenever an image changes.
+For interior banners use `headingPhoto`, `headingPhotoPosition`, and
+`headingPhotoFit`. Run `npm run build` and `npm test`, then check desktop and phone
+previews before publishing. No layout rewrite is needed to add or swap images.
