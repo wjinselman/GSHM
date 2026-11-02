@@ -53,6 +53,21 @@ fs.mkdirSync(out,{recursive:true});
    assert.equal(await page.locator('html').getAttribute('data-season')||'',after,'open page switches at local midnight');
   }
   await page.close();
+  const demo=await browser.newPage({viewport:{width:390,height:900}});
+  await demo.clock.install({time:new Date('2027-01-15T12:00:00Z')});
+  for(const season of ['october','november','december','none']) {
+   await demo.goto('http://127.0.0.1:4175/?season='+season);
+   assert.equal(await demo.locator('html').getAttribute('data-season')||'',season==='none'?'':season);
+   await demo.locator('.mobile-menu-toggle').click();
+   await demo.locator('#main-nav > a[href*="membership.html"]').click();
+   assert.equal(new URL(demo.url()).searchParams.get('season'),season,'preview follows internal navigation');
+   assert.equal(await demo.locator('html').getAttribute('data-season')||'',season==='none'?'':season);
+  }
+  for(const suffix of ['', '?season=invalid']) {
+   await demo.goto('http://127.0.0.1:4175/'+suffix);
+   assert.equal(await demo.locator('html').getAttribute('data-season'),null,'normal links keep the automatic schedule');
+  }
+  await demo.close();
   const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto('http://127.0.0.1:4175/');assert.equal(await p.locator('.seasonal-accent').count(),0);assert(await p.locator('h1').isVisible());await nojs.close();
   console.log(`${checks} seasonal viewport/page cases, local-midnight transitions, overseas visitor time zone, and no-JavaScript fallback pass`);
  } finally {await browser.close();}

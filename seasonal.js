@@ -14,6 +14,17 @@
  }
  if(typeof module !== 'undefined' && module.exports) module.exports = {seasonForDate};
  if(typeof document === 'undefined') return;
+ // URL-only presentation previews: never saved to storage or applied to others.
+ const requested = new URLSearchParams(location.search).get('season');
+ const preview = ['none',...Object.values(seasons)].includes(requested) ? requested : null;
+ if(preview) document.querySelectorAll('a[href]').forEach(link => {
+  const target = new URL(link.getAttribute('href'),location.href);
+  const siteRoot = new URL('.',location.href).pathname;
+  if(target.origin === location.origin && target.pathname.startsWith(siteRoot) &&
+     (target.pathname.endsWith('.html') || target.pathname === siteRoot)) {
+   target.searchParams.set('season',preview);link.href = target.href;
+  }
+ });
  const root = document.documentElement;
  const decorations = [];
  const greetings = [];
@@ -40,7 +51,7 @@
  let timer;
  function refresh() {
   clearTimeout(timer);
-  const season = seasonForDate();
+  const season = seasonForDate(new Date(),preview || settings.mode);
   if(season) root.dataset.season = season;
   else delete root.dataset.season;
   decorations.forEach(el => {el.hidden = !season;});
