@@ -75,3 +75,9 @@
 @media(max-width:800px){[data-season=december] .hero>.seasonal-trim:not([hidden]){right:110px}}
 [data-season=december] .page-heading>.seasonal-trim:not([hidden]){height:26px;background-size:270px 30px}
 [data-season=december] .page-heading:not(.page-heading-photo)>.seasonal-trim{display:none}
+
+/* Christmas-only artwork aligns to the unchanged homepage logo's SVG viewBox. */
+[data-season=december] .hero .museum-name{position:relative}
+[data-season=december] .hero .museum-name::after{content:'';position:absolute;inset:0;background:url('assets/season-oak-christmas.svg') center/100% 100% no-repeat;pointer-events:none;user-select:none}
+@media(max-width:800px){[data-season=december] .hero .museum-name::after{background-image:url('assets/season-oak-christmas-mobile.svg')}}
+@media print, (forced-colors:active){[data-season=december] .hero .museum-name::after{display:none}}
