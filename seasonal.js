@@ -28,7 +28,7 @@
    leaves.className = 'seasonal-leaves';leaves.setAttribute('aria-hidden','true');
    host.append(leaves);decorations.push(leaves);
    const greeting = document.createElement('span');
-   greeting.className = 'seasonal-greeting';greeting.textContent = 'Happy Fall, Y’all';
+   greeting.className = 'seasonal-greeting';
    host.append(greeting);greetings.push(greeting);
   }
   if(!host.classList.contains('closing')) {
@@ -44,7 +44,10 @@
   if(season) root.dataset.season = season;
   else delete root.dataset.season;
   decorations.forEach(el => {el.hidden = !season;});
-  greetings.forEach(el => {el.hidden = season !== 'november';});
+  greetings.forEach(el => {
+   el.textContent = {october:'Happy Halloween',november:'Happy Fall, Y’all',december:'Merry Christmas'}[season] || '';
+   el.hidden = !season;
+  });
   // Check at the next minute boundary, including local midnight. Returning tabs
   // refresh immediately even when the browser suspended their background timers.
   if(!document.hidden) timer = setTimeout(refresh, 60000 - Date.now() % 60000);
