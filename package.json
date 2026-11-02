@@ -6,8 +6,9 @@
   "scripts": {
     "build": "node build.cjs",
     "start": "node serve.cjs",
-    "test": "node scripts/check.cjs",
-    "test:browser": "node scripts/browser-check.cjs"
+    "test": "node scripts/check.cjs && node scripts/seasonal-check.cjs",
+    "test:browser": "node scripts/browser-check.cjs",
+    "test:seasons": "node scripts/seasonal-browser-check.cjs"
   },
   "engines": {
     "node": ">=22"

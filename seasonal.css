@@ -1,0 +1,19 @@
+/* Quiet, static seasonal accents. All photos and visitor controls stay unchanged. */
+.seasonal-accent,.seasonal-trim{display:none;position:absolute;pointer-events:none;user-select:none;z-index:2}
+[data-season] .hero,[data-season] .page-heading,[data-season] .closing{position:relative}
+[data-season] .seasonal-accent:not([hidden]){display:block;width:144px;height:80px;right:22px;bottom:12px;background:var(--season-art) center/contain no-repeat;opacity:.9}
+[data-season=october]{--season-art:url('assets/season-october.svg')}
+[data-season=november]{--season-art:url('assets/season-november.svg')}
+[data-season=december]{--season-art:url('assets/season-december.svg')}
+/* Interior headings reserve their lower edge for a smaller decorative mark. */
+[data-season] .page-heading>.seasonal-accent{width:72px;height:40px;right:16px;bottom:2px;opacity:.75}
+[data-season] .closing>.seasonal-accent{width:90px;height:50px;right:16px;bottom:2px;opacity:.8}
+[data-season=december] .seasonal-trim:not([hidden]){display:block;inset:0 0 auto;height:22px;background:url('assets/season-lights.svg') center top/240px 22px repeat-x;opacity:.9}
+@media(max-width:800px){
+ [data-season] .hero>.seasonal-accent{width:62px;height:36px;right:5px;bottom:5px;opacity:.7}
+ [data-season] .page-heading>.seasonal-accent{width:58px;height:32px;right:7px;bottom:2px;opacity:.65}
+ [data-season] .closing>.seasonal-accent{width:60px;height:30px;right:10px;bottom:3px}
+ [data-season=december] .seasonal-trim:not([hidden]){height:14px;background-size:180px 16px}
+}
+@media print{.seasonal-accent,.seasonal-trim{display:none!important}}
+@media(forced-colors:active){.seasonal-accent,.seasonal-trim{display:none!important}}

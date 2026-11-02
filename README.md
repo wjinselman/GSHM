@@ -81,3 +81,24 @@ replacing repeated photos. Keep captions concise and describe each image in its 
 text. Resize and compress new photographs for web use before adding large batches;
 keep full-resolution originals separately. Gallery images load lazily and reserve
 space so adding more photos does not require loading them all at the top of a page.
+
+## Automatic seasonal decorations
+
+The October, November and December decorations repeat every year. October runs
+October 1–31, November runs November 1–30, and December runs December 1–31.
+January through September use the regular design. Dates follow Ardmore's local
+clock (`America/Chicago`), including daylight saving time, rather than each
+visitor's time zone. The browser uses the visitor device's clock to determine the
+current instant. A page opened across midnight updates at the minute boundary;
+returning from a suspended/background tab refreshes immediately.
+
+No monthly deployment or paid scheduler is needed. `seasonal.js` contains a single
+`settings.mode` switch: `auto` (default), `none` (disable), or `october`, `november`,
+`december` (manual override). Publish changes to that setting normally. Original
+museum photos and text remain unchanged. Decorations are static, noninteractive,
+hidden from assistive technology and print, and smaller on phones. New photo
+entries do not require any seasonal configuration. With JavaScript disabled the
+normal museum design remains available.
+
+Run `npm test` for calendar-boundary checks and, with the local server running,
+`npm run test:seasons` for seasonal desktop/mobile checks and midnight transitions.
