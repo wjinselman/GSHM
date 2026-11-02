@@ -885,12 +885,10 @@
         ]
       },
       {
-        "title": "About & support",
+        "title": "About",
         "pages": [
           "about",
-          "board",
-          "membership",
-          "contribute"
+          "board"
         ]
       }
     ]

@@ -3,13 +3,17 @@
 document.documentElement.classList.add('js');
 const dialog = document.querySelector('#photo-dialog');
 if (dialog && typeof dialog.showModal === 'function') {
+ let photoTrigger;
+ dialog.addEventListener('close', () => { photoTrigger?.focus({preventScroll:true}); });
  document.querySelectorAll('.photo-link').forEach(link => link.addEventListener('click', event => {
   event.preventDefault();
   const picture = link.querySelector('img');
   dialog.querySelector('img').src = picture.src;
   dialog.querySelector('img').alt = picture.alt;
   dialog.querySelector('p').textContent = link.dataset.caption || '';
+  photoTrigger = link;
   dialog.showModal();
+  dialog.querySelector('.photo-close').focus();
  }));
  dialog.querySelector('button').addEventListener('click', () => dialog.close());
  dialog.addEventListener('click', event => { if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();} });
