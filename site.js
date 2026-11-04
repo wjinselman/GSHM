@@ -1,5 +1,36 @@
 
 'use strict';
+/* Desktop scroll reveals. Mobile retains its existing animation and navigation. */
+(()=>{
+ const desktop=matchMedia('(min-width:801px)'),motion=matchMedia('(prefers-reduced-motion:reduce)');
+ if(!('IntersectionObserver' in window))return;
+ const selector='.slideshow-heading,.section-heading,.card,.photo-frame,.story>div:last-child,.program-grid article,.support,.home-mission,.content-section,.gallery figure,.board-grid>li,.contacts>section,.concept-cards>article';
+ const candidates=[...document.querySelectorAll(selector)];
+ // Animate only the outermost matching block to avoid compounded movement.
+ const items=candidates.filter(item=>!item.parentElement.closest(selector));
+ const seen=new WeakSet();
+ let observer;
+ function reveal(item){item.classList.remove('desktop-reveal-pending');seen.add(item);observer?.unobserve(item);}
+ function sync(){
+  observer?.disconnect();
+  items.forEach(item=>item.classList.remove('desktop-reveal-pending','desktop-reveal-item'));
+  if(!desktop.matches||motion.matches)return;
+  observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)reveal(entry.target);}),{threshold:0,rootMargin:'0px 0px -32px 0px'});
+  items.forEach(item=>{
+   if(seen.has(item))return;
+   // Keep the opening view, restored scroll position and focused content visible.
+   if(item.getBoundingClientRect().top<=innerHeight||item.contains(document.activeElement)){seen.add(item);return;}
+   observer.observe(item);
+   item.classList.add('desktop-reveal-item','desktop-reveal-pending');
+  });
+ }
+ document.addEventListener('focusin',event=>{
+  const item=event.target.closest('.desktop-reveal-pending');if(item)reveal(item);
+ });
+ desktop.addEventListener('change',sync);motion.addEventListener('change',sync);
+ window.addEventListener('pageshow',sync);
+ sync();
+})();
 document.documentElement.classList.add('js');
 const dialog = document.querySelector('#photo-dialog');
 if (dialog && typeof dialog.showModal === 'function') {

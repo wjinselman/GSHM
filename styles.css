@@ -434,3 +434,14 @@ dialog:not([open]){display:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* A lone gallery photo should not expand into an oversized desktop banner. */
 .gallery>figure:only-child{width:100%;max-width:840px;justify-self:center}
+/* Desktop-only progressive enhancement; content stays visible without JavaScript. */
+@media screen and (min-width:801px) and (prefers-reduced-motion:no-preference){
+ .desktop-reveal-item{
+  transition:opacity .62s ease,translate .62s cubic-bezier(.2,.75,.25,1);
+ }
+ .desktop-reveal-pending{opacity:0;translate:0 22px}
+ .desktop-reveal-pending:focus-within{opacity:1;translate:none}
+}
+@media print{
+ .desktop-reveal-item{opacity:1!important;translate:none!important;transition:none!important}
+}
