@@ -117,3 +117,9 @@ URL to preview a seasonal treatment at any time. Use `?season=none` for the norm
 design. The selection follows internal page links in that preview, but is never
 stored or applied to other visitors. Opening the normal site URL restores the
 automatic schedule; invalid preview values also fall back to automatic selection.
+
+## Posting a museum update
+
+Upload the event photo (JPG, PNG, or WebP) to assets, then edit current-event.js on the publishing branch. Enter the headline, details (including the event date and time), and endDate in YYYY-MM-DD format. Enter the photo path, such as assets/event-photo.jpg, and a short description in photoAlt. The photo is optional. For multiple paragraphs use \n\n inside the details string. Keep the quotes around each value.
+
+Commit the update and wait for GitHub Pages to publish. Open the homepage and tap the green headline to check the event. Posting an event does not require a build or an external service. The announcement runs through the end date in Ardmore local time, then disappears. To take it down early, clear the headline and commit. Replace the entry to post the next event.

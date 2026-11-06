@@ -445,3 +445,29 @@ dialog:not([open]){display:none}
 @media print{
  .desktop-reveal-item{opacity:1!important;translate:none!important;transition:none!important}
 }
+
+/* Current museum announcement */
+.event-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 10px 5%;
+  min-height: 46px;
+  background: #163f34;
+  color: #fffaf0;
+  border-bottom: 1px solid #b79b66;
+  font: 500 clamp(17px, 2vw, 21px)/1.35 Georgia, serif;
+  text-decoration: none;
+}
+.event-bar:hover span:first-child, .event-bar:focus-visible span:first-child { text-decoration: underline; }
+.event-bar:focus-visible { outline: 2px solid #f3d395; outline-offset: -4px; }
+.event-arrow { color: #e6cc94; flex: none; }
+.event-page article { max-width: 46rem; margin: auto; overflow-wrap: anywhere; }
+.event-page h1 { margin-top: 1.5rem; }
+.event-details img { max-height: 34rem; margin: 0 auto 2rem; object-fit: contain; }
+.event-details p { white-space: pre-line; }
+.event-bar span:first-child { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+  .event-bar { justify-content: space-between; }
+}
