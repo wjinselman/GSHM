@@ -15,3 +15,13 @@ for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html'))){
 console.log('Heading structure, mission and direct support navigation regressions pass');
 
 for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html'))){const html=fs.readFileSync(path.join(root,file),'utf8');for(const asset of ['seasonal.css','seasonal.js']){const hash=require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,asset),'utf8').replace(/\r\n/g,'\n')).digest('hex').slice(0,12);assert(html.includes(asset+'?v='+hash),file+': stale seasonal asset version');}}
+
+// Nov 6 museum review changes.
+for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html'))){
+ const html=fs.readFileSync(path.join(root,file),'utf8');
+ assert(!html.includes('href="board.html"'),file+': hide the board page from navigation');
+ assert(html.includes('A nonprofit museum preserving the stories of South Central Oklahoma.'),file+': nonprofit descriptor');
+ assert(html.includes('tree-only.css?v=20261106'),file+': tree-only seasonal style');
+}
+for(const name of ['Wesley Hull','Cassandra Normile','Caitlin Vanet'])assert(fs.readFileSync(path.join(root,'contact.html'),'utf8').includes(name),'missing contact '+name);
+console.log('Museum review checks passed');

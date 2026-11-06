@@ -22,11 +22,12 @@ fs.mkdirSync(out,{recursive:true});
      await page.clock.setSystemTime(new Date(`2026-${month}-15T12:00:00Z`));
      await page.evaluate(()=>document.dispatchEvent(new Event('visibilitychange')));
      assert.equal(await page.locator('html').getAttribute('data-season'),season);
-     if(file==='index.html') {assert(await page.locator('.seasonal-greeting').isVisible());assert.equal(await page.locator('.seasonal-greeting').textContent(),{october:'Happy Halloween',november:'Happy Fall, Y’all',december:'Merry Christmas'}[season]);}
+     if(file==='index.html') assert((await page.locator('.museum-name').evaluate(e=>getComputedStyle(e,'::after').backgroundImage)).includes('season-oak-'),'tree decoration visible');
      assert.equal(await page.evaluate(()=>document.body.scrollHeight),baseHeight,'decorations must not change page layout');
      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-     assert(await page.locator('.seasonal-accent').first().isVisible());
-     assert(await page.locator('.seasonal-trim').first().isVisible(),'each season has a visible top trim');
+     assert(!(await page.locator('.seasonal-accent').first().isVisible()),'no corner decoration');
+     assert(!(await page.locator('.seasonal-trim').first().isVisible()),'no border trim');
+     if(file==='index.html')assert(!(await page.locator('.seasonal-greeting').isVisible()),'no holiday greeting');
      assert(await page.locator('.seasonal-accent,.seasonal-trim,.seasonal-leaves').evaluateAll(els=>els.every(e=>e.getAttribute('aria-hidden')==='true'&&getComputedStyle(e).pointerEvents==='none')));
      if(width<801) {await page.locator('.mobile-menu-toggle').click();assert(await page.locator('#main-nav > a[href="membership.html"]').isVisible());await page.keyboard.press('Escape');}
      if(await page.locator('.photo-link').count()) {await page.locator('.photo-link').first().click();assert(await page.locator('.photo-close').isVisible());await page.keyboard.press('Escape');await page.waitForTimeout(50);}

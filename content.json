@@ -13,15 +13,15 @@
       "thegreatersouthwest@gshm.org"
     ],
     [
-      "Director",
+      "Wesley Hull · Director",
       "whull@gshm.org"
     ],
     [
-      "Curator · Cassandra",
+      "Cassandra Normile · Curator",
       "cnormile@gshm.org"
     ],
     [
-      "Gift Shop Manager",
+      "Caitlin Vanet · Office Manager & Gift Shop Manager",
       "officemanager@gshm.org"
     ]
   ],
@@ -186,10 +186,6 @@
             [
               "Military Memorial Museum",
               "military-museum.html"
-            ],
-            [
-              "Meet the board",
-              "board.html"
             ]
           ]
         }
@@ -774,7 +770,7 @@
       "The past feels",
       "closer here."
     ],
-    "welcomeText": "Behind these limestone walls are the objects, memories and people that shaped our home. Take your time. There’s a story around every corner.",
+    "welcomeText": "Behind these limestone walls are the objects, memories and people that shaped our home. Take your time. There’s a story around every corner. As a nonprofit museum, we’re here to preserve these stories for generations to come.",
     "cards": [
       [
         "explore",
@@ -891,8 +887,7 @@
       {
         "title": "About",
         "pages": [
-          "about",
-          "board"
+          "about"
         ]
       }
     ]

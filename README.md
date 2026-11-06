@@ -84,6 +84,13 @@ space so adding more photos does not require loading them all at the top of a pa
 
 ## Automatic seasonal decorations
 
+Museum-approved review presentation: the oak-tree artwork remains decorated in
+October, November and December. All seasonal borders, corners and greetings are
+hidden by `tree-only.css`; the normal museum layout stays unchanged.
+The board page remains at its direct URL, but it is temporarily removed from
+menus and other site links until the museum supplies its new trustees list.
+
+
 The October, November and December decorations repeat every year. October runs
 October 1–31, November runs November 1–30, and December runs December 1–31.
 January through September use the regular design. Dates follow Ardmore's local
