@@ -990,13 +990,15 @@
           "src": "assets/home.jpg",
           "alt": "Historic tractors and equipment displayed inside Tools of Our Land",
           "title": "Tools of Our Land",
-          "caption": "Discover the region’s farming and ranching heritage."
+          "caption": "Discover the region’s farming and ranching heritage.",
+          "fullPhoto": true
         },
         {
-          "src": "assets/scavenger-hunt.jpg",
+          "src": "assets/edu-scavenger-hunts.jpg",
           "alt": "Ardmore’s historic steam-powered fire engine on display",
           "title": "Ardmore’s first fire engine",
-          "caption": "A closer look at the objects that shaped everyday life."
+          "caption": "Ardmore’s steam-powered fire engine on display at the museum.",
+          "fullPhoto": true
         },
         {
           "src": "assets/military-museum.jpg",

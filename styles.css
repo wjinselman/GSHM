@@ -474,3 +474,24 @@ dialog:not([open]){display:none}
 }
 
 .museum-album > h2 { max-width: 1240px; margin: 2rem auto 1rem; padding-inline: clamp(20px, 4vw, 40px); }
+
+/* Let the full photograph set the card width; the caption wraps underneath. */
+.slides > .museum-slide.full-photo {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  align-self: start;
+  justify-self: center;
+}
+.museum-slide.full-photo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(54svh, 570px);
+  aspect-ratio: auto;
+}
+.museum-slide.full-photo figcaption { contain: inline-size; }
+@media (max-width: 800px) {
+  .museum-slide.full-photo img { max-height: none; }
+}
