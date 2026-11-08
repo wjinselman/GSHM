@@ -157,3 +157,13 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
 .page-tagline{font-size:21px;margin-bottom:8px}
 .page-heading .intro{font-size:17px;line-height:1.55}
 .inner-landscape{padding-top:20px}
+
+/* Armory highlight: fill the mobile photo area instead of letterboxing the wide image. */
+.museum-slideshow .museum-slide:first-child img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 55% center;
+}
