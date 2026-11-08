@@ -152,8 +152,8 @@
         }
       ],
       "headingPhoto": "assets/about.jpg",
-      "headingPhotoPosition": "center 78%",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "about",
@@ -198,8 +198,8 @@
         }
       ],
       "headingPhoto": "assets/about.jpg",
-      "headingPhotoPosition": "center 78%",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "explore",
@@ -248,15 +248,15 @@
         }
       ],
       "headingPhoto": "assets/home.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover",
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain",
       "albums": [
         {
           "title": "Main Museum",
           "photos": [
             {
               "src": "assets/museum-photos/museum-01.webp",
-              "alt": "Historic machinery with large red wheels"
+              "alt": "Side view of Ardmore’s steam-powered fire engine, showing the boiler and red wheels"
             },
             {
               "src": "assets/museum-photos/museum-02.webp",
@@ -438,8 +438,8 @@
         }
       ],
       "headingPhoto": "assets/military-museum.jpg",
-      "headingPhotoPosition": "center top",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "genealogical-library",
@@ -476,8 +476,8 @@
         }
       ],
       "headingPhoto": "assets/library.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "store",
@@ -522,8 +522,8 @@
         }
       ],
       "headingPhoto": "assets/store.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "rent",
@@ -582,7 +582,7 @@
         }
       ],
       "headingPhoto": "assets/sign.jpg",
-      "headingPhotoPosition": "center center",
+      "headingPhotoPosition": "right center",
       "headingPhotoFit": "contain"
     },
     {
@@ -637,7 +637,7 @@
         }
       ],
       "headingPhoto": "assets/sign.jpg",
-      "headingPhotoPosition": "center center",
+      "headingPhotoPosition": "right center",
       "headingPhotoFit": "contain"
     },
     {
@@ -702,7 +702,7 @@
         }
       ],
       "headingPhoto": "assets/sign.jpg",
-      "headingPhotoPosition": "center center",
+      "headingPhotoPosition": "right center",
       "headingPhotoFit": "contain"
     },
     {
@@ -780,8 +780,8 @@
         }
       ],
       "headingPhoto": "assets/education.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "santas-house",
@@ -848,8 +848,8 @@
         }
       ],
       "headingPhoto": "assets/santas-house.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "scavenger-hunt",
@@ -880,14 +880,14 @@
       ],
       "photos": [
         {
-          "src": "assets/scavenger-hunt.jpg",
-          "alt": "Scavenger hunt at the Greater Southwest Historical Museum",
-          "caption": "Scavenger hunt"
+          "src": "assets/edu-scavenger-hunts.jpg",
+          "alt": "Ardmore’s steam-powered fire engine on display",
+          "caption": "Ardmore’s first fire engine"
         }
       ],
-      "headingPhoto": "assets/scavenger-hunt.jpg",
-      "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhoto": "assets/edu-scavenger-hunts.jpg",
+      "headingPhotoPosition": "right center",
+      "headingPhotoFit": "contain"
     },
     {
       "id": "contact",
