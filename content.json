@@ -249,7 +249,108 @@
       ],
       "headingPhoto": "assets/home.jpg",
       "headingPhotoPosition": "center center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "albums": [
+        {
+          "title": "Main Museum",
+          "photos": [
+            {
+              "src": "assets/museum-photos/museum-01.webp",
+              "alt": "Historic machinery with large red wheels"
+            },
+            {
+              "src": "assets/museum-photos/museum-02.webp",
+              "alt": "Evening sky above the limestone armory"
+            },
+            {
+              "src": "assets/museum-photos/museum-03.webp",
+              "alt": "Schoolroom exhibit with desks and a chalkboard"
+            },
+            {
+              "src": "assets/museum-photos/museum-04.webp",
+              "alt": "Orange vehicle on display in front of a mural"
+            },
+            {
+              "src": "assets/museum-photos/museum-05.webp",
+              "alt": "Stone fireplace in a log cabin interior"
+            },
+            {
+              "src": "assets/museum-photos/museum-06.webp",
+              "alt": "Historic black-and-white photograph of the armory"
+            },
+            {
+              "src": "assets/museum-photos/museum-07.webp",
+              "alt": "The limestone armory beneath a blue sky"
+            }
+          ]
+        },
+        {
+          "title": "Tools of Our Land",
+          "photos": [
+            {
+              "src": "assets/museum-photos/tools-01.webp",
+              "alt": "Orange tractors lined up in the exhibit hall"
+            },
+            {
+              "src": "assets/museum-photos/tools-02.webp",
+              "alt": "Gray tractor with red wheels beside vintage signs"
+            },
+            {
+              "src": "assets/museum-photos/tools-03.webp",
+              "alt": "Farm machinery in front of a rural landscape mural"
+            }
+          ]
+        },
+        {
+          "title": "Off the Beaten Path",
+          "photos": [
+            {
+              "src": "assets/museum-photos/details-01.webp",
+              "alt": "Overhead view of a display in a stone-walled room"
+            },
+            {
+              "src": "assets/museum-photos/details-02.webp",
+              "alt": "Clothing and merchandise beneath a Daube’s sign"
+            },
+            {
+              "src": "assets/museum-photos/details-03.webp",
+              "alt": "Scale model of a white house with a fenced yard"
+            },
+            {
+              "src": "assets/museum-photos/details-04.webp",
+              "alt": "Workshop exhibit with wooden walls and tools"
+            },
+            {
+              "src": "assets/museum-photos/details-05.webp",
+              "alt": "Gallery lined with framed artwork and objects"
+            },
+            {
+              "src": "assets/museum-photos/details-06.webp",
+              "alt": "Lace-up boots in a display case"
+            },
+            {
+              "src": "assets/museum-photos/details-07.webp",
+              "alt": "Porcelain figurines in period dress"
+            },
+            {
+              "src": "assets/museum-photos/details-08.webp",
+              "alt": "Rows of historic tools and machinery"
+            },
+            {
+              "src": "assets/museum-photos/details-09.webp",
+              "alt": "Table and chairs beside a cabin fireplace"
+            },
+            {
+              "src": "assets/museum-photos/details-10.webp",
+              "alt": "Log cabin beneath a protective roof"
+            },
+            {
+              "src": "assets/museum-photos/details-11.webp",
+              "alt": "Vintage advertising signs along a museum aisle"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "military-museum",
@@ -314,6 +415,26 @@
           "src": "assets/military-museum.jpg",
           "alt": "Golden eagle above the Military Memorial Museum entrance",
           "caption": "Military Memorial Museum"
+        },
+        {
+          "src": "assets/museum-photos/military-01.webp",
+          "alt": "Army recruiters visiting the museum"
+        },
+        {
+          "src": "assets/museum-photos/military-02.webp",
+          "alt": "Uniform and peaked cap in a display case"
+        },
+        {
+          "src": "assets/museum-photos/military-03.webp",
+          "alt": "Flight helmet and oxygen mask"
+        },
+        {
+          "src": "assets/museum-photos/military-04.webp",
+          "alt": "Model airplane suspended in the gallery"
+        },
+        {
+          "src": "assets/museum-photos/military-05.webp",
+          "alt": "Field equipment and supplies arranged in a display case"
         }
       ],
       "headingPhoto": "assets/military-museum.jpg",
@@ -390,6 +511,14 @@
           "src": "assets/store.jpg",
           "alt": "Gift Shop at the Greater Southwest Historical Museum",
           "caption": "Gift Shop"
+        },
+        {
+          "src": "assets/museum-photos/shop-01.webp",
+          "alt": "Gift shop entrance with a piano beside the display cases"
+        },
+        {
+          "src": "assets/museum-photos/shop-02.webp",
+          "alt": "Gift shop shelves and glass cases stocked with souvenirs"
         }
       ],
       "headingPhoto": "assets/store.jpg",
@@ -628,6 +757,26 @@
           "src": "assets/education.jpg",
           "alt": "Learning & programs at the Greater Southwest Historical Museum",
           "caption": "Learning & programs"
+        },
+        {
+          "src": "assets/museum-photos/education-01.webp",
+          "alt": "Coloring contest entries displayed on easels"
+        },
+        {
+          "src": "assets/museum-photos/education-02.webp",
+          "alt": "Be a Soldier for a Day participants in front of an American flag"
+        },
+        {
+          "src": "assets/museum-photos/education-03.webp",
+          "alt": "Group gathered for Ardmore’s 137th birthday celebration"
+        },
+        {
+          "src": "assets/museum-photos/education-04.webp",
+          "alt": "Museum group outside beside the limestone armory"
+        },
+        {
+          "src": "assets/museum-photos/education-05.webp",
+          "alt": "Visitors gathered around a museum activity table"
         }
       ],
       "headingPhoto": "assets/education.jpg",
@@ -688,6 +837,14 @@
           "src": "assets/santas-house.jpg",
           "alt": "Santa’s House on the Prairie at the Greater Southwest Historical Museum",
           "caption": "Santa’s House on the Prairie"
+        },
+        {
+          "src": "assets/museum-photos/santa-01.webp",
+          "alt": "Santa and Mrs. Claus seated between decorated trees"
+        },
+        {
+          "src": "assets/museum-photos/santa-02.webp",
+          "alt": "Covered wagon surrounded by Christmas trees"
         }
       ],
       "headingPhoto": "assets/santas-house.jpg",

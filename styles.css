@@ -472,3 +472,5 @@ dialog:not([open]){display:none}
 @media (max-width: 800px) {
   .event-bar { justify-content: space-between; }
 }
+
+.museum-album > h2 { max-width: 1240px; margin: 2rem auto 1rem; padding-inline: clamp(20px, 4vw, 40px); }
