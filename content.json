@@ -128,14 +128,14 @@
               "education.html"
             ],
             [
-              "Contact our team",
-              "contact.html"
+              "Email Caitlin about a group visit",
+              "mailto:officemanager@gshm.org"
             ]
           ]
         },
         {
           "title": "Research visits",
-          "text": "The Genealogical Library has separate hours: Wednesdays, 10 a.m. to 3 p.m., and by special appointment. Please call ahead.",
+          "text": "The Genealogical Library has separate hours: Wednesdays, 10 a.m. to 3 p.m., and by special appointment. Please call ahead. The library is closed throughout December.",
           "links": [
             [
               "Visit the library",
@@ -165,7 +165,7 @@
       "sections": [
         {
           "title": "Our largest artifact is the building itself",
-          "text": "Built in 1935–1936 by the Works Progress Administration, this limestone armory originally served the local National Guard. Today, its walls hold the stories of our region."
+          "text": "Built in 1935–1936 by the Works Progress Administration, this limestone armory originally served the local National Guard. The building also served as a roller skating rink. Today, its walls hold the stories of our region."
         },
         {
           "title": "Our mission",
@@ -173,7 +173,7 @@
         },
         {
           "title": "Many stories under one roof",
-          "text": "Major exhibits are housed in three main wings. The north wing’s Transportation and Industry Gallery explores railroads, cotton and oil, with early carriages, saddles, soapbox derby cars and a working model of oil-field equipment. The south wing includes From the Ashes, the Fonville Gallery, the Genealogical Library and items found in early homes of the area. Ardmore’s first steam-powered fire engine is among its highlights."
+          "text": "Major exhibits are housed in three main wings. The north wing’s Transportation and Industry Gallery explores railroads, cotton and oil, with early carriages, saddles, soapbox derby cars and a model of oil-field equipment. The south wing includes From the Ashes, the Fonville Gallery, the Genealogical Library and items found in early homes of the area. Ardmore’s first steam-powered fire engine is among its highlights."
         },
         {
           "title": "Tools of Our Land",
@@ -211,7 +211,7 @@
       "sections": [
         {
           "title": "Transportation & industry",
-          "text": "Explore early carriages, saddles, soapbox derby cars and a working model of oil-field equipment. Discover how railroads, cotton and oil helped shape South Central Oklahoma."
+          "text": "Explore early carriages, saddles, soapbox derby cars and a model of oil-field equipment. Discover how railroads, cotton and oil helped shape South Central Oklahoma."
         },
         {
           "title": "From the Ashes",
@@ -294,7 +294,7 @@
           "links": [
             [
               "Ask about membership or a memorial",
-              "tel:+15802263857"
+              "contact.html"
             ]
           ]
         },
@@ -330,7 +330,7 @@
       "sections": [
         {
           "title": "Library hours",
-          "text": "Wednesdays, 10 a.m.–3 p.m., and by special appointment. Please call ahead if possible before visiting."
+          "text": "Wednesdays, 10 a.m.–3 p.m., and by special appointment. Please call ahead if possible before visiting. The library is closed throughout December."
         },
         {
           "title": "Let us help you begin",
@@ -360,7 +360,7 @@
     },
     {
       "id": "store",
-      "title": "Take a little history home.",
+      "title": "Take home a piece of our history",
       "label": "Gift Shop",
       "eyebrow": "Something to remember",
       "intro": "Stop by the museum’s gift shop during your visit for gifts and souvenirs.",
@@ -418,7 +418,7 @@
         },
         {
           "title": "Plan your event with us",
-          "text": "Contact the museum to discuss your date, group size, current rental rates and guidelines, and request the rental brochure and Guidelines for Private Functions. Rates and documents are being reviewed; confirm the applicable fees and requirements before booking.",
+          "text": "Contact the museum to discuss your date, group size, current rental rates and guidelines, and request the rental brochure and Guidelines for Private Functions.",
           "links": [
             [
               "Call about a rental",
@@ -487,7 +487,7 @@
         },
         {
           "title": "Join or renew",
-          "text": "Contact the museum for a membership application and to confirm current benefits, rental terms and availability. Patron includes Sustaining benefits; Benefactor includes Patron benefits.",
+          "text": "Memberships renew every January. Contact the museum for a membership application and to confirm current benefits, rental terms and availability. Patron includes Sustaining benefits; Benefactor includes Patron benefits.",
           "links": [
             [
               "Ask about membership",
@@ -538,7 +538,7 @@
         },
         {
           "title": "Santa’s House on the Prairie",
-          "text": "Tree sponsorship helps support Santa’s House on the Prairie. Your name is displayed on a tree in the Holiday Forest, where children listen to stories and watch the Daube Puppets. You may decorate your tree or have museum staff decorate it for an additional fee. Staff will do their best to use your chosen colors or theme. Contact the curator for current sponsorship prices and display dates.",
+          "text": "You can give to the Museum General Fund or sponsor a Holiday Forest tree. Tree sponsorship helps support Santa’s House on the Prairie. Your name is displayed on a tree in the Holiday Forest, where children listen to stories and watch the Daube Puppets. You may decorate your tree or have museum staff decorate it for an additional fee. Staff will do their best to use your chosen colors or theme. Contact the curator for current sponsorship prices and display dates.",
           "links": [
             [
               "Email Cassandra, Curator",
@@ -600,7 +600,7 @@
         },
         {
           "title": "Scavenger hunts",
-          "text": "Follow clues through the museum and discover the stories behind its artifacts. Recommended for grades 3–8.",
+          "text": "Follow clues through the museum and discover the stories behind its artifacts.",
           "links": [
             [
               "Explore the scavenger hunt",
@@ -648,7 +648,7 @@
         },
         {
           "title": "Plan your group’s visit",
-          "text": "The program takes place during the first two weeks of December. Please call between August and October to schedule. Appointments are offered at 15-minute intervals from 9 to 11:30 a.m. The listed cost is $2 per child; confirm current availability and pricing when booking. Spaces fill quickly, so please reserve early."
+          "text": "The program takes place during the first two full weeks of December. Please call between August and October to schedule. Appointments are offered at 15-minute intervals from 9 to 11:30 a.m. The listed cost is $2 per child; confirm current availability and pricing when booking."
         },
         {
           "title": "Help make the magic",
@@ -708,7 +708,7 @@
         },
         {
           "title": "Plan your hunt",
-          "text": "Allow 45 minutes to one hour. Recommended for grades 3–8. The scavenger hunt is wheelchair accessible. Contact the museum to discuss your group’s needs.",
+          "text": "Allow 45 minutes to one hour. The scavenger hunt is wheelchair accessible. Contact the museum to discuss your group’s needs.",
           "links": [
             [
               "Arrange a group visit",
@@ -810,7 +810,7 @@
       },
       {
         "id": "scavenger-hunt",
-        "eyebrow": "For grades 3–8",
+        "eyebrow": "Group activity",
         "title": "Small clues. Big discoveries.",
         "text": "A museum scavenger hunt for curious young minds.",
         "photo": "assets/edu-scavenger-hunts.jpg",
