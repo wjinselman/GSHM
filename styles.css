@@ -564,3 +564,5 @@ dialog:not([open]){display:none}
   .contact-feedback:not(:empty) { display:block; color:var(--green); font-size:13px; font-weight:600; }
 }
 @media print { .contact-copy:not([hidden]), .contact-feedback { display:none; } }
+.footer-bottom a[href="https://inselmandigital.com/"] { text-decoration: none; }
+.footer-bottom a[href="https://inselmandigital.com/"]:is(:hover, :focus-visible) { text-decoration: underline; }
