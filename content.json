@@ -144,7 +144,8 @@
       ],
       "headingPhoto": "assets/museum-photos/museum-02.webp",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "desktopHeadingPhoto": "assets/about-armory-desktop.webp"
     },
     {
       "id": "explore",
