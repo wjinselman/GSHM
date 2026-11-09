@@ -495,3 +495,14 @@ dialog:not([open]){display:none}
 @media (max-width: 800px) {
   .museum-slide.full-photo img { max-height: none; }
 }
+
+/* Homepage story cards: match the first landscape photo's white breathing room to the other two. Hero/slideshow unaffected. */
+@media (min-width:801px){
+  #discover .cards > .card:first-child > img{
+    box-sizing:border-box;
+    padding-block:52px;
+    background:#fff;
+    object-fit:contain;
+    object-position:center;
+  }
+}
