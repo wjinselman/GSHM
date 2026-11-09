@@ -1,28 +1,19 @@
-/* Only loaded for desktop exhibit heroes with a separate photo selection. */
-html[data-theme="heritage"] .page-heading-photo[data-page] {
-  display:grid;
-  grid-template-columns:44% 56%;
-  align-items:center;
-  background:#163e32;
+/* Alternate desktop sources use the existing header image box. The page's
+   shared styles continue to draw the background, gradient and wording. */
+.exhibit-hero-photo {display:contents}
+html[data-theme="heritage"] .page-heading-photo[data-page] > .exhibit-hero-photo > img.heading-photo {
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center center;
+  mask-image:none;
+  z-index:0;
 }
-.exhibit-hero-photo {
-  position:absolute; inset:0 0 0 42%;
-  display:flex; align-items:center;
-  mask-image:linear-gradient(to right,transparent,#000 14%);
-}
-html[data-theme="heritage"] .exhibit-hero-photo > img.heading-photo {
-  position:static; width:100%; height:100%;
-  max-width:none; object-fit:cover; object-position:center;
-}
-html[data-theme="heritage"] [data-page="military-museum"] .exhibit-hero-photo > img.heading-photo {
-  height:auto;object-fit:contain;
-}
-html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner {
-  grid-column:1; width:auto; max-width:none; margin:0;
-  padding:clamp(28px,3.5vw,60px) 5% clamp(28px,3.5vw,60px) max(5vw,24px);
-}
-html[data-theme="heritage"] .page-heading-photo[data-page]::before,
-html[data-theme="heritage"] .page-heading-photo[data-page]::after {display:none}
-html[data-theme="heritage"] [data-page="military-museum"] .page-heading-inner h1 {
-  font-size:clamp(42px,4.1vw,66px);
+html[data-theme="heritage"] .page-heading-photo[data-page="military-museum"] > .exhibit-hero-photo > img.heading-photo {
+  object-fit:contain;
+  object-position:right center;
 }
