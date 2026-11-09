@@ -237,3 +237,15 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
    background-position:center,center 61%;
  }
 }
+
+/* The credit sits on its own line below the museum's nonprofit statement. */
+.footer-bottom > span { display:block; }
+.footer-bottom a[href="https://inselmandigital.com/"] {
+  display:block;
+  width:fit-content;
+  max-width:100%;
+  margin-top:4px;
+  padding-block:3px;
+  font-size:12px;
+  line-height:1.5;
+}
