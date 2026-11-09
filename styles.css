@@ -517,7 +517,7 @@ dialog:not([open]){display:none}
   }
   html[data-theme="heritage"] .page-heading-photo[data-page]::before{
     content:"";display:block;position:absolute;inset:0;z-index:1;
-    background:linear-gradient(90deg,rgba(11,37,28,.54) 0%,rgba(11,37,28,.45) 35%,rgba(11,37,28,.22) 70%,rgba(11,37,28,.08) 100%);
+    background:linear-gradient(90deg,rgba(12,45,34,.94) 0%,rgba(12,45,34,.87) 24%,rgba(12,45,34,.66) 48%,rgba(12,45,34,.32) 73%,rgba(12,45,34,.08) 91%,rgba(12,45,34,0) 100%);
     pointer-events:none;
   }
   html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner{position:relative;z-index:2}
