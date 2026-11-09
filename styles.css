@@ -522,3 +522,19 @@ dialog:not([open]){display:none}
   }
   html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner{position:relative;z-index:2}
 }
+
+/* Museum interior desktop headers: separate, reliably visible green-to-clear veil.
+   Existing full-bleed photo stays untouched; homepage hero is a different section. */
+@media screen and (min-width:801px){
+  html[data-theme="heritage"] .page-heading-photo[data-page]::after{
+    content:"";display:block;position:absolute;inset:0;z-index:3;pointer-events:none;
+    background:linear-gradient(90deg,
+      rgba(13,53,40,.96) 0%,
+      rgba(13,53,40,.89) 24%,
+      rgba(13,53,40,.68) 48%,
+      rgba(13,53,40,.33) 73%,
+      rgba(13,53,40,.09) 90%,
+      transparent 100%);
+  }
+  html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner{z-index:4}
+}
