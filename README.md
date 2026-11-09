@@ -1,125 +1,46 @@
 # Greater Southwest Historical Museum website
 
-Review-stage museum website prepared by Inselman Digital. This repository does not deploy to gshm.org.
+This review package contains 15 visitor pages, their source, and the museum's photography. Extract the ZIP and open index.html, or use the local server below. The package keeps search indexing disabled.
 
-## Local preview
+## Build and preview
 
-Requires Node.js 22 or newer. No dependency installation is required.
+With Node.js 22 or newer, run:
 
-```sh
-npm run build
-npm test
-npm start
-```
+    npm run build
+    npm test
+    npm start
 
-Open http://127.0.0.1:4175/index.html. The server binds to this computer only.
-
-## Browser checks
-
-With the local server running, run `npm ci`, `npx playwright install chromium`, then
-`npm run test:browser`. This checks all 18 pages at 320, 390, 810, 1024 and 1440
-pixels wide, including navigation, photo dialogs, focus restoration, slideshow
-controls, images, fragment links and overflow. Desktop and phone runs also scan
-WCAG A/AA rules with axe. Results and screenshots go to `work/qa/` (ignored by Git),
-or the folder specified by `QA_OUTPUT`. Automated checks do not replace testing
-with real devices and assistive technology.
-
-## Museum polish preview
-
-The `preview/museum-polish` branch preserves the current design and assets, removes
-the duplicate homepage mission and repeated top-bar/sidebar hours, and exposes
-Membership and Give directly in navigation. Closed photo dialogs are explicitly
-hidden; opening focuses Close, and closing restores focus to the photograph.
-The generator also retains the corrected logo heading markup on rebuild.
-
-Review this branch before merging into the branch configured as the GitHub Pages
-source. This branch does not create a separate hosted preview or change Pages
-settings. After merging, wait for the Pages deployment and check the staging URL.
+Open http://127.0.0.1:4175/. The build uses no external packages. For browser and accessibility tests, install the development dependencies with npm ci and npx playwright install chromium, keep the preview server running, then run npm run test:browser and npm run test:seasons.
 
 ## Editing
 
-- content.json: central content, contacts, board order, photographs, palettes and per-page header framing.
-- build.cjs: generates HTML and appearance.css.
-- styles.css: shared layout and responsive styling.
-- site.js: accessible menus, slideshow and photo enlargement.
-- assets/: museum images and original oak logo.
+Edit content.json, then rebuild. The location, phone, office hours, general email, visitor pages, image descriptions and photo selections feed the generated pages. Address and hours also feed the homepage's Museum structured data. The social preview links and image URLs use siteUrl. Change that setting when the final public hostname is confirmed.
 
-Rebuild after content changes; generated HTML is committed for easy review. Add photos to a page's photos array with src, alt and caption. headingPhoto, headingPhotoPosition and headingPhotoFit control its banner.
+Place a new museum photograph in assets and update the specific content entry. Homepage card items contain the destination, eyebrow, heading, photo, link label and descriptive alt text in that order. Image widths listed in imageWidths require the corresponding WebP files. The original map is a source master; browsers receive the smaller WebP backgrounds.
 
-## Review status
+October, November and December use museum oak artwork on the homepage. The automatic switch follows America/Chicago time. The footer lets visitors show or hide the seasonal artwork. The homepage links ?season=october, ?season=november, ?season=december and ?season=none allow review at any time.
 
-Heritage Green is the main direction. The existing copper and navy concepts still contain layout differences; the requested color-only variants are pending. Content and replacement photography still need museum approval. Pages remain noindex. The private developer dashboard, internal edit register, review questions, logs and screenshots are intentionally excluded.
+For an announcement, edit current-event.js. Provide a headline, details and an inclusive end date in YYYY-MM-DD format. Supply a local photo and description if desired. A blank headline keeps the announcement hidden.
 
-## Publishing
+## Museum confirmations before public launch
 
-No deployment workflow or GitHub Pages configuration is included. Before launch, resolve museum content approvals, prepare a public-only build, remove review concepts and source files from the hosting package, configure redirects from original URLs, and review indexing and hosting security headers. A public source repository is not a production deployment.
+- Caitlin explicitly requested general group bookings from Visit. This package routes general group bookings to her throughout, with Cassandra listed separately for educational activities. Confirm who actually schedules school visits and scavenger hunts.
+- Confirm the holiday calendar, car and accessible parking arrangements, accessible entrance and restroom details, and a typical self-guided visit duration. The Visit page gives the verified bus parking and scavenger-hunt accessibility and duration. That duration applies only to the hunt.
+- Confirm this year's Santa booking window, program length and Holiday Forest display dates. The previous site and the staging copy disagree on the first two.
+- Confirm current Business and Sustaining membership benefits, renewal materials and any approved online checkout. The GSHM application gives the mailing address and check payee. Military Memorial memberships support the separately funded west-wing museum.
+- Supply the approved board roster before reintroducing a board page. Concept pages, the internal review page and the unconfirmed roster are excluded from this package.
+- Confirm the production site URL before enabling indexing. Publish from a clean directory so old board, review and concept URLs do not continue serving old files. Preserve or redirect important old visitor URLs during domain cutover.
+- There is no payment or contact form in this build. A normal link to a confirmed hosted checkout can be added directly. Revisit CSP and visitor data handling if a form or a remote API is introduced. Select a host or proxy that supports HTTP response headers if frame-ancestors or other server-set policies are required.
 
-## Assets
+## Sources used in the review
 
-Existing museum images, map and logo were sourced from gshm.org for this museum project. No open-source license is granted for museum branding or photography.
+- Caitlin Vanet's November 7, 2026 email about the preview and website photos.
+- Museum membership levels: https://gshm.org/membership/
+- Mailing instructions and payee: https://gshm.org/pdf/membership-form.pdf
+- Military museum funding and annual/life memberships: https://gshm.org/military-museum/
+- Santa's House and the published child fee: https://gshm.org/santas-house/
+- Oklahoma Tourism listing (bus parking and facility amenities): https://www.travelok.com/listings/view.profile/id.3213
+- Scavenger hunt accessibility: https://gshm.org/scavenger-hunt/
+- The external airfield link displayed the Ardmore Army Air Field and Ardmore Air Force Base memorial history when checked November 9, 2026: https://home.brightok.net/~gsimmons/
 
-## Adding museum photographs later
-
-Keep image files in `assets/`, using short filenames such as `gallery-tools.jpg`.
-You can replace an existing file with the same name to update every place using it,
-or add a new file and change only the relevant `src`/photo field in `content.json`.
-The homepage uses `hero.src`, `home.slideshow.slides`, `home.cards` (image filename
-at index 3), `home.storyPhoto.src`, and `home.programs[].photo`. Each interior page
-has a `photos` list: add `{ "src": "assets/gallery-tools.jpg", "alt": "Describe the
-actual photograph", "caption": "Optional visible caption" }` to add a framed,
-enlargeable photograph automatically. Update alt text whenever an image changes.
-For interior banners use `headingPhoto`, `headingPhotoPosition`, and
-`headingPhotoFit`. Run `npm run build` and `npm test`, then check desktop and phone
-previews before publishing. No layout rewrite is needed to add or swap images.
-
-Gallery additions automatically receive the shared frame, soft shadow, caption
-styling, and photo viewer. Their 3:2 viewing areas show the complete photograph
-without stretching or cropping, including portrait images. Homepage feature cards
-and banners remain editorial crops; choose landscape images with the subject away
-from the edges and review both screen sizes. Use a distinct file per subject when
-replacing repeated photos. Keep captions concise and describe each image in its alt
-text. Resize and compress new photographs for web use before adding large batches;
-keep full-resolution originals separately. Gallery images load lazily and reserve
-space so adding more photos does not require loading them all at the top of a page.
-
-## Automatic seasonal decorations
-
-Museum-approved review presentation: the oak-tree artwork remains decorated in
-October, November and December. All seasonal borders, corners and greetings are
-hidden by `tree-only.css`; the normal museum layout stays unchanged.
-The board page remains at its direct URL, but it is temporarily removed from
-menus and other site links until the museum supplies its new trustees list.
-
-
-The October, November and December decorations repeat every year. October runs
-October 1–31, November runs November 1–30, and December runs December 1–31.
-January through September use the regular design. Dates follow Ardmore's local
-clock (`America/Chicago`), including daylight saving time, rather than each
-visitor's time zone. The browser uses the visitor device's clock to determine the
-current instant. A page opened across midnight updates at the minute boundary;
-returning from a suspended/background tab refreshes immediately.
-
-No monthly deployment or paid scheduler is needed. `seasonal.js` contains a single
-`settings.mode` switch: `auto` (default), `none` (disable), or `october`, `november`,
-`december` (manual override). Publish changes to that setting normally. Original
-museum photos and text remain unchanged. Decorations are static, noninteractive,
-hidden from assistive technology and print, and smaller on phones. New photo
-entries do not require any seasonal configuration. With JavaScript disabled the
-normal museum design remains available.
-
-Run `npm test` for calendar-boundary checks and, with the local server running,
-`npm run test:seasons` for seasonal desktop/mobile checks and midnight transitions.
-
-### Presentation links
-
-Use `?season=october`, `?season=november`, or `?season=december` on the homepage
-URL to preview a seasonal treatment at any time. Use `?season=none` for the normal
-design. The selection follows internal page links in that preview, but is never
-stored or applied to other visitors. Opening the normal site URL restores the
-automatic schedule; invalid preview values also fall back to automatic selection.
-
-## Posting a museum update
-
-Upload the event photo (JPG, PNG, or WebP) to assets, then edit current-event.js on the publishing branch. Enter the headline, details (including the event date and time), and endDate in YYYY-MM-DD format. Enter the photo path, such as assets/event-photo.jpg, and a short description in photoAlt. The photo is optional. For multiple paragraphs use \n\n inside the details string. Keep the quotes around each value.
-
-Commit the update and wait for GitHub Pages to publish. Open the homepage and tap the green headline to check the event. Posting an event does not require a build or an external service. The announcement runs through the end date in Ardmore local time, then disappears. To take it down early, clear the headline and commit. Replace the entry to post the next event.
+The images and oak artwork belong to the museum project. This package grants no separate license to them.

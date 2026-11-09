@@ -1,81 +1,3 @@
-/* Quiet, static seasonal accents. All photos and visitor controls stay unchanged. */
-.seasonal-accent,.seasonal-trim{display:none;position:absolute;pointer-events:none;user-select:none;z-index:2}
-[data-season] .hero,[data-season] .page-heading,[data-season] .closing{position:relative}
-[data-season] .seasonal-accent:not([hidden]){display:block;width:144px;height:80px;right:22px;bottom:12px;background:var(--season-art) center/contain no-repeat;opacity:.9}
-[data-season=october]{--season-art:url('assets/season-october.svg')}
-[data-season=november]{--season-art:url('assets/season-november.svg')}
-[data-season=december]{--season-art:url('assets/season-december.svg?v=gift1')}
-/* Interior headings reserve their lower edge for a smaller decorative mark. */
-[data-season] .page-heading>.seasonal-accent{width:72px;height:40px;right:16px;bottom:2px;opacity:.75}
-[data-season] .closing>.seasonal-accent{width:90px;height:50px;right:16px;bottom:2px;opacity:.8}
-[data-season=december] .seasonal-trim:not([hidden]){display:block;inset:0 0 auto;height:22px;background:url('assets/season-lights.svg?v=larger2') center top/240px 22px repeat-x;opacity:.9}
-@media(max-width:800px){
- [data-season] .hero>.seasonal-accent{width:62px;height:36px;right:5px;bottom:5px;opacity:.7}
- [data-season] .page-heading>.seasonal-accent{width:58px;height:32px;right:7px;bottom:2px;opacity:.65}
- [data-season] .closing>.seasonal-accent{width:60px;height:30px;right:10px;bottom:3px}
- [data-season=december] .seasonal-trim:not([hidden]){height:14px;background-size:180px 16px}
-}
-@media print{.seasonal-accent,.seasonal-trim{display:none!important}}
-@media(forced-colors:active){.seasonal-accent,.seasonal-trim{display:none!important}}
-
-/* Fuller seasonal corners: readable greetings above low decorative arrangements. */
-.seasonal-leaves,.seasonal-greeting{display:none;position:absolute;pointer-events:none;z-index:2}
-[data-season] .hero>.seasonal-leaves:not([hidden]){
- display:block;left:0;bottom:0;width:clamp(220px,23vw,360px);height:110px;
- background:var(--season-corner-art) left bottom/contain no-repeat;
-}
-[data-season] .hero>.seasonal-accent{width:230px;height:128px;right:14px;bottom:0;opacity:1}
-[data-season] .hero>.seasonal-accent::before{
- content:'';position:absolute;right:175px;bottom:0;width:230px;height:90px;
- background:var(--season-corner-art) center bottom/contain no-repeat;transform:scaleX(-1);
-}
-[data-season] .hero>.seasonal-greeting:not([hidden]){
- display:block;right:32px;bottom:112px;margin:0;padding:5px 12px;
- border-radius:5px;background:#173f32e8;color:#f4dbab;
- font:italic 24px/1.35 Georgia,serif;letter-spacing:.01em;
-}
-@media(min-width:801px){
- [data-season] .hero .hero-foot{bottom:116px;z-index:3}
- [data-season] .hero .hero-foot>span{padding:3px 8px;border-radius:4px;background:#173f32e8}
-}
-@media(max-width:800px){
- [data-season] .hero>.seasonal-leaves:not([hidden]){width:92px;height:42px;opacity:.85}
- [data-season] .hero>.seasonal-accent{width:82px;height:46px;right:2px;bottom:0;opacity:.9}
- [data-season] .hero>.seasonal-accent::before{display:none}
- [data-season] .hero>.seasonal-greeting:not([hidden]){
-  right:8px;bottom:auto;top:clamp(140px,42vw,300px);font-size:16px;padding:4px 8px;
- }
-}
-@media print{.seasonal-leaves,.seasonal-greeting{display:none!important}}
-@media(forced-colors:active){.seasonal-leaves{display:none!important}}
-
-[data-season=october]{--season-corner-art:url('assets/season-halloween-corner.svg')}
-[data-season=november]{--season-corner-art:url('assets/season-autumn-leaves.svg')}
-[data-season=december]{--season-corner-art:url('assets/season-evergreen.svg')}
-[data-season=december] .seasonal-trim:not([hidden]){height:40px;background-size:360px 44px;opacity:1}
-@media(max-width:800px){[data-season=december] .seasonal-trim:not([hidden]){height:29px;background-size:270px 33px}}
-
-/* Static garlands share the Christmas light position without adding layout or scripts. */
-[data-season=october]{--season-trim-art:url('assets/season-halloween-trim.svg')}
-[data-season=november]{--season-trim-art:url('assets/season-fall-trim.svg')}
-[data-season=october] .seasonal-trim:not([hidden]),[data-season=november] .seasonal-trim:not([hidden]){
- display:block;inset:0 0 auto;height:40px;background:var(--season-trim-art) center top/360px 44px repeat-x;opacity:1;
-}
-@media(max-width:800px){
- [data-season=october] .seasonal-trim:not([hidden]),[data-season=november] .seasonal-trim:not([hidden]){height:29px;background-size:270px 33px}
- /* Leave the homepage Menu button visually clear of the new garlands. */
- [data-season=october] .hero>.seasonal-trim:not([hidden]),[data-season=november] .hero>.seasonal-trim:not([hidden]){right:110px}
-}
-
-/* Interior garlands stay above breadcrumbs; text-only headers remain uncluttered. */
-[data-season=october] .page-heading>.seasonal-trim:not([hidden]),[data-season=november] .page-heading>.seasonal-trim:not([hidden]){height:26px;background-size:270px 30px}
-[data-season=october] .page-heading:not(.page-heading-photo)>.seasonal-trim,[data-season=november] .page-heading:not(.page-heading-photo)>.seasonal-trim{display:none}
-
-/* Larger Christmas bulbs follow the same clearances as the autumn garlands. */
-@media(max-width:800px){[data-season=december] .hero>.seasonal-trim:not([hidden]){right:110px}}
-[data-season=december] .page-heading>.seasonal-trim:not([hidden]){height:26px;background-size:270px 30px}
-[data-season=december] .page-heading:not(.page-heading-photo)>.seasonal-trim{display:none}
-
 /* Christmas-only artwork aligns to the unchanged homepage logo's SVG viewBox. */
 [data-season=december] .hero .museum-name{position:relative}
 [data-season=december] .hero .museum-name::after{content:'';position:absolute;inset:0;background:url('assets/season-oak-christmas.svg?v=claus-1') center/100% 100% no-repeat;pointer-events:none;user-select:none}
@@ -99,3 +21,8 @@
 .seasonal-toggle:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .footer-bottom:has(.seasonal-toggle){gap:12px;flex-wrap:wrap;align-items:center}
 @media print{.seasonal-toggle{display:none}}
+
+@media(min-width:801px){
+ [data-season] .hero .hero-foot {bottom:26px;}
+ [data-season] .hero .hero-foot>span {padding:0;border-radius:0;background:transparent;}
+}

@@ -17,7 +17,7 @@
   const article = document.querySelector('#museum-event');
   let bar;
   if (article) {
-    document.title = event.headline + ' | GSHM';
+    document.title = event.headline + ' | ' + document.title.split(' | ').slice(1).join(' | ');
     article.querySelector('h1').textContent = event.headline;
     article.querySelector('.event-empty').hidden = true;
     const details = article.querySelector('.event-details');

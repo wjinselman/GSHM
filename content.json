@@ -1,9 +1,6 @@
 {
   "name": "Greater Southwest Historical Museum",
-  "tagline": "Strong roots. Remarkable stories.",
-  "address": "35 Sunset Drive SW, Ardmore, OK 73401",
   "phone": "580-226-3857",
-  "hours": "Tuesday–Saturday · 10 a.m.–5 p.m.",
   "closed": "Closed Sundays, Mondays and holidays.",
   "admission": "Free admission",
   "mission": "To collect, preserve and interpret the social, cultural and economic history of South Central Oklahoma with a special emphasis on Ardmore and Carter County.",
@@ -25,72 +22,9 @@
       "officemanager@gshm.org"
     ]
   ],
-  "board": [
-    [
-      "Keisha Lemons",
-      "President"
-    ],
-    [
-      "Casey Draper",
-      "Vice President"
-    ],
-    [
-      "Daniel Gibbs",
-      "Secretary"
-    ],
-    [
-      "Cary Williamson",
-      "Treasurer"
-    ],
-    [
-      "Jim Matlack",
-      "Trustee"
-    ],
-    [
-      "Sandy Babcock",
-      "Advisory Trustee"
-    ],
-    [
-      "Bob Bates",
-      "Trustee"
-    ],
-    [
-      "Dixie Harper",
-      "Trustee"
-    ],
-    [
-      "Dennis Morris",
-      "Trustee"
-    ],
-    [
-      "Bonnie Watson",
-      "Trustee"
-    ],
-    [
-      "Jana Howard",
-      "Trustee"
-    ],
-    [
-      "Tom Hayes",
-      "Trustee"
-    ],
-    [
-      "Brenna Gaik",
-      "Trustee"
-    ],
-    [
-      "Drew Butler",
-      "Trustee"
-    ],
-    [
-      "Jessica Scott",
-      "Trustee"
-    ]
-  ],
   "hero": {
     "src": "assets/about.jpg",
-    "alt": "The limestone armory that houses the museum",
-    "position": "center"
+    "alt": "The limestone armory that houses the museum"
   },
   "pages": [
     {
@@ -103,19 +37,29 @@
       "sections": [
         {
           "title": "Come on in",
-          "text": "Admission is free. We are open Tuesday through Saturday, 10 a.m. to 5 p.m., and closed Sundays, Mondays and holidays."
+          "text": "{admission}. {hours}. {closed} If you plan to visit over a holiday, call before you travel."
         },
         {
           "title": "Find us in Ardmore",
-          "text": "35 Sunset Drive SW, Ardmore, OK 73401. Call 580-226-3857 for help planning your visit.",
+          "text": "{address}. Call {phone} for directions.",
           "links": [
             [
               "Get directions",
-              "https://www.google.com/maps/search/?api=1&query=35+Sunset+Drive+SW+Ardmore+OK+73401"
+              "{mapLink}"
             ],
             [
               "Call the museum",
-              "tel:+15802263857"
+              "{phoneLink}"
+            ]
+          ]
+        },
+        {
+          "title": "Parking, accessibility and visit length",
+          "text": "Bus and motorcoach parking is available. The scavenger hunt is wheelchair accessible and takes about 45 minutes to an hour. For help finding an entrance, planning a drop-off or choosing galleries that fit your schedule, call {phone}.",
+          "links": [
+            [
+              "Call about your visit",
+              "{phoneLink}"
             ]
           ]
         },
@@ -151,7 +95,7 @@
           "caption": "Plan your visit"
         }
       ],
-      "headingPhoto": "assets/about.jpg",
+      "headingPhoto": "assets/museum-photos/museum-07.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover"
     },
@@ -197,7 +141,7 @@
           "caption": "About the museum"
         }
       ],
-      "headingPhoto": "assets/about.jpg",
+      "headingPhoto": "assets/museum-photos/museum-02.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover"
     },
@@ -459,11 +403,11 @@
           "links": [
             [
               "Email research inquiries",
-              "mailto:thegreatersouthwest@gshm.org"
+              "{generalMail}"
             ],
             [
-              "Call 580-226-3857",
-              "tel:+15802263857"
+              "Call {phone}",
+              "{phoneLink}"
             ]
           ]
         }
@@ -489,11 +433,11 @@
       "sections": [
         {
           "title": "Find something thoughtful",
-          "text": "The existing shop selection includes old-fashioned toys, books, Oklahoma souvenirs, pottery, jewelry and handmade crafts. Looking for a birthday gift or holiday keepsake? Contact the Gift Shop Manager for current items and availability."
+          "text": "Browse old-fashioned toys, books, Oklahoma souvenirs, pottery, jewelry and handmade crafts. Looking for a particular gift? Ask Caitlin what’s in stock."
         },
         {
           "title": "Visit the shop",
-          "text": "Tuesday–Saturday, 10 a.m.–5 p.m. Closed Sundays, Mondays and holidays.",
+          "text": "{hours}. {closed}",
           "links": [
             [
               "Email the Gift Shop Manager",
@@ -539,7 +483,7 @@
         },
         {
           "title": "The Education Room",
-          "text": "Located in the north wing, the Education Room suits small meetings, birthday parties, wedding and baby showers, and workshops. It is available during operating hours. A $50 reservation deposit is required. Half-day rental time slots are 10 a.m.–1:30 p.m. or 1:30–5 p.m. Please confirm availability when booking."
+          "text": "Located in the north wing, the Education Room suits small meetings, birthday parties, wedding and baby showers, and workshops. It is available during operating hours. A $50 reservation deposit is required. Half-day rental time slots are 10 a.m.–1:30 p.m. or 1:30–5 p.m. Call to reserve a time."
         },
         {
           "title": "Tools of Our Land",
@@ -551,11 +495,11 @@
           "links": [
             [
               "Call about a rental",
-              "tel:+15802263857"
+              "{phoneLink}"
             ],
             [
               "Email the museum",
-              "mailto:thegreatersouthwest@gshm.org"
+              "{generalMail}"
             ]
           ]
         },
@@ -565,11 +509,11 @@
           "links": [
             [
               "Ask about an investigation",
-              "mailto:thegreatersouthwest@gshm.org"
+              "{generalMail}"
             ],
             [
-              "Call 580-226-3857",
-              "tel:+15802263857"
+              "Call {phone}",
+              "{phoneLink}"
             ]
           ]
         }
@@ -598,7 +542,7 @@
           "text": "All membership levels receive quarterly newsletters and invitations to special events. Some levels include additional rental benefits. Contact the museum to join.",
           "action": {
             "label": "Contact us to join",
-            "href": "mailto:thegreatersouthwest@gshm.org"
+            "href": "{generalMail}"
           }
         },
         {
@@ -608,23 +552,33 @@
             "Individual — $25: standard benefits",
             "Couple — $35: standard benefits for two people",
             "Family — $50: standard benefits for all family members, plus a 5% rental discount",
-            "Business — $100: standard benefits, plus a 10% business discount on museum rentals",
-            "Sustaining — $100: individual benefits, plus a 10% discount on museum rentals",
+            "Business — $100 for a business. Includes standard benefits and a 10% discount on museum rentals for the business.",
+            "Sustaining — $100 for an individual. Includes individual benefits and a 10% discount on museum rentals.",
             "Patron — $250: Sustaining benefits, plus one Education Room rental fee waiver",
             "Benefactor — $500: Patron benefits, plus one Noble Hall rental fee waiver"
           ]
         },
         {
           "title": "Join or renew",
-          "text": "Memberships renew every January. Contact the museum for a membership application and to confirm current benefits, rental terms and availability. Patron includes Sustaining benefits; Benefactor includes Patron benefits.",
+          "text": "Memberships renew every January. Ask for the current application, then mail the completed form and a check payable to GSHM to {name}, {address}.",
           "links": [
             [
               "Ask about membership",
-              "mailto:thegreatersouthwest@gshm.org"
+              "{generalMail}"
             ],
             [
               "Call the museum",
-              "tel:+15802263857"
+              "{phoneLink}"
+            ]
+          ]
+        },
+        {
+          "title": "Military Memorial Museum membership",
+          "text": "The Military Memorial Museum in the west wing is self-supporting and offers its own annual and life memberships. Its dues support the military museum.",
+          "links": [
+            [
+              "See Military Memorial Museum memberships",
+              "military-museum.html"
             ]
           ]
         }
@@ -636,18 +590,9 @@
           "caption": "Membership"
         }
       ],
-      "headingPhoto": "assets/sign.jpg",
+      "headingPhoto": "assets/museum-photos/tools-01.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover"
-    },
-    {
-      "id": "board",
-      "title": "Caring for our shared history.",
-      "label": "Board of Trustees",
-      "eyebrow": "Our people",
-      "intro": "Meet the community members who help guide the Greater Southwest Historical Museum.",
-      "sections": [],
-      "photos": []
     },
     {
       "id": "contribute",
@@ -659,7 +604,7 @@
       "sections": [
         {
           "title": "Museum General Fund",
-          "text": "Contributions support educational and public programming, exhibits and other museum activities."
+          "text": "Contributions support educational and public programming, exhibits and other museum activities. To give by mail, send a check payable to GSHM to {name}, {address}."
         },
         {
           "title": "Memorial gifts",
@@ -689,7 +634,7 @@
             ],
             [
               "Call the museum",
-              "tel:+15802263857"
+              "{phoneLink}"
             ]
           ]
         }
@@ -701,7 +646,7 @@
           "caption": "Contribute"
         }
       ],
-      "headingPhoto": "assets/sign.jpg",
+      "headingPhoto": "assets/museum-photos/details-05.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover"
     },
@@ -742,12 +687,12 @@
           "text": "Reserve tours and programs well in advance to help secure your preferred date, and give at least one week’s notice for all group visits. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park is available for groups wishing to bring lunches.",
           "links": [
             [
-              "Email the curator",
-              "mailto:cnormile@gshm.org"
+              "Email Caitlin about a group booking",
+              "mailto:officemanager@gshm.org"
             ],
             [
-              "Call the museum",
-              "tel:+15802263857"
+              "Ask Cassandra about educational activities",
+              "mailto:cnormile@gshm.org"
             ]
           ]
         }
@@ -793,11 +738,11 @@
       "sections": [
         {
           "title": "A memorable morning",
-          "text": "Begin in the Holiday Forest, enjoy stories with Mr. and Mrs. Claus, decorate an ornament and receive cookies. Allow about 30 minutes for the activities."
+          "text": "Begin in the Holiday Forest, hear a story from Santa and visit the craft stations with your group."
         },
         {
           "title": "Plan your group’s visit",
-          "text": "The program takes place during the first two full weeks of December. Please call between August and October to schedule. Appointments are offered at 15-minute intervals from 9 to 11:30 a.m. The listed cost is $2 per child; confirm current availability and pricing when booking."
+          "text": "Santa’s House runs during the first two full weeks of December. Admission is $2 per child. Call the museum to reserve a time for your group."
         },
         {
           "title": "Help make the magic",
@@ -809,7 +754,7 @@
             ],
             [
               "Call to arrange a visit",
-              "tel:+15802263857"
+              "{phoneLink}"
             ],
             [
               "Support the program",
@@ -819,7 +764,7 @@
         },
         {
           "title": "Sponsor a Holiday Forest tree",
-          "text": "Tree sponsorship helps offset program costs. Sponsors’ names are displayed on the trees. The existing program lists a display period from the beginning of November through January 1; confirm this season’s dates with the curator. Small and large trees are available. Decorate your own tree or ask staff to decorate it for an additional fee; staff will do their best to use your chosen colors or theme. Contact Cassandra for current prices.",
+          "text": "Sponsor a small or large tree in the Holiday Forest to help support Santa’s House. Your name will appear on the tree. Decorate it yourself or have museum staff decorate it for an additional fee. Ask Cassandra about display dates, colors and sponsorship prices.",
           "links": [
             [
               "Ask about tree sponsorship",
@@ -827,7 +772,7 @@
             ],
             [
               "Call the museum",
-              "tel:+15802263857"
+              "{phoneLink}"
             ]
           ]
         }
@@ -868,12 +813,12 @@
           "text": "Allow 45 minutes to one hour. The scavenger hunt is wheelchair accessible. Contact the museum to discuss your group’s needs.",
           "links": [
             [
-              "Arrange a group visit",
-              "mailto:cnormile@gshm.org"
+              "Email Caitlin to book a group",
+              "mailto:officemanager@gshm.org"
             ],
             [
-              "Call 580-226-3857",
-              "tel:+15802263857"
+              "Ask Cassandra about the hunt",
+              "mailto:cnormile@gshm.org"
             ]
           ]
         }
@@ -898,15 +843,15 @@
       "sections": [
         {
           "title": "Visit or call",
-          "text": "35 Sunset Drive SW, Ardmore, OK 73401. Tuesday–Saturday, 10 a.m.–5 p.m.",
+          "text": "{address}. {hours}.",
           "links": [
             [
-              "Call 580-226-3857",
-              "tel:+15802263857"
+              "Call {phone}",
+              "{phoneLink}"
             ],
             [
               "Get directions",
-              "https://www.google.com/maps/search/?api=1&query=35+Sunset+Drive+SW+Ardmore+OK+73401"
+              "{mapLink}"
             ]
           ]
         }
@@ -914,13 +859,7 @@
       "photos": []
     }
   ],
-  "review": [],
   "home": {
-    "eyebrow": "Greater Southwest Historical Museum · Ardmore, Oklahoma",
-    "titleLines": [
-      "Deep roots.",
-      "Living history."
-    ],
     "intro": "Step into the stories of South Central Oklahoma—and discover a little of your own.",
     "heroCaption": "Our historic home · The 1935–1936 armory",
     "welcomeTitleLines": [
@@ -934,26 +873,29 @@
         "Inside the museum",
         "Ordinary objects. Extraordinary stories.",
         "homepage-cards/museum-interior.jpg",
-        "Explore the galleries"
+        "Explore the galleries",
+        "Historic farm machinery and red tractors inside the Tools of Our Land gallery"
       ],
       [
         "military-museum",
         "Honoring service",
         "Remembering the people who served.",
         "homepage-cards/military-memorial.jpg",
-        "Visit the military museum"
+        "Visit the military museum",
+        "Golden eagle with its wings spread above the Military Memorial Museum entrance sign"
       ],
       [
         "genealogical-library",
         "Find your roots",
         "Your family’s history starts with a question.",
         "homepage-cards/genealogical-library.jpg",
-        "Discover the library"
+        "Discover the library",
+        "Books, shelves and a research table inside the genealogical library"
       ]
     ],
     "storyPhoto": {
-      "src": "assets/about.jpg",
-      "alt": "Historic limestone museum building"
+      "src": "assets/museum-photos/museum-06.webp",
+      "alt": "Historic black-and-white view of the stone armory"
     },
     "programs": [
       {
@@ -1019,9 +961,9 @@
     "line": "#d5ded3",
     "soft": "#edf1e8",
     "accent": "#b59660",
-    "mapImage": "assets/ardmore-map-1600.webp",
+    "mapImage": "assets/ardmore-map-1280.webp",
     "mapOpacity": 0.22,
-    "mobileMapImage": "assets/ardmore-map-960.webp"
+    "mobileMapImage": "assets/ardmore-map-800.webp"
   },
   "navigation": {
     "groups": [
@@ -1081,5 +1023,25 @@
       800,
       1200
     ]
+  },
+  "location": {
+    "street": "35 Sunset Drive SW",
+    "city": "Ardmore",
+    "state": "OK",
+    "stateName": "Oklahoma",
+    "zip": "73401",
+    "country": "US"
+  },
+  "siteUrl": "https://wjinselman.github.io/GSHM/",
+  "openingHours": {
+    "days": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "10:00",
+    "closes": "17:00"
   }
 }

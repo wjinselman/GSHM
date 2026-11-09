@@ -151,7 +151,7 @@ if(mobileNav){
 if(document.querySelector('.hero .museum-name')){
  document.body.classList.add('home-identity-preview');
  const admission=document.createElement('a');
- admission.className='home-mobile-admission';admission.href='visit.html';admission.textContent='Free admission';
+ admission.className='home-mobile-admission';admission.href='visit.html';admission.textContent=document.querySelector('.visit-strip strong').textContent;
  document.querySelector('.header').prepend(admission);
 }
 /* Keep the same navigation controls while arranging homepage actions for phones. */

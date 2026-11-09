@@ -1,6 +1,0 @@
-/* Seasonal oak artwork only: all other decorative holiday elements are hidden. */
-.seasonal-accent,.seasonal-trim,.seasonal-leaves,.seasonal-greeting,.seasonal-toggle {display:none !important;}
-@media(min-width:801px){
- [data-season] .hero .hero-foot {bottom:26px;}
- [data-season] .hero .hero-foot>span {padding:0;border-radius:0;background:transparent;}
-}
