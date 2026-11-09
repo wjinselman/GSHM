@@ -191,35 +191,3 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
   aspect-ratio: auto;
   object-fit: contain;
 }
-
-/* The eagle's wings and entrance lettering fit together in a 2:1 crop. */
-.museum-slide:has(> img[src="assets/military-museum.jpg"]) {
-  flex-direction: column;
-}
-.js .museum-slideshow .museum-slide:has(> img[src="assets/military-museum.jpg"]) {
-  display: flex;
-}
-.museum-slideshow .museum-slide > img[src="assets/military-museum.jpg"] {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 1;
-  object-fit: cover;
-  object-position: center;
-  flex: none;
-}
-.museum-slide:has(> img[src="assets/military-museum.jpg"]) figcaption {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: 0;
-}
-.museum-slide:has(> img[src="assets/military-museum.jpg"]) figcaption::after {
-  content: "";
-  flex: 1;
-  min-height: 0;
-  margin-top: 10px;
-  background: url("assets/oak-tree.svg") center / auto min(100%, 72px) no-repeat;
-}
