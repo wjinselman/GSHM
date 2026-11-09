@@ -384,7 +384,8 @@
       ],
       "headingPhoto": "assets/military-museum.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "desktopHeadingPhoto": "assets/military-museum.jpg"
     },
     {
       "id": "genealogical-library",
@@ -468,7 +469,8 @@
       ],
       "headingPhoto": "assets/store.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "desktopHeadingPhoto": "assets/museum-photos/shop-02.webp"
     },
     {
       "id": "rent",
@@ -833,7 +835,8 @@
       ],
       "headingPhoto": "assets/edu-scavenger-hunts.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "desktopHeadingPhoto": "assets/museum-photos/details-11.webp"
     },
     {
       "id": "contact",
