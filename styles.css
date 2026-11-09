@@ -498,3 +498,10 @@ dialog:not([open]){display:none}
 
 /* Safety restore: no masking or letterboxing on interior banners. */
 @media(min-width:801px){.page-heading-photo[data-page] .heading-photo{mask-image:none}}
+
+/* Interior page-header correction: reveal the full-width photo under readable text.
+   Does not affect the homepage hero, slideshow, galleries or body cards. */
+@media (min-width:801px){
+ .page-heading-photo[data-page] .heading-photo{object-fit:cover;object-position:center center;mask-image:none}
+ .page-heading-photo[data-page]::before{background:linear-gradient(90deg,rgba(18,55,43,.78) 0%,rgba(18,55,43,.70) 32%,rgba(18,55,43,.42) 67%,rgba(18,55,43,.12) 100%)}
+}
