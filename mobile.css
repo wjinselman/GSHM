@@ -166,9 +166,3 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
   aspect-ratio: auto;
   object-fit: contain;
 }
-
-
-/* Responsive photo correction: use the real image proportions, not green letterbox bands. */
-.museum-slide,.slides>.museum-slide.full-photo{padding:0;background:var(--surface);border-radius:10px;overflow:hidden;width:100%;max-width:100%}
-.museum-slide img,.museum-slide.full-photo img{display:block;width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain;object-position:center;background:transparent}
-.museum-slide figcaption,.museum-slide.full-photo figcaption{min-height:0;background:var(--surface);padding:16px}
