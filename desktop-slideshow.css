@@ -51,4 +51,20 @@
     mask-image: linear-gradient(to bottom,#000 97.5%,transparent),linear-gradient(to right,#000 90%,transparent);
     mask-composite: intersect;
   }
+
+  .museum-slideshow .slides > .museum-slide:nth-child(-n+3) > img {
+    position: absolute;
+    inset: 0;
+    grid-area: auto;
+    mask-image: linear-gradient(to right, #000 32%, rgba(0,0,0,.92) 43%, rgba(0,0,0,.25) 64%, rgba(0,0,0,.12) 79%, rgba(0,0,0,.18));
+  }
+  .museum-slideshow .slides > .museum-slide:nth-child(-n+3) > figcaption {
+    position: relative;
+    color: #193a30;
+  }
+  .museum-slideshow .slides > .museum-slide:nth-child(-n+3) > figcaption p {
+    color: #274238;
+  }
+  .museum-slideshow .slides > .museum-slide:nth-child(2) > img { object-position: center 54%; }
+  .museum-slideshow .slides > .museum-slide:nth-child(3) > img { object-position: center 47%; }
 }
