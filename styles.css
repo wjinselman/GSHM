@@ -538,3 +538,29 @@ dialog:not([open]){display:none}
   }
   html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner{z-index:4}
 }
+
+/* Contact information follows the site's existing desktop and phone layouts. */
+.contact-desktop { display:none; }
+@media screen and (min-width:801px), print {
+  .contact-mobile { display:none; }
+  .contact-desktop { display:block; }
+  .contact-detail { display:block; min-width:0; max-width:100%; }
+  .contact-purpose { display:block; margin-bottom:3px; color:var(--muted); font-size:.88rem; }
+  .contact-row { display:flex; align-items:center; flex-wrap:wrap; gap:2px 12px; }
+  .contact-value { color:var(--green); font-weight:600; overflow-wrap:anywhere; user-select:all; }
+  .contact-copy:not([hidden]) {
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:5px 10px; min-height:32px; background:var(--paper); border:1px solid #aab9ac;
+    border-radius:5px; color:var(--green); cursor:pointer; font:600 13px/1.35 system-ui,sans-serif;
+  }
+  .contact-copy:hover { background:var(--soft); border-color:var(--green); }
+  .contact-copy:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+  .copy-symbol { position:relative; width:12px; height:14px; }
+  .copy-symbol::before,.copy-symbol::after {
+    content:""; position:absolute; width:7px; height:9px; border:1.3px solid currentColor; border-radius:1px;
+  }
+  .copy-symbol::before { left:0; top:0; }
+  .copy-symbol::after { left:3px; top:3px; background:var(--paper); }
+  .contact-feedback:not(:empty) { display:block; color:var(--green); font-size:13px; font-weight:600; }
+}
+@media print { .contact-copy:not([hidden]), .contact-feedback { display:none; } }

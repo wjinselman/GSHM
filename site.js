@@ -166,3 +166,35 @@ if(document.body.classList.contains('home-identity-preview')){
  }
  phoneLayout.addEventListener('change',arrangeHomeActions);arrangeHomeActions();
 }
+
+// Desktop contact controls leave addresses and numbers selectable even without clipboard access.
+document.querySelectorAll('.contact-copy').forEach(button => {
+ const detail = button.closest('.contact-desktop');
+ const value = detail.querySelector('.contact-value');
+ const feedback = detail.querySelector('.contact-feedback');
+ const label = button.lastElementChild;
+ const originalLabel = label.textContent;
+ let feedbackTimer;
+ button.hidden = false;
+ button.addEventListener('click', async () => {
+  clearTimeout(feedbackTimer);
+  const text = value.textContent;
+  let copied = false;
+  try {
+   await navigator.clipboard.writeText(text);
+   copied = true;
+  } catch {
+   const selection = window.getSelection();
+   const range = document.createRange();
+   range.selectNodeContents(value);
+   selection.removeAllRanges();
+   selection.addRange(range);
+   try { copied = document.execCommand('copy'); } catch { /* Keep the detail selected for manual copy. */ }
+   if(copied) selection.removeAllRanges();
+  }
+  label.textContent = copied ? 'Copied' : originalLabel;
+  feedback.classList.toggle('sr-only', copied);
+  feedback.textContent = copied ? originalLabel+' succeeded.' : 'Text selected. Use your usual copy shortcut.';
+  feedbackTimer = setTimeout(() => { label.textContent = originalLabel; feedback.textContent = ''; }, copied ? 2500 : 6500);
+ });
+});

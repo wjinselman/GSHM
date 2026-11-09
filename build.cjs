@@ -29,6 +29,20 @@ function resolve(text) {
 const esc = s => resolve(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function url(s) { s=resolve(s); if (!/^(https:\/\/|mailto:|tel:|[a-zA-Z0-9][a-zA-Z0-9._/-]*$)/.test(s) || s.includes('..')) throw Error('Invalid URL: '+s); return esc(s); }
 const link = (label,href,cls='text-link') => '<a class="'+cls+'" href="'+url(href)+'">'+esc(label)+'<span aria-hidden="true"> '+(resolve(href).startsWith('https:')?'↗':'→')+'</span></a>';
+function contactDetail(label, href, cls='text-link') {
+ const uri=resolve(href);
+ const email=uri.startsWith('mailto:');
+ if(!email && !uri.startsWith('tel:')) return link(label,href,cls);
+ const value=email?uri.slice(7):(uri===phoneLink?d.phone:uri.slice(4));
+ const title=resolve(label);
+ const caption=(title===value || title==='Call '+value)?'':title;
+ const action=email?'Copy email':'Copy number';
+ return '<span class="contact-detail"><span class="contact-mobile">'+link(label,href,cls)+'</span>'+
+  '<span class="contact-desktop">'+(caption?'<span class="contact-purpose">'+esc(caption)+'</span>':'')+
+  '<span class="contact-row"><span class="contact-value">'+esc(value)+'</span>'+
+  '<button hidden class="contact-copy" type="button" aria-label="'+action+' '+esc(value)+'"><span aria-hidden="true" class="copy-symbol"></span><span>'+action+'</span></button></span>'+
+  '<span class="contact-feedback" role="status"></span></span></span>';
+}
 function primaryNavigation(current) {
  const navLink = (id, label, cls='') => '<a'+(cls?' class="'+cls+'"':'')+' href="'+(id==='home'?'index':id)+'.html"'+(id===current?' aria-current="page"':'')+'>'+esc(label)+'</a>';
  const groups = d.navigation.groups.map(group=>{
@@ -39,7 +53,7 @@ function primaryNavigation(current) {
  return navLink('home','Home','home-link')+groups.join('')+navLink('membership','Membership','support-link')+navLink('contribute','Give','support-link')+navLink('contact','Contact');
 }
 function header(current){return '<a class="skip" href="#main">Skip to content</a><div class="topbar"><span>'+esc(city+', '+stateName)+'</span><a href="visit.html">'+esc(d.admission)+' · Plan your visit</a></div><header class="header"><a class="brand" href="index.html" aria-label="Greater Southwest Historical Museum home"><img src="assets/logo.svg" alt="Greater Southwest Historical Museum oak tree logo" width="990" height="252"></a><nav id="main-nav" class="compact-nav" aria-label="Main navigation">'+primaryNavigation(current)+'</nav></header>';}
-function footer(){return '<section class="closing"><div><p class="eyebrow">Your next chapter starts here</p><h2>Come discover your connection.</h2></div>'+link('Plan your visit','visit.html','button light')+'</section><footer><div class="footer-top"><div><img class="footer-logo" src="assets/logo.svg" alt="Greater Southwest Historical Museum" width="990" height="252"><p>'+esc(address)+'</p>'+link(d.phone,phoneLink)+'</div><div><h2>Visit the museum</h2><p>'+esc(hours)+'<br>'+esc(d.closed)+'<br><strong>'+esc(d.admission)+'</strong></p></div><div><h2>Stay connected</h2>'+link('Email the museum',values.generalMail)+'<br>'+link('Follow on Facebook','https://www.facebook.com/gshmuseum')+'</div></div><nav class="footer-links" aria-label="All museum pages">'+d.pages.map(p=>'<a href="'+p.id+'.html">'+esc(p.label)+'</a>').join('')+'</nav><div class="footer-bottom"><span>A nonprofit museum preserving the stories of South Central Oklahoma.</span><a href="https://inselmandigital.com/">Website by Inselman Digital</a></div></footer>';}
+function footer(){return '<section class="closing"><div><p class="eyebrow">Your next chapter starts here</p><h2>Come discover your connection.</h2></div>'+link('Plan your visit','visit.html','button light')+'</section><footer><div class="footer-top"><div><img class="footer-logo" src="assets/logo.svg" alt="Greater Southwest Historical Museum" width="990" height="252"><p>'+esc(address)+'</p>'+'<span class="footer-phone"><span class="contact-mobile">'+link(d.phone,phoneLink)+'</span><span class="contact-desktop">'+esc(d.phone)+'</span></span>'+'</div><div><h2>Visit the museum</h2><p>'+esc(hours)+'<br>'+esc(d.closed)+'<br><strong>'+esc(d.admission)+'</strong></p></div><div><h2>Stay connected</h2>'+link('Contact the museum','contact.html')+'<br>'+link('Follow on Facebook','https://www.facebook.com/gshmuseum')+'</div></div><nav class="footer-links" aria-label="All museum pages">'+d.pages.map(p=>'<a href="'+p.id+'.html">'+esc(p.label)+'</a>').join('')+'</nav><div class="footer-bottom"><span>A nonprofit museum preserving the stories of South Central Oklahoma.</span><a href="https://inselmandigital.com/">Website by Inselman Digital</a></div></footer>';}
 function metadata(label,current) {
  const page=d.pages.find(p=>p.id===current);
  const title=(current==='home'?'':label+' | ')+d.name+' | '+city+', '+stateName;
@@ -82,9 +96,9 @@ function headingImage(p) {
  return '<picture class="exhibit-hero-photo"><source media="(min-width:801px)" srcset="'+url(p.desktopHeadingPhoto)+'">'+img+'</picture>';
 }
 function page(p){
-const sections=p.sections.map(s=>'<section class="content-section"><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+(s.items?'<ul class="rates">'+s.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+(s.action?'<div class="actions">'+link(s.action.label,s.action.href,'button')+'</div>':'')+(s.links?'<div class="link-list">'+s.links.map(([l,h])=>link(l,h)).join('')+'</div>':'')+'</section>').join('');
-const contacts=p.id==='contact'?'<div class="contacts">'+d.contacts.map(([n,e])=>'<section><h2>'+esc(n)+'</h2><a href="mailto:'+esc(e)+'">'+esc(e)+'</a></section>').join('')+'</div>':'';
-return shell(p.label,'<main id="main"><div class="page-heading'+(p.headingPhoto?' page-heading-photo':'')+'" data-page="'+esc(p.id)+'">'+headingImage(p)+'<div class="page-heading-inner"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>'+esc(p.label)+'</span></nav><p class="eyebrow">'+esc(p.eyebrow)+'</p><h1>'+esc(p.label)+'</h1><p class="page-tagline">'+esc(p.title)+'</p><p class="intro">'+esc(p.intro)+'</p></div></div><div class="inner-landscape"><div class="page-layout"><div class="page-content">'+sections+contacts+'</div><aside class="visit-aside"><p class="eyebrow">A warm welcome awaits</p><h2>Plan your visit</h2><p><strong>'+esc(d.admission)+'</strong></p><p>'+esc(address)+'</p>'+link('Visitor information','visit.html','button')+link('Call '+d.phone,phoneLink)+'</aside></div>'+gallery(p.photos)+photoAlbums(p.albums)+'</div></main>',p.id);
+const sections=p.sections.map(s=>'<section class="content-section"><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+(s.items?'<ul class="rates">'+s.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+(s.action?'<div class="actions">'+contactDetail(s.action.label,s.action.href,'button')+'</div>':'')+(s.links?'<div class="link-list">'+s.links.map(([l,h])=>contactDetail(l,h)).join('')+'</div>':'')+'</section>').join('');
+const contacts=p.id==='contact'?'<div class="contacts">'+d.contacts.map(([n,e])=>'<section><h2>'+esc(n)+'</h2>'+contactDetail(e,'mailto:'+e)+'</section>').join('')+'</div>':'';
+return shell(p.label,'<main id="main"><div class="page-heading'+(p.headingPhoto?' page-heading-photo':'')+'" data-page="'+esc(p.id)+'">'+headingImage(p)+'<div class="page-heading-inner"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>'+esc(p.label)+'</span></nav><p class="eyebrow">'+esc(p.eyebrow)+'</p><h1>'+esc(p.label)+'</h1><p class="page-tagline">'+esc(p.title)+'</p><p class="intro">'+esc(p.intro)+'</p></div></div><div class="inner-landscape"><div class="page-layout"><div class="page-content">'+sections+contacts+'</div><aside class="visit-aside"><p class="eyebrow">A warm welcome awaits</p><h2>Plan your visit</h2><p><strong>'+esc(d.admission)+'</strong></p><p>'+esc(address)+'</p>'+link('Visitor information','visit.html','button')+contactDetail('Call '+d.phone,phoneLink)+'</aside></div>'+gallery(p.photos)+photoAlbums(p.albums)+'</div></main>',p.id);
 }
 const appearance=d.appearance||{};
 const colors=['paper','surface','green','ink','muted','line','soft','accent'].map(k=>{
