@@ -76,18 +76,20 @@
     align-self: start;
     height: 80%;
   }
-  /* The original fills the left 82%; its outer edge continues under the caption fade. */
+  /* Fit the full engine photograph and fade a second exhibit view behind the caption. */
   .museum-slideshow .slides > .museum-slide:nth-child(3) > img {
-    width: 82%;
-    object-position: center 46%;
-    mask-image: linear-gradient(to bottom,rgba(0,0,0,.48),transparent 34%,transparent 70%,rgba(0,0,0,.48)), linear-gradient(to right,#000 52%,rgba(0,0,0,.95) 62%,rgba(0,0,0,.40) 83%,rgba(0,0,0,.32));
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    mask-image: linear-gradient(to right,#000 87%,transparent);
   }
   .museum-slideshow .slides > .museum-slide:nth-child(3)::before {
     content: "";
     position: absolute;
-    inset: 0 0 0 82%;
-    transform: scaleX(-1);
-    background: url("assets/edu-scavenger-hunts.jpg") right 46% / 455.556% auto no-repeat;
-    mask-image: linear-gradient(to bottom,rgba(0,0,0,.48),transparent 34%,transparent 70%,rgba(0,0,0,.48)), linear-gradient(#0005,#0005);
+    inset: 0 0 0 50%;
+    background: url("assets/museum-photos/museum-01.webp") center 46% / cover no-repeat;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,.48),transparent 35%,transparent 69%,rgba(0,0,0,.48)),linear-gradient(to right,transparent,#0005 32%,#0004 82%,#0006);
   }
 }
