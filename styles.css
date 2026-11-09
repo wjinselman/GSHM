@@ -505,3 +505,20 @@ dialog:not([open]){display:none}
  .page-heading-photo[data-page] .heading-photo{object-fit:cover;object-position:center center;mask-image:none}
  .page-heading-photo[data-page]::before{background:linear-gradient(90deg,rgba(18,55,43,.78) 0%,rgba(18,55,43,.70) 32%,rgba(18,55,43,.42) 67%,rgba(18,55,43,.12) 100%)}
 }
+
+/* Interior header full-bleed photo fix (desktop only).
+   The image itself sits above any solid header background; a transparent veil
+   supports text without creating an opaque green block on the left. */
+@media screen and (min-width:801px){
+  html[data-theme="heritage"] .page-heading-photo[data-page]{position:relative;isolation:isolate;overflow:hidden}
+  html[data-theme="heritage"] .page-heading-photo[data-page] > img.heading-photo{
+    display:block;position:absolute;inset:0;width:100%;height:100%;max-width:none;
+    object-fit:cover;object-position:center center;mask-image:none;z-index:0;
+  }
+  html[data-theme="heritage"] .page-heading-photo[data-page]::before{
+    content:"";display:block;position:absolute;inset:0;z-index:1;
+    background:linear-gradient(90deg,rgba(11,37,28,.54) 0%,rgba(11,37,28,.45) 35%,rgba(11,37,28,.22) 70%,rgba(11,37,28,.08) 100%);
+    pointer-events:none;
+  }
+  html[data-theme="heritage"] .page-heading-photo[data-page] > .page-heading-inner{position:relative;z-index:2}
+}
