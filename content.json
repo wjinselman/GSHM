@@ -95,9 +95,10 @@
           "caption": "Plan your visit"
         }
       ],
-      "headingPhoto": "assets/museum-photos/museum-07.webp",
+      "headingPhoto": "assets/visit-entrance-sign.webp",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "headingPhotoAlt": "The green oak seal and Greater Southwest Historical Museum name on the entrance sign"
     },
     {
       "id": "about",
