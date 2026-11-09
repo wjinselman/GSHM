@@ -546,23 +546,29 @@ dialog:not([open]){display:none}
   .contact-desktop { display:block; }
   .contact-detail { display:block; min-width:0; max-width:100%; }
   .contact-purpose { display:block; margin-bottom:3px; color:var(--muted); font-size:.88rem; }
-  .contact-row { display:flex; align-items:center; flex-wrap:wrap; gap:2px 12px; }
-  .contact-value { color:var(--green); font-weight:600; overflow-wrap:anywhere; user-select:all; }
-  .contact-copy:not([hidden]) {
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:5px 10px; min-height:32px; background:var(--paper); border:1px solid #aab9ac;
-    border-radius:5px; color:var(--green); cursor:pointer; font:600 13px/1.35 system-ui,sans-serif;
+  .contact-value { color:var(--green); overflow-wrap:anywhere; user-select:all; }
+  .contact-detail-link {
+    color:var(--green); font-weight:500; overflow-wrap:anywhere;
+    text-decoration:underline; text-decoration-color:#8da394; text-underline-offset:.2em;
   }
-  .contact-copy:hover { background:var(--soft); border-color:var(--green); }
-  .contact-copy:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
-  .copy-symbol { position:relative; width:12px; height:14px; }
-  .copy-symbol::before,.copy-symbol::after {
-    content:""; position:absolute; width:7px; height:9px; border:1.3px solid currentColor; border-radius:1px;
-  }
-  .copy-symbol::before { left:0; top:0; }
-  .copy-symbol::after { left:3px; top:3px; background:var(--paper); }
-  .contact-feedback:not(:empty) { display:block; color:var(--green); font-size:13px; font-weight:600; }
+  .contact-detail-link:hover { text-decoration-color:currentColor; }
 }
-@media print { .contact-copy:not([hidden]), .contact-feedback { display:none; } }
-.footer-bottom a[href="https://inselmandigital.com/"] { text-decoration: none; }
-.footer-bottom a[href="https://inselmandigital.com/"]:is(:hover, :focus-visible) { text-decoration: underline; }
+#contact-dialog {
+  width:min(410px,90vw); margin:auto; padding:30px; border-radius:10px;
+  box-shadow:0 12px 50px #122e2540; background:var(--surface);
+}
+#contact-dialog::backdrop {background:#102b24a6}
+#contact-dialog h2 {margin:0 36px 12px 0; font-size:28px; line-height:1.2}
+#contact-dialog .contact-dialog-value {
+  margin:0 0 22px; font-size:17px; color:var(--green);
+  overflow-wrap:anywhere; user-select:all;
+}
+#contact-dialog .contact-close {
+  position:absolute; right:12px; top:12px; width:38px; height:38px;
+  border:0; border-radius:50%; background:transparent; color:var(--green);
+  font:24px/1 system-ui; cursor:pointer;
+}
+#contact-dialog .contact-close:hover {background:var(--soft)}
+#contact-dialog .contact-feedback:not(:empty) {margin-top:12px;font-size:14px}
+.footer-bottom a[href="https://inselmandigital.com/"] { text-decoration:none; }
+.footer-bottom a[href="https://inselmandigital.com/"]:is(:hover,:focus-visible) { text-decoration:underline; }

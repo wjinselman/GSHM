@@ -36,12 +36,9 @@ function contactDetail(label, href, cls='text-link') {
  const value=email?uri.slice(7):(uri===phoneLink?d.phone:uri.slice(4));
  const title=resolve(label);
  const caption=(title===value || title==='Call '+value)?'':title;
- const action=email?'Copy email':'Copy number';
  return '<span class="contact-detail"><span class="contact-mobile">'+link(label,href,cls)+'</span>'+
   '<span class="contact-desktop">'+(caption?'<span class="contact-purpose">'+esc(caption)+'</span>':'')+
-  '<span class="contact-row"><span class="contact-value">'+esc(value)+'</span>'+
-  '<button hidden class="contact-copy" type="button" aria-label="'+action+' '+esc(value)+'"><span aria-hidden="true" class="copy-symbol"></span><span>'+action+'</span></button></span>'+
-  '<span class="contact-feedback" role="status"></span></span></span>';
+  '<span class="contact-value" data-kind="'+(email?'email':'phone')+'">'+esc(value)+'</span></span></span>';
 }
 function primaryNavigation(current) {
  const navLink = (id, label, cls='') => '<a'+(cls?' class="'+cls+'"':'')+' href="'+(id==='home'?'index':id)+'.html"'+(id===current?' aria-current="page"':'')+'>'+esc(label)+'</a>';

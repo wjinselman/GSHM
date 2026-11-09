@@ -167,34 +167,58 @@ if(document.body.classList.contains('home-identity-preview')){
  phoneLayout.addEventListener('change',arrangeHomeActions);arrangeHomeActions();
 }
 
-// Desktop contact controls leave addresses and numbers selectable even without clipboard access.
-document.querySelectorAll('.contact-copy').forEach(button => {
- const detail = button.closest('.contact-desktop');
- const value = detail.querySelector('.contact-value');
- const feedback = detail.querySelector('.contact-feedback');
- const label = button.lastElementChild;
- const originalLabel = label.textContent;
- let feedbackTimer;
- button.hidden = false;
- button.addEventListener('click', async () => {
-  clearTimeout(feedbackTimer);
-  const text = value.textContent;
-  let copied = false;
-  try {
-   await navigator.clipboard.writeText(text);
-   copied = true;
-  } catch {
-   const selection = window.getSelection();
-   const range = document.createRange();
-   range.selectNodeContents(value);
-   selection.removeAllRanges();
-   selection.addRange(range);
-   try { copied = document.execCommand('copy'); } catch { /* Keep the detail selected for manual copy. */ }
-   if(copied) selection.removeAllRanges();
-  }
-  label.textContent = copied ? 'Copied' : originalLabel;
-  feedback.classList.toggle('sr-only', copied);
-  feedback.textContent = copied ? originalLabel+' succeeded.' : 'Text selected. Use your usual copy shortcut.';
-  feedbackTimer = setTimeout(() => { label.textContent = originalLabel; feedback.textContent = ''; }, copied ? 2500 : 6500);
+// Add a single dialog for desktop contact links. Without JavaScript the details remain selectable.
+(() => {
+ const values = document.querySelectorAll('.contact-value[data-kind]');
+ if (!values.length || typeof HTMLDialogElement === 'undefined') return;
+ const dialog = document.createElement('dialog');
+ dialog.id = 'contact-dialog';
+ dialog.setAttribute('aria-labelledby','contact-dialog-title');
+ dialog.innerHTML = '<button class="contact-close" type="button" aria-label="Close contact details">×</button><h2 id="contact-dialog-title"></h2><p class="contact-dialog-value"></p><button class="button contact-copy" type="button"></button><p class="contact-feedback" role="status"></p>';
+ document.body.append(dialog);
+ const title = dialog.querySelector('h2');
+ const value = dialog.querySelector('.contact-dialog-value');
+ const copy = dialog.querySelector('.contact-copy');
+ const feedback = dialog.querySelector('.contact-feedback');
+ let revision = 0;
+ for (const detail of values) {
+  const link = document.createElement('a');
+  link.className = 'contact-detail-link';
+  link.href = '#contact-dialog';
+  link.setAttribute('aria-haspopup','dialog');
+  link.textContent = detail.textContent;
+  detail.replaceWith(link);
+  link.addEventListener('click',event => {
+   event.preventDefault();
+   const email = detail.dataset.kind === 'email';
+   const person = link.closest('.contacts section')?.querySelector('h2')?.textContent.split(' · ')[0];
+   title.textContent = person || (email ? 'Email address' : 'Museum phone number');
+   value.textContent = link.textContent;
+   copy.textContent = email ? 'Copy email' : 'Copy number';
+   feedback.textContent = '';
+   revision++;
+   dialog.showModal();
+   copy.focus();
+  });
+ }
+ dialog.querySelector('.contact-close').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('close',()=>{revision++;});
+ dialog.addEventListener('click',event=>{
+  if(event.target!==dialog)return;
+  const rect=dialog.getBoundingClientRect();
+  if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();
  });
-});
+ copy.addEventListener('click',async()=>{
+  const request=revision;
+  let copied=false;
+  try { await navigator.clipboard.writeText(value.textContent); copied=true; }
+  catch {
+   if(!dialog.open||request!==revision)return;
+   const selection=window.getSelection(),range=document.createRange();
+   range.selectNodeContents(value);selection.removeAllRanges();selection.addRange(range);
+   try { copied=document.execCommand('copy'); } catch { /* Manual copy remains available. */ }
+   if(copied)selection.removeAllRanges();
+  }
+  if(dialog.open&&request===revision)feedback.textContent=copied?'Copied to clipboard.':'Text selected. Use your usual copy shortcut.';
+ });
+})();
