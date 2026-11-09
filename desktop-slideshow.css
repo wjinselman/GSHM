@@ -1,0 +1,54 @@
+@media screen and (min-width:801px) {
+  .museum-slideshow .slides {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+  .museum-slideshow .slides > .museum-slide:not([hidden]) {
+    display: grid;
+    grid-template-columns: 62% minmax(0, 1fr);
+    width: 100%;
+    aspect-ratio: 2.22;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+  }
+  .museum-slideshow .slides > .museum-slide > img {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    object-fit: cover;
+  }
+  .museum-slideshow .museum-slide:first-child > img {object-position: 70% center}
+  .museum-slideshow .slides > .museum-slide > figcaption {
+    grid-area: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: clamp(24px, 3.3vw, 54px);
+    contain: none;
+  }
+  .museum-slideshow .museum-slide figcaption h3 {
+    margin: 0;
+    font-size: clamp(32px, 3.1vw, 47px);
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .museum-slideshow .museum-slide figcaption p {line-height: 1.55}
+  .museum-slideshow .museum-slide:has(> img[src="assets/military-museum.jpg"]) {
+    background: linear-gradient(90deg, transparent 34%, rgba(249,247,240,.70) 63%, #f9f7f0 87%),
+      linear-gradient(to bottom, #dadbd7 48%, rgba(218,219,215,.92) 60%, transparent 81%), url("assets/museum-photos/museum-06.webp") left 36% / cover;
+  }
+  .museum-slideshow .slides > .museum-slide > img[src="assets/military-museum.jpg"] {
+    height: auto;
+    aspect-ratio: 2.18;
+    align-self: start;
+    mask-image: linear-gradient(to bottom,#000 97.5%,transparent),linear-gradient(to right,#000 90%,transparent);
+    mask-composite: intersect;
+  }
+}
