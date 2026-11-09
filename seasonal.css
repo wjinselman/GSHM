@@ -78,8 +78,8 @@
 
 /* Christmas-only artwork aligns to the unchanged homepage logo's SVG viewBox. */
 [data-season=december] .hero .museum-name{position:relative}
-[data-season=december] .hero .museum-name::after{content:'';position:absolute;inset:0;background:url('assets/season-oak-christmas.svg') center/100% 100% no-repeat;pointer-events:none;user-select:none}
-@media(max-width:800px){[data-season=december] .hero .museum-name::after{background-image:url('assets/season-oak-christmas-mobile.svg')}}
+[data-season=december] .hero .museum-name::after{content:'';position:absolute;inset:0;background:url('assets/season-oak-christmas.svg?v=claus-1') center/100% 100% no-repeat;pointer-events:none;user-select:none}
+@media(max-width:800px){[data-season=december] .hero .museum-name::after{background-image:url('assets/season-oak-christmas-mobile.svg?v=claus-1')}}
 @media print, (forced-colors:active){[data-season=december] .hero .museum-name::after{display:none}}
 
 /* Seasonal oak layers share the original logo's coordinates; lettering stays clear. */
