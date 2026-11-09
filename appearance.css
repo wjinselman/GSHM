@@ -1,5 +1,7 @@
 :root[data-theme="heritage"]{--paper:#f8f9f4;--surface:#fffffb;--green:#123f34;--ink:#20392f;--muted:#4f6257;--line:#d5ded3;--soft:#edf1e8;--accent:#b59660;}
-:root{--map-image:url("assets/ardmore-map.jpg");--map-opacity:0.22}.page-heading-photo[data-page="visit"] .heading-photo{object-fit:cover;object-position:right center}
+:root{--map-image:url("assets/ardmore-map-1600.webp");--map-opacity:0.22}
+@media (max-width:800px){:root{--map-image:url("assets/ardmore-map-960.webp")}}
+.page-heading-photo[data-page="visit"] .heading-photo{object-fit:cover;object-position:right center}
 .page-heading-photo[data-page="about"] .heading-photo{object-fit:cover;object-position:right center}
 .page-heading-photo[data-page="explore"] .heading-photo{object-fit:cover;object-position:right center}
 .page-heading-photo[data-page="military-museum"] .heading-photo{object-fit:cover;object-position:right center}

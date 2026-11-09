@@ -153,7 +153,7 @@
       ],
       "headingPhoto": "assets/about.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "about",
@@ -199,7 +199,7 @@
       ],
       "headingPhoto": "assets/about.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "explore",
@@ -249,7 +249,7 @@
       ],
       "headingPhoto": "assets/home.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain",
+      "headingPhotoFit": "cover",
       "albums": [
         {
           "title": "Main Museum",
@@ -439,7 +439,7 @@
       ],
       "headingPhoto": "assets/military-museum.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "genealogical-library",
@@ -477,7 +477,7 @@
       ],
       "headingPhoto": "assets/library.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "store",
@@ -523,7 +523,7 @@
       ],
       "headingPhoto": "assets/store.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "rent",
@@ -583,7 +583,7 @@
       ],
       "headingPhoto": "assets/sign.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "membership",
@@ -638,7 +638,7 @@
       ],
       "headingPhoto": "assets/sign.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "board",
@@ -703,7 +703,7 @@
       ],
       "headingPhoto": "assets/sign.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "education",
@@ -781,7 +781,7 @@
       ],
       "headingPhoto": "assets/education.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "santas-house",
@@ -849,7 +849,7 @@
       ],
       "headingPhoto": "assets/santas-house.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "scavenger-hunt",
@@ -887,7 +887,7 @@
       ],
       "headingPhoto": "assets/edu-scavenger-hunts.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "contain"
+      "headingPhotoFit": "cover"
     },
     {
       "id": "contact",
@@ -1019,8 +1019,9 @@
     "line": "#d5ded3",
     "soft": "#edf1e8",
     "accent": "#b59660",
-    "mapImage": "assets/ardmore-map.jpg",
-    "mapOpacity": 0.22
+    "mapImage": "assets/ardmore-map-1600.webp",
+    "mapOpacity": 0.22,
+    "mobileMapImage": "assets/ardmore-map-960.webp"
   },
   "navigation": {
     "groups": [
@@ -1049,6 +1050,36 @@
           "about"
         ]
       }
+    ]
+  },
+  "imageWidths": {
+    "assets/about.jpg": [
+      960,
+      1900
+    ],
+    "assets/home.jpg": [
+      960,
+      1500
+    ],
+    "assets/military-museum.jpg": [
+      960,
+      1900
+    ],
+    "assets/edu-scavenger-hunts.jpg": [
+      960,
+      1000
+    ],
+    "assets/homepage-cards/museum-interior.jpg": [
+      800,
+      1200
+    ],
+    "assets/homepage-cards/military-memorial.jpg": [
+      800,
+      1200
+    ],
+    "assets/homepage-cards/genealogical-library.jpg": [
+      800,
+      1200
     ]
   }
 }
