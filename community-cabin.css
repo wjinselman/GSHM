@@ -11,4 +11,21 @@
  inset:4% 14%; background:radial-gradient(ellipse, var(--paper) 15%, transparent 75%);
  filter:none; opacity:.92;
 }
-@media(max-width:600px){.heritage-landscape .support::before{inset:0 -10%}.heritage-landscape .support::after{inset-block:6%;width:100vw;opacity:.24}}
+@media (max-width: 600px) {
+ [data-theme=heritage] .heritage-landscape > .support {
+  padding-top: clamp(170px, 47vw, 235px);
+ }
+ .heritage-landscape .support::after {
+  inset: 0 auto auto 50%;
+  width: 100vw;
+  aspect-ratio: 3 / 2;
+  background-position: center;
+  opacity: .78;
+  mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 48%, rgba(0,0,0,.50) 72%, transparent);
+ }
+ .heritage-landscape .support::before {
+  inset: 0 -4%;
+  background: linear-gradient(to bottom, transparent 15%, var(--paper) 48%, var(--paper) 100%);
+  opacity: .76;
+ }
+}
