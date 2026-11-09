@@ -11,10 +11,3 @@
 .page-heading-photo[data-page="education"] .heading-photo{object-fit:cover;object-position:right center}
 .page-heading-photo[data-page="santas-house"] .heading-photo{object-fit:cover;object-position:right center}
 .page-heading-photo[data-page="scavenger-hunt"] .heading-photo{object-fit:cover;object-position:right center}
-/* Warm navigation surfaces against the heritage map and paper. */
-[data-theme="heritage"] .slideshow-controls:not([hidden]),
-[data-theme="heritage"] .mobile-quick-nav:not([hidden]) {
-  background-color: #efe9dc;
-  border-color: #c8beac;
-  box-shadow: 0 3px 12px #2435281c;
-}
