@@ -933,21 +933,21 @@
         "explore",
         "Inside the museum",
         "Ordinary objects. Extraordinary stories.",
-        "home.jpg",
+        "homepage-cards/museum-interior.jpg",
         "Explore the galleries"
       ],
       [
         "military-museum",
         "Honoring service",
         "Remembering the people who served.",
-        "military-museum.jpg",
+        "homepage-cards/military-memorial.jpg",
         "Visit the military museum"
       ],
       [
         "genealogical-library",
         "Find your roots",
         "Your family’s history starts with a question.",
-        "library.jpg",
+        "homepage-cards/genealogical-library.jpg",
         "Discover the library"
       ]
     ],
