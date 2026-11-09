@@ -170,7 +170,20 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
 .page-heading .intro{font-size:17px;line-height:1.55}
 .inner-landscape{padding-top:20px}
 
-/* Armory highlight: show the full panoramic photograph at its natural proportions. */
+/* Let the armory photograph use the space above its caption in the mobile slide stack. */
+.js .museum-slideshow .museum-slide:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.js .museum-slideshow .museum-slide:first-child img {
+  flex: 1 1 0;
+  min-height: 0;
+  height: 0;
+  object-fit: cover;
+  object-position: 70% 50%;
+}
+.museum-slideshow .museum-slide:first-child figcaption { flex: none; }
+
 .museum-slideshow .museum-slide:first-child img {
   display: block;
   width: 100%;
