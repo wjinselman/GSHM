@@ -166,3 +166,8 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
   aspect-ratio: auto;
   object-fit: contain;
 }
+
+/* Align the responsive homepage slides with the full-frame 16:9 desktop treatment. */
+.museum-slide{padding:0;border-radius:14px;overflow:hidden;background:#f8f6f0}
+.museum-slide img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center;background:#182c26}
+.museum-slide figcaption{padding:18px 20px;min-height:0;background:#f8f6f0}
