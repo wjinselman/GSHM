@@ -12,20 +12,36 @@
  filter:none; opacity:.92;
 }
 @media (max-width: 600px) {
- [data-theme=heritage] .heritage-landscape > .support {
-  padding-top: clamp(170px, 47vw, 235px);
- }
- .heritage-landscape .support::after {
-  inset: 0 auto auto 50%;
+ .heritage-landscape .support::after { content: none; }
+ .heritage-landscape .support h2 { position: relative; }
+ .heritage-landscape .support h2::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
   width: 100vw;
   aspect-ratio: 3 / 2;
-  background-position: center;
-  opacity: .78;
-  mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 48%, rgba(0,0,0,.50) 72%, transparent);
+  background: url("assets/museum-photos/museum-05.webp") center / cover no-repeat;
+  opacity: .74;
+  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 78%, transparent);
  }
  .heritage-landscape .support::before {
-  inset: 0 -4%;
-  background: linear-gradient(to bottom, transparent 15%, var(--paper) 48%, var(--paper) 100%);
-  opacity: .76;
+  inset: 0;
+  background: none;
+ }
+ .heritage-landscape .support h2::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  inset: -28px -8px;
+  background: radial-gradient(ellipse, var(--paper) 10%, transparent 75%);
+  opacity: .87;
+ }
+ .heritage-landscape .support h2, .heritage-landscape .support .eyebrow {
+  text-shadow: 0 0 4px var(--paper);
  }
 }
