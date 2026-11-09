@@ -18,7 +18,7 @@ Edit content.json, then rebuild. The location, phone, office hours, general emai
 
 Place a new museum photograph in assets and update the specific content entry. Homepage card items contain the destination, eyebrow, heading, photo, link label and descriptive alt text in that order. Image widths listed in imageWidths require the corresponding WebP files. The original map is a source master; browsers receive the smaller WebP backgrounds.
 
-October, November and December use museum oak artwork on the homepage. The automatic switch follows America/Chicago time. The footer lets visitors show or hide the seasonal artwork. The homepage links ?season=october, ?season=november, ?season=december and ?season=none allow review at any time.
+October, November and December use museum oak artwork on the homepage. The automatic switch follows America/Chicago time. The homepage links ?season=october, ?season=november, ?season=december and ?season=none allow review at any time.
 
 For an announcement, edit current-event.js. Provide a headline, details and an inclusive end date in YYYY-MM-DD format. Supply a local photo and description if desired. A blank headline keeps the announcement hidden.
 
