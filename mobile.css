@@ -49,7 +49,19 @@ body{font-size:17px;line-height:1.65}h2{font-size:clamp(30px,7.6vw,42px)}h3{font
 [data-theme=heritage] .hero-copy{margin-top:20px}
 .heritage-landscape::before,.inner-landscape::before{mask-image:linear-gradient(to bottom,transparent,#000 2%,#000 96%,transparent)}
 /* Homepage only: utility bar, identity, photograph, then introduction. */
-.home-identity-preview .topbar,.home-identity-preview .header .brand{display:none}
+.home-identity-preview .topbar {
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ flex-wrap:wrap;
+ gap:0 6px;
+ padding:0 3%;
+ font-size:12px;
+ line-height:1.4;
+}
+.home-identity-preview .topbar > span {display:block}
+.home-identity-preview .topbar > a {display:inline-flex;align-items:center;min-height:44px}
+.home-identity-preview .header .brand{display:none}
 .home-identity-preview .header.mobile-nav-ready{background:#194032;padding:6px 5%;border-bottom:1px solid #ffffff26;gap:8px}
 .home-identity-preview .home-mobile-admission{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-size:12px;letter-spacing:.03em;text-decoration:none}
 .home-identity-preview .mobile-menu-toggle{min-height:44px;background:transparent;border-color:#ffffff40;padding:8px 12px;font-size:13px}
