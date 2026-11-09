@@ -13,7 +13,10 @@
 }
 @media (max-width: 600px) {
  .heritage-landscape .support::after { content: none; }
- .heritage-landscape .support h2 { position: relative; }
+ .heritage-landscape .support h2 {
+  position: relative;
+  font-weight: 700;
+}
  .heritage-landscape .support h2::before {
   content: "";
   position: absolute;
@@ -38,7 +41,7 @@
   pointer-events: none;
   z-index: -1;
   inset: -28px -8px;
-  background: radial-gradient(ellipse, var(--paper) 10%, transparent 75%);
+  background: radial-gradient(ellipse, var(--paper) 24%, transparent 82%);
   opacity: .87;
  }
  .heritage-landscape .support h2, .heritage-landscape .support .eyebrow {
