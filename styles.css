@@ -495,3 +495,12 @@ dialog:not([open]){display:none}
 @media (max-width: 800px) {
   .museum-slide.full-photo img { max-height: none; }
 }
+
+/* Museum photo presentation refresh: identical widescreen canvas on every slide.
+   Contain preserves the complete historic artifact/photo without destructive cropping. */
+.museum-slide{border-radius:14px;overflow:hidden;padding:10px;background:#f8f6f0;box-shadow:0 14px 38px #17382a15}
+.museum-slide img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center;background:#182c26}
+.museum-slide figcaption{padding:22px 24px 18px;background:#f8f6f0}
+.museum-slide h3{font-size:clamp(23px,2.4vw,30px)}
+@media(max-width:800px){.museum-slide img{height:auto;aspect-ratio:16/9;object-fit:contain}}
+@media(max-width:480px){.museum-slide img{height:auto;aspect-ratio:16/9;object-fit:contain}.museum-slide figcaption{min-height:0;padding:17px 16px}}
