@@ -507,3 +507,6 @@ dialog:not([open]){display:none}
 /* HERO FIX: use the photograph as a true cover background across the full hero box, not a contained inline image. */
 html[data-theme="heritage"] body .hero{background-image:url('assets/about.jpg');background-position:center center;background-repeat:no-repeat;background-size:cover}
 html[data-theme="heritage"] body .hero > img.hero-image{opacity:0!important;pointer-events:none}
+
+/* Full-bleed museum hero: authoritative photo layer behind the masthead. */
+@media (min-width:801px){html[data-theme="heritage"] body .hero{background:#183d31 url("assets/about.jpg") center center/cover no-repeat!important;overflow:hidden}html[data-theme="heritage"] body .hero::before{content:"";position:absolute;inset:0;background:url("assets/about.jpg") center center/cover no-repeat;z-index:-2;pointer-events:none}}
