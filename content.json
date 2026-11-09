@@ -142,7 +142,7 @@
           "caption": "About the museum"
         }
       ],
-      "headingPhoto": "assets/museum-photos/museum-02.webp",
+      "headingPhoto": "assets/about-armory-desktop.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover",
       "desktopHeadingPhoto": "assets/about-armory-desktop.webp"
