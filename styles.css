@@ -503,3 +503,7 @@ dialog:not([open]){display:none}
 .museum-slide.full-photo img,.museum-slide img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;background:transparent}
 .museum-slide.full-photo figcaption{background:var(--surface);padding:19px 22px 15px}
 @media(max-width:800px){.museum-slide.full-photo img,.museum-slide img{width:100%;height:auto;aspect-ratio:auto;max-height:none;background:transparent}.museum-slide.full-photo figcaption{min-height:0;padding:16px}}
+
+/* HERO FIX: use the photograph as a true cover background across the full hero box, not a contained inline image. */
+html[data-theme="heritage"] body .hero{background-image:url('assets/about.jpg');background-position:center center;background-repeat:no-repeat;background-size:cover}
+html[data-theme="heritage"] body .hero > img.hero-image{opacity:0!important;pointer-events:none}
