@@ -47,4 +47,20 @@
  .heritage-landscape .support h2, .heritage-landscape .support .eyebrow {
   text-shadow: 0 0 4px var(--paper);
  }
+ .heritage-landscape .support > p:not(.eyebrow) {
+  position: relative;
+  isolation: isolate;
+  color: #193a30;
+  font-weight: 700;
+  line-height: 1.55;
+ }
+ .heritage-landscape .support > p:not(.eyebrow)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -4px -8px;
+  background: rgba(250, 248, 240, .85);
+  filter: blur(6px);
+  pointer-events: none;
+ }
 }
