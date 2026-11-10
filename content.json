@@ -966,9 +966,9 @@
     "line": "#d5ded3",
     "soft": "#edf1e8",
     "accent": "#b59660",
-    "mapImage": "assets/ardmore-map-1280.webp",
+    "mapImage": "assets/ardmore-map-ink-1760.webp",
     "mapOpacity": 0.22,
-    "mobileMapImage": "assets/ardmore-map-800.webp"
+    "mobileMapImage": "assets/ardmore-map-ink-1440.webp"
   },
   "navigation": {
     "groups": [

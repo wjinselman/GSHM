@@ -249,3 +249,15 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
   font-size:12px;
   line-height:1.5;
 }
+
+.heritage-landscape::before, .inner-landscape::before, footer::before,
+.home-identity-preview .heritage-landscape::before, .home-identity-preview .visit-strip::before {
+  background-size: 680px auto;
+  mask-image: none;
+  filter:none;
+  opacity:.62;
+  mix-blend-mode:multiply;
+}
+footer::before {opacity:.40}
+
+body:has(.mobile-quick-nav) footer::before {bottom:calc(-84px - env(safe-area-inset-bottom,0px))}
