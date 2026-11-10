@@ -968,7 +968,11 @@
     "accent": "#b59660",
     "mapImage": "assets/ardmore-map-1280.webp",
     "mapOpacity": 0.22,
-    "mobileMapImage": "assets/ardmore-map-800.webp"
+    "mobileMapImage": "assets/ardmore-map-800.webp",
+    "detailMap": {
+      "desktop": "assets/ardmore-map-fine-desktop.avif",
+      "mobile": "assets/ardmore-map-fine-mobile.avif"
+    }
   },
   "navigation": {
     "groups": [

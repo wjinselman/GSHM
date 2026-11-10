@@ -111,6 +111,14 @@ if (appearance.mobileMapImage) {
  fs.appendFileSync(path.join(root,'appearance.css'),'\n@media (max-width:800px){:root{--map-image:url('+JSON.stringify(smallMap)+')}}\n');
 }
 
+// Use higher-resolution map lettering when supported, with the original WebP fallback.
+if (appearance.detailMap) {
+ const sources = (detail, fallback) => 'image-set(url('+JSON.stringify(url(detail))+') type("image/avif"),url('+JSON.stringify(url(fallback))+') type("image/webp"))';
+ const desktop=sources(appearance.detailMap.desktop,map);
+ const mobile=sources(appearance.detailMap.mobile,appearance.mobileMapImage||map);
+ fs.appendFileSync(path.join(root,'appearance.css'),'\n@supports (background-image:image-set(url("a") type("image/avif"))){:root{--map-image:'+desktop+'}@media(max-width:800px){:root{--map-image:'+mobile+'}}}\n');
+}
+
 // Per-page photographic framing, maintained with the page content.
 fs.appendFileSync(path.join(root,"appearance.css"),d.pages.filter(p=>p.headingPhoto).map(p=>{if(!/^[a-z-]+$/.test(p.id)||!/^([a-z]+|[0-9]+%)( ([a-z]+|[0-9]+%))?$/.test(p.headingPhotoPosition)||!["contain","cover"].includes(p.headingPhotoFit))throw Error("Invalid header framing");return `.page-heading-photo[data-page="${p.id}"] .heading-photo{object-fit:${p.headingPhotoFit};object-position:${p.headingPhotoPosition}}`;}).join("\n"));
 
