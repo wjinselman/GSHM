@@ -570,5 +570,9 @@ dialog:not([open]){display:none}
 }
 #contact-dialog .contact-close:hover {background:var(--soft)}
 #contact-dialog .contact-feedback:not(:empty) {margin-top:12px;font-size:14px}
-.footer-bottom a[href="https://inselmandigital.com/"] { text-decoration:none; }
+.footer-bottom a[href="https://inselmandigital.com/"] { font-size:11px; text-decoration:none; }
 .footer-bottom a[href="https://inselmandigital.com/"]:is(:hover,:focus-visible) { text-decoration:underline; }
+/* Retain the desktop map's vertical fade, with clearer ink next to the slides. */
+@media screen and (min-width:801px) {
+  .heritage-landscape::before {opacity:.32}
+}
