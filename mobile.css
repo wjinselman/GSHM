@@ -245,30 +245,7 @@ html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
   width:fit-content;
   max-width:100%;
   margin-top:4px;
-  padding-block:4px;
+  padding-block:3px;
   font-size:11px;
   line-height:1.5;
 }
-
-.heritage-landscape::before, .inner-landscape::before, footer::before,
-.home-identity-preview .heritage-landscape::before, .home-identity-preview .visit-strip::before {
-  background-size:max(100%, 660px) auto;
-  mask-image: none;
-  filter:none;
-  opacity:.24;
-  mix-blend-mode:multiply;
-}
-footer {position:relative; isolation:isolate}
-footer::before {
-  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
-  background-image:var(--map-image); background-position:center top; background-repeat:repeat;
-  opacity:.14;
-}
-.heritage-landscape::before,.inner-landscape::before {background-position:center top;background-repeat:repeat}
-
-body:has(.mobile-quick-nav) footer::before {bottom:calc(-84px - env(safe-area-inset-bottom,0px))}
-
-/* Ardmore is near the southeast of the sheet; the Arbuckle label is northwest. */
-.heritage-landscape::before, .home-identity-preview .heritage-landscape::before,
-.inner-landscape::before { background-position:86% -610px; }
-.home-identity-preview .visit-strip::before, footer::before { background-position:left top; }
