@@ -572,19 +572,3 @@ dialog:not([open]){display:none}
 #contact-dialog .contact-feedback:not(:empty) {margin-top:12px;font-size:14px}
 .footer-bottom a[href="https://inselmandigital.com/"] { text-decoration:none; }
 .footer-bottom a[href="https://inselmandigital.com/"]:is(:hover,:focus-visible) { text-decoration:underline; }
-
-/* The archival map continues through the light page sections and footer. */
-.heritage-landscape::before, .inner-landscape::before,
-.home-identity-preview .heritage-landscape::before, footer::before {
-  background-image: var(--map-image);
-  background-size: clamp(960px, 100vw, 1600px) auto;
-  background-position: center top;
-  background-repeat: repeat;
-  filter: none;
-  mask-image: none;
-  opacity: .54;
-  mix-blend-mode: multiply;
-}
-footer {position:relative; isolation:isolate}
-footer::before {content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.35}
-@media print {footer::before,.heritage-landscape::before,.inner-landscape::before{display:none}}
