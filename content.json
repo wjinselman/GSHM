@@ -386,7 +386,14 @@
       "headingPhoto": "assets/military-museum.jpg",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover",
-      "desktopHeadingPhoto": "assets/military-museum.jpg"
+      "desktopHeadingPhoto": "assets/military-museum.jpg",
+      "documents": [
+        {
+          "title": "Military Memorial Museum forms",
+          "path": "documents/military-memorial-forms.pdf",
+          "description": "Membership and memorial forms."
+        }
+      ]
     },
     {
       "id": "genealogical-library",
@@ -424,7 +431,14 @@
       ],
       "headingPhoto": "assets/library.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "documents": [
+        {
+          "title": "Genealogy research brochure",
+          "path": "documents/genealogy-brochure.pdf",
+          "description": "A printable guide to tracing family history and finding research resources."
+        }
+      ]
     },
     {
       "id": "store",
@@ -527,7 +541,24 @@
       ],
       "headingPhoto": "assets/sign.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "documents": [
+        {
+          "title": "Museum rental brochure",
+          "path": "documents/2026-museum-rental-brochure.pdf",
+          "description": "Spaces and rental information."
+        },
+        {
+          "title": "Indoor rental agreement",
+          "path": "documents/2026-indoor-rental-agreement.pdf",
+          "description": "Terms and required rental paperwork."
+        },
+        {
+          "title": "Paranormal investigation policy",
+          "path": "documents/paranormal-investigation-policy.pdf",
+          "description": "Requirements, restrictions, and agreement."
+        }
+      ]
     },
     {
       "id": "membership",
