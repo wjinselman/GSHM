@@ -93,10 +93,10 @@ function headingImage(p) {
  return '<picture class="exhibit-hero-photo"><source media="(min-width:801px)" srcset="'+url(p.desktopHeadingPhoto)+'">'+img+'</picture>';
 }
 function resourceDocuments(p) {
- const safe=(p.documents||[]).filter(doc=>typeof doc.path==='string' && /^documents\/[a-z0-9-]+\.pdf$/.test(doc.path) && fs.existsSync(path.join(root,doc.path)));
+ const safe=(p.documents||[]).filter(doc=>typeof doc.path==='string' && /^documents\/[a-z0-9-]+\.(pdf|docx|zip)$/.test(doc.path) && fs.existsSync(path.join(root,doc.path)));
  if(!safe.length)return '';
  const lines=safe.map(doc=>'<li><a class="text-link" href="'+esc(doc.path)+'" target="_blank" rel="noopener">'+esc(doc.title)+'<span aria-hidden="true"> ↗</span></a><p>'+esc(doc.description||'')+'</p></li>').join('');
- return '<section class="content-section document-resources"><details><summary>Brochures and documents</summary><div class="resource-body"><p>View or save the museum’s original PDF documents.</p><ul>'+lines+'</ul></div></details></section>';
+ return '<section class="content-section document-resources"><details><summary>Brochures and documents</summary><div class="resource-body"><p>Open or download the museum’s original documents.</p><ul>'+lines+'</ul></div></details></section>';
 }
 function page(p){
 const sections=p.sections.map(s=>'<section class="content-section"><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+(s.items?'<ul class="rates">'+s.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+(s.action?'<div class="actions">'+contactDetail(s.action.label,s.action.href,'button')+'</div>':'')+(s.links?'<div class="link-list">'+s.links.map(([l,h])=>contactDetail(l,h)).join('')+'</div>':'')+'</section>').join('');
