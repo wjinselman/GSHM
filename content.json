@@ -55,7 +55,7 @@
         },
         {
           "title": "Parking, accessibility and visit length",
-          "text": "Bus and motorcoach parking is available. The scavenger hunt is wheelchair accessible and takes about 45 minutes to an hour. For help finding an entrance, planning a drop-off or choosing galleries that fit your schedule, call {phone}.",
+          "text": "Bus and motorcoach parking is available. The scavenger hunt is wheelchair accessible and takes about 45 minutes to an hour. ",
           "links": [
             [
               "Call about your visit",
@@ -65,7 +65,7 @@
         },
         {
           "title": "Visiting with a group?",
-          "text": "Reserve group tours and programs well in advance to help secure your preferred date, with at least one week’s notice for all groups. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park is available for those bringing lunches. Tell us about any access needs so we can help you plan.",
+          "text": "Reserve group tours and programs well in advance to help secure your preferred date, with at least one week’s notice for all groups. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park, located behind the museum, is available for those bringing lunches. Tell us about any access needs so we can help you plan.",
           "links": [
             [
               "Explore learning programs",
@@ -487,7 +487,7 @@
         },
         {
           "title": "The Education Room",
-          "text": "Located in the north wing, the Education Room suits small meetings, birthday parties, wedding and baby showers, and workshops. It is available during operating hours. A $50 reservation deposit is required. Half-day rental time slots are 10 a.m.–1:30 p.m. or 1:30–5 p.m. Call to reserve a time."
+          "text": "Located in the north wing, the Education Room suits small meetings, birthday parties, wedding and baby showers, and workshops. It is available during operating hours. Full-day rentals are available from 10 a.m.–5 p.m. Half-day rental time slots are 10 a.m.–1:30 p.m. or 1:30–5 p.m. Call to reserve a time."
         },
         {
           "title": "Tools of Our Land",
@@ -608,7 +608,7 @@
       "sections": [
         {
           "title": "Museum General Fund",
-          "text": "Contributions support educational and public programming, exhibits and other museum activities. To give by mail, send a check payable to GSHM to {name}, {address}."
+          "text": "Contributions support educational and public programming, exhibits and other museum activities. To give by mail, send a check payable to GSHM to {address}."
         },
         {
           "title": "Memorial gifts",
@@ -616,7 +616,7 @@
         },
         {
           "title": "Santa’s House on the Prairie",
-          "text": "You can give to the Museum General Fund or sponsor a Holiday Forest tree. Tree sponsorship helps support Santa’s House on the Prairie. Your name is displayed on a tree in the Holiday Forest, where children listen to stories and watch the Daube Puppets. You may decorate your tree or have museum staff decorate it for an additional fee. Staff will do their best to use your chosen colors or theme. Contact the curator for current sponsorship prices and display dates.",
+          "text": "You can donate to the Santa’s House on the Prairie General Fund or sponsor a Holiday Forest tree. Both options directly support Santa’s House on the Prairie. Your name is displayed on a tree in the Holiday Forest, where children listen to stories and watch the Daube Puppets. You may decorate your tree or have museum staff decorate it for an additional fee. Staff will do their best to use your chosen colors or theme. Contact the curator for current sponsorship prices and display dates.",
           "links": [
             [
               "Email Cassandra, Curator",
@@ -664,7 +664,7 @@
       "sections": [
         {
           "title": "Learning throughout the museum",
-          "text": "The museum teaches the history and culture of the area through three-dimensional artifacts, archives and photographs. Educational opportunities are available for groups of all ages. Programs may take place inside the museum, at the 700 Ranch House or in Neustadt Park. Contact us to discuss a setting and program for your group."
+          "text": "The museum teaches the history and culture of the area through three-dimensional artifacts, archives and photographs. Educational opportunities are available for groups of all ages. Programs may take place inside the museum, in Neustadt Park behind the museum. Contact us to discuss a setting and program for your group."
         },
         {
           "title": "Santa’s House on the Prairie",
@@ -688,7 +688,7 @@
         },
         {
           "title": "Arrange a group visit",
-          "text": "Reserve tours and programs well in advance to help secure your preferred date, and give at least one week’s notice for all group visits. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park is available for groups wishing to bring lunches.",
+          "text": "Reserve tours and programs well in advance to help secure your preferred date, and give at least one week’s notice for all group visits. School groups must bring at least one adult chaperone for every 15 students. Neustadt Park, located behind the museum, is available for groups wishing to bring lunches.",
           "links": [
             [
               "Email Caitlin about a group booking",
@@ -737,7 +737,7 @@
       "title": "A little holiday wonder.",
       "label": "Santa’s House on the Prairie",
       "eyebrow": "Every December",
-      "intro": "Santa’s House on the Prairie is an event designed for schoolchildren ages three to seven years old. Participating children enjoy decorating ornaments, exploring our Holiday Forest, and listening to stories read by Mr. and Mrs. Claus.",
+      "intro": "Santa’s House on the Prairie is the museum’s biggest fundraiser of the year, designed for schoolchildren ages three to seven years old. Participating children enjoy decorating ornaments, exploring our Holiday Forest, and listening to stories read by Mr. and Mrs. Claus.",
       "image": "santas-house.jpg",
       "sections": [
         {
@@ -746,7 +746,7 @@
         },
         {
           "title": "Plan your group’s visit",
-          "text": "Santa’s House runs during the first two full weeks of December. Admission is $2 per child. Call the museum to reserve a time for your group."
+          "text": "Santa’s House runs during the first two full weeks of December. Admission is $2 per child. Reservations are required for all groups. Call the museum to reserve a time."
         },
         {
           "title": "Help make the magic",
@@ -768,7 +768,7 @@
         },
         {
           "title": "Sponsor a Holiday Forest tree",
-          "text": "Sponsor a small or large tree in the Holiday Forest to help support Santa’s House. Your name will appear on the tree. Decorate it yourself or have museum staff decorate it for an additional fee. Ask Cassandra about display dates, colors and sponsorship prices.",
+          "text": "Sponsor a small or large tree in the Holiday Forest, or donate to the Santa’s House on the Prairie General Fund, to support Santa’s House. Your name will appear on the tree. Decorate it yourself or have museum staff decorate it for an additional fee. Ask Cassandra about display dates, colors and sponsorship prices.",
           "links": [
             [
               "Ask about tree sponsorship",
