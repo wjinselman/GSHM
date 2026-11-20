@@ -575,3 +575,6 @@ dialog:not([open]){display:none}
 
 /* Museum review: photos remain clickable without visible enlargement labels. */
 .photo-link .photo-label {display:none!important}
+
+/* Discreet photography acknowledgment in the footer. */
+.photo-attribution{display:block;font-size:10px;font-weight:400;line-height:1.4;opacity:.6;margin-top:5px;letter-spacing:.01em}
