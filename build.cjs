@@ -95,7 +95,7 @@ function headingImage(p) {
 function resourceDocuments(p) {
  const safe=(p.documents||[]).filter(doc=>typeof doc.path==='string' && /^documents\/[a-z0-9-]+\.(pdf|docx|zip)$/.test(doc.path) && fs.existsSync(path.join(root,doc.path)));
  if(!safe.length)return '';
- const lines=safe.map(doc=>'<li><a class="text-link" href="'+esc(doc.path)+'" target="_blank" rel="noopener">'+esc(doc.title)+'<span aria-hidden="true"> ↗</span></a><p>'+esc(doc.description||'')+'</p></li>').join('');
+ const lines=safe.map(doc=>'<li><a class="text-link" href="'+esc(doc.path)+'" target="_blank" rel="noopener"'+(/\.(zip|docx)$/.test(doc.path)?' download':'')+'>'+esc(doc.title)+'<span aria-hidden="true"> ↗</span></a><p>'+esc(doc.description||'')+'</p></li>').join('');
  return '<section class="content-section document-resources"><details><summary>Brochures and documents</summary><div class="resource-body"><p>Open or download the museum’s original documents.</p><ul>'+lines+'</ul></div></details></section>';
 }
 function page(p){
