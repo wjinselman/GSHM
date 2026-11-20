@@ -810,11 +810,6 @@
       ],
       "photos": [
         {
-          "src": "assets/santas-house.jpg",
-          "alt": "Santa’s House on the Prairie at the Greater Southwest Historical Museum",
-          "caption": "Santa’s House on the Prairie"
-        },
-        {
           "src": "assets/museum-photos/santa-01.webp",
           "alt": "Santa and Mrs. Claus seated between decorated trees"
         },
@@ -823,7 +818,7 @@
           "alt": "Covered wagon surrounded by Christmas trees"
         }
       ],
-      "headingPhoto": "assets/santas-house.jpg",
+      "headingPhoto": "assets/museum-photos/santa-01.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover"
     },
