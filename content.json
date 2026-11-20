@@ -544,6 +544,11 @@
       "headingPhotoFit": "cover",
       "documents": [
         {
+          "title": "2026 museum rental brochure",
+          "path": "documents/2026-rental-brochure.pdf",
+          "description": "Museum rental spaces and booking information (PDF)."
+        },
+        {
           "title": "Indoor rental agreement",
           "path": "documents/2026-indoor-rental-agreement.docx",
           "description": "Terms and required rental paperwork."
