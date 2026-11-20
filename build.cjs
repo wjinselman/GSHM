@@ -92,10 +92,16 @@ function headingImage(p) {
  if (!p.desktopHeadingPhoto) return img;
  return '<picture class="exhibit-hero-photo"><source media="(min-width:801px)" srcset="'+url(p.desktopHeadingPhoto)+'">'+img+'</picture>';
 }
+function resourceDocuments(p) {
+ const safe=(p.documents||[]).filter(doc=>typeof doc.path==='string' && /^documents\/[a-z0-9-]+\.pdf$/.test(doc.path) && fs.existsSync(path.join(root,doc.path)));
+ if(!safe.length)return '';
+ const lines=safe.map(doc=>'<li><a class="text-link" href="'+esc(doc.path)+'" target="_blank" rel="noopener">'+esc(doc.title)+'<span aria-hidden="true"> ↗</span></a><p>'+esc(doc.description||'')+'</p></li>').join('');
+ return '<section class="content-section document-resources"><details><summary>Brochures and documents</summary><div class="resource-body"><p>View or save the museum’s original PDF documents.</p><ul>'+lines+'</ul></div></details></section>';
+}
 function page(p){
 const sections=p.sections.map(s=>'<section class="content-section"><h2>'+esc(s.title)+'</h2>'+(s.text?'<p>'+esc(s.text)+'</p>':'')+(s.items?'<ul class="rates">'+s.items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+(s.action?'<div class="actions">'+contactDetail(s.action.label,s.action.href,'button')+'</div>':'')+(s.links?'<div class="link-list">'+s.links.map(([l,h])=>contactDetail(l,h)).join('')+'</div>':'')+'</section>').join('');
 const contacts=p.id==='contact'?'<div class="contacts">'+d.contacts.map(([n,e])=>'<section><h2>'+esc(n)+'</h2>'+contactDetail(e,'mailto:'+e)+'</section>').join('')+'</div>':'';
-return shell(p.label,'<main id="main"><div class="page-heading'+(p.headingPhoto?' page-heading-photo':'')+'" data-page="'+esc(p.id)+'">'+headingImage(p)+'<div class="page-heading-inner"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>'+esc(p.label)+'</span></nav><p class="eyebrow">'+esc(p.eyebrow)+'</p><h1>'+esc(p.label)+'</h1><p class="page-tagline">'+esc(p.title)+'</p><p class="intro">'+esc(p.intro)+'</p></div></div><div class="inner-landscape"><div class="page-layout"><div class="page-content">'+sections+contacts+'</div><aside class="visit-aside"><p class="eyebrow">A warm welcome awaits</p><h2>Plan your visit</h2><p><strong>'+esc(d.admission)+'</strong></p><p>'+esc(address)+'</p>'+link('Visitor information','visit.html','button')+contactDetail('Call '+d.phone,phoneLink)+'</aside></div>'+gallery(p.photos)+photoAlbums(p.albums)+'</div></main>',p.id);
+return shell(p.label,'<main id="main"><div class="page-heading'+(p.headingPhoto?' page-heading-photo':'')+'" data-page="'+esc(p.id)+'">'+headingImage(p)+'<div class="page-heading-inner"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true"> / </span><span>'+esc(p.label)+'</span></nav><p class="eyebrow">'+esc(p.eyebrow)+'</p><h1>'+esc(p.label)+'</h1><p class="page-tagline">'+esc(p.title)+'</p><p class="intro">'+esc(p.intro)+'</p></div></div><div class="inner-landscape"><div class="page-layout"><div class="page-content">'+sections+resourceDocuments(p)+contacts+'</div><aside class="visit-aside"><p class="eyebrow">A warm welcome awaits</p><h2>Plan your visit</h2><p><strong>'+esc(d.admission)+'</strong></p><p>'+esc(address)+'</p>'+link('Visitor information','visit.html','button')+contactDetail('Call '+d.phone,phoneLink)+'</aside></div>'+gallery(p.photos)+photoAlbums(p.albums)+'</div></main>',p.id);
 }
 const appearance=d.appearance||{};
 const colors=['paper','surface','green','ink','muted','line','soft','accent'].map(k=>{
