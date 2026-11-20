@@ -389,9 +389,9 @@
       "desktopHeadingPhoto": "assets/military-museum.jpg",
       "documents": [
         {
-          "title": "Military Memorial Museum forms",
-          "path": "documents/military-memorial-forms.pdf",
-          "description": "Membership and memorial forms."
+          "title": "Military Memorial Museum forms (ZIP)",
+          "path": "documents/military-memorial-forms.zip",
+          "description": "Download the three original forms for Hall of Honor nominations, In Honor Of tributes, and military memberships."
         }
       ]
     },
@@ -424,12 +424,12 @@
       ],
       "photos": [
         {
-          "src": "assets/library.jpg",
-          "alt": "Genealogical Library at the Greater Southwest Historical Museum",
+          "src": "assets/library-updated.jpeg",
+          "alt": "Updated photograph of bookshelves and research tables at the museum genealogical library",
           "caption": "Genealogical Library"
         }
       ],
-      "headingPhoto": "assets/library.jpg",
+      "headingPhoto": "assets/library-updated.jpeg",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover",
       "documents": [
@@ -544,18 +544,13 @@
       "headingPhotoFit": "cover",
       "documents": [
         {
-          "title": "Museum rental brochure",
-          "path": "documents/2026-museum-rental-brochure.pdf",
-          "description": "Spaces and rental information."
-        },
-        {
           "title": "Indoor rental agreement",
-          "path": "documents/2026-indoor-rental-agreement.pdf",
+          "path": "documents/2026-indoor-rental-agreement.docx",
           "description": "Terms and required rental paperwork."
         },
         {
           "title": "Paranormal investigation policy",
-          "path": "documents/paranormal-investigation-policy.pdf",
+          "path": "documents/paranormal-investigation-policy.docx",
           "description": "Requirements, restrictions, and agreement."
         }
       ]
