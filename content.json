@@ -386,7 +386,14 @@
       "headingPhoto": "assets/military-museum.jpg",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover",
-      "desktopHeadingPhoto": "assets/military-museum.jpg"
+      "desktopHeadingPhoto": "assets/military-museum.jpg",
+      "documents": [
+        {
+          "title": "Military Memorial Museum forms (ZIP)",
+          "path": "documents/military-memorial-forms.zip",
+          "description": "Download the three original forms for Hall of Honor nominations, In Honor Of tributes, and military memberships."
+        }
+      ]
     },
     {
       "id": "genealogical-library",
@@ -417,14 +424,21 @@
       ],
       "photos": [
         {
-          "src": "assets/library.jpg",
-          "alt": "Genealogical Library at the Greater Southwest Historical Museum",
+          "src": "assets/library-updated.jpeg",
+          "alt": "Updated photograph of bookshelves and research tables at the museum genealogical library",
           "caption": "Genealogical Library"
         }
       ],
-      "headingPhoto": "assets/library.jpg",
+      "headingPhoto": "assets/library-updated.jpeg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "documents": [
+        {
+          "title": "Genealogy research brochure",
+          "path": "documents/genealogy-brochure.pdf",
+          "description": "A printable guide to tracing family history and finding research resources."
+        }
+      ]
     },
     {
       "id": "store",
@@ -527,7 +541,19 @@
       ],
       "headingPhoto": "assets/sign.jpg",
       "headingPhotoPosition": "right center",
-      "headingPhotoFit": "cover"
+      "headingPhotoFit": "cover",
+      "documents": [
+        {
+          "title": "Indoor rental agreement",
+          "path": "documents/2026-indoor-rental-agreement.docx",
+          "description": "Terms and required rental paperwork."
+        },
+        {
+          "title": "Paranormal investigation policy",
+          "path": "documents/paranormal-investigation-policy.docx",
+          "description": "Requirements, restrictions, and agreement."
+        }
+      ]
     },
     {
       "id": "membership",

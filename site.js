@@ -222,3 +222,6 @@ if(document.body.classList.contains('home-identity-preview')){
   if(dialog.open&&request===revision)feedback.textContent=copied?'Copied to clipboard.':'Text selected. Use your usual copy shortcut.';
  });
 })();
+
+/* Quiet attribution for museum-supplied photographs; the build also includes it in static markup. */
+(()=>{const footer=document.querySelector('.footer-bottom > span');if(!footer||footer.querySelector('.photo-attribution'))return;const credit=document.createElement('small');credit.className='photo-attribution';credit.textContent='Selected photography: Logan Webb.';footer.appendChild(credit);})();
