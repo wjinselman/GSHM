@@ -460,10 +460,6 @@
           "caption": "Gift Shop"
         },
         {
-          "src": "assets/museum-photos/shop-01.webp",
-          "alt": "Gift shop entrance with a piano beside the display cases"
-        },
-        {
           "src": "assets/museum-photos/shop-02.webp",
           "alt": "Gift shop shelves and glass cases stocked with souvenirs"
         }
@@ -908,8 +904,8 @@
         "eyebrow": "For ages 3–7 · December",
         "title": "Santa’s House on the Prairie",
         "text": "Ornaments, stories and a little holiday wonder.",
-        "photo": "assets/edu-santas-house.jpg",
-        "alt": "Santa’s House holiday program",
+        "photo": "assets/museum-photos/santa-01.webp",
+        "alt": "Santa and Mrs. Claus seated between decorated trees",
         "linkLabel": "Discover Santa’s House"
       },
       {
