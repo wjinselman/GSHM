@@ -446,7 +446,7 @@
       "label": "Gift Shop",
       "eyebrow": "Something to remember",
       "intro": "Stop by the museum’s gift shop during your visit for gifts and souvenirs.",
-      "image": "store.jpg",
+      "image": "museum-photos/shop-01.webp",
       "sections": [
         {
           "title": "Find something thoughtful",
@@ -469,7 +469,7 @@
       ],
       "photos": [
         {
-          "src": "assets/store.jpg",
+          "src": "assets/museum-photos/shop-01.webp",
           "alt": "Gift Shop at the Greater Southwest Historical Museum",
           "caption": "Gift Shop"
         },
@@ -478,10 +478,10 @@
           "alt": "Gift shop shelves and glass cases stocked with souvenirs"
         }
       ],
-      "headingPhoto": "assets/store.jpg",
+      "headingPhoto": "assets/museum-photos/shop-01.webp",
       "headingPhotoPosition": "right center",
       "headingPhotoFit": "cover",
-      "desktopHeadingPhoto": "assets/museum-photos/shop-02.webp"
+      "desktopHeadingPhoto": "assets/museum-photos/shop-01.webp"
     },
     {
       "id": "rent",
@@ -691,7 +691,7 @@
       "sections": [
         {
           "title": "Learning throughout the museum",
-          "text": "The museum teaches the history and culture of the area through three-dimensional artifacts, archives and photographs. Educational opportunities are available for groups of all ages. Programs may take place inside the museum, in Neustadt Park behind the museum. Contact us to discuss a setting and program for your group."
+          "text": "The museum teaches the history and culture of the area through three-dimensional artifacts, archives and photographs. Educational opportunities are available for groups of all ages. Programs may take place inside the museum, or in Neustadt Park behind the museum. Contact us to discuss a setting and program for your group."
         },
         {
           "title": "Santa’s House on the Prairie",
