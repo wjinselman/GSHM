@@ -1,0 +1,67 @@
+name: Apply corrected GSHM rental agreement once
+on:
+  push:
+    branches:
+      - review/gshm-caitlin-nov21
+    paths:
+      - .github/workflows/gshm-rental-update-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  replace-corrected-agreement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Verify previous rental document
+        run: |
+          test "$(git hash-object documents/2026-indoor-rental-agreement.docx)" = "f154dc134a9c022caa770e5a6b6c0ef05217fae1"
+      - name: Apply Caitlin's corrected signed-off wording
+        run: |
+          python3 - <<'PY'
+          import base64, os, re, tempfile, zipfile, zlib, xml.etree.ElementTree as ET
+          from pathlib import Path
+          
+          path=Path("documents/2026-indoor-rental-agreement.docx")
+          replacement=zlib.decompress(base64.b64decode("eNrNll1v2jAUhv+KlfviJIS0jVokStINaW0RZJN6aRxDsjofsg2h+/WzCflg2SoSLtYLZDjmffweH/skd7mTgX1ME+7k91ooROZAyHFIYsQHaUYSObdOWYyE/Mk2ME9ZkLEUE86jZBNTaOq6DWMUJVqJMawWKI4wS3m6FgOcxjBdryNMDigpN/TDt5hWgAz3AdSupijZIV7i8P48WsBQLsUKaEEcIibIvmYYnSEjeAtv2iCzB0hmaBpt1LAzyobKVQtk9QJJVy3SqB/pL8nZ/Uhmm3TdjzRsk276kVrHKcbnXLUYsbdtdiXBGRLRKqKReD9ctxIjL91bD0dSVRHiYdCZcA3jNCB0GJSU9F7bssQ56q8qvbLuFPrjUCkIPW9ZudwtJHtBuSi17Jy9K+RuircxSUTRpBihch/ThIdRVnWHuC9NToYlZPfRBuyana1fb6xbm1uUoQaeY/9Yu7JZf0w09DOqqRC1YtQtJ/PPfm/YmOy7MW6ODIjrW6U4UdCNY1ecqJGQ3c9MAxBsOyHMYelDDUreYPFABGE3XPlIhUqLBAoRD0+Ja9qNaDWIxdmiKX5rMkm3TRtVwPe4UcNsc9kF+cLSbVbTostos7pV5km3BHW79VrDLzOzDFEmO6h8v3IyxNBMHvVr1zA8y9KLqHzCCBU1Hk1rMvJMGXUYj4LFvabrU9t2p1YVcskabaloz8xV6NY0LONRG9/Jt8M5U8NPLOd3SJ6aVSobH1QxVkytDj9WU34Y+a/yj6alHSNTfhqDRy2s8Kz0NWdqfePBnLpD7aJFcieMNiGVH1FOvBNK07zpIHeEKo/DM4RlfTNGOGE7oo39rx6YTxb+K1x4z/7kG3j6vvSB9+wCpRUF4cR5w/f/S2Y8ewb+7MkDjy8LcMhh4T3Nlt4S+C/gwQM/JtOJ77ng4fVfaXyWAgDDcHQdzAdPg0++5X4YcRAlmG4DwgGiFGBKUCJv7ODEuDrt49+9ZZwI"))
+          assert b"THE PARTY/RENTAL MUST END" in replacement
+          assert b"IN TIME FOR THE PREMISES TO BE VACATED BY" in replacement
+          old=path.read_bytes()
+          with tempfile.NamedTemporaryFile(suffix=".docx",dir=path.parent,delete=False) as tmp:
+              temp=tmp.name
+          try:
+              with zipfile.ZipFile(path) as src, zipfile.ZipFile(temp,"w") as dest:
+                  for entry in src.infolist():
+                      data=src.read(entry.filename)
+                      if entry.filename=="word/document.xml":
+                          pattern=rb"<w:p\b[^>]*>.*?</w:p>"
+                          matches=list(re.finditer(pattern,data,re.S))
+                          candidates=[m for m in matches if b"THE PARTY/RENTAL MUST END BY 11:00 P.M." in m.group()]
+                          assert len(candidates)==1, f"Expected one old rental term; got {len(candidates)}"
+                          found=candidates[0]
+                          assert b"VACATED BY 12A.M." in found.group()
+                          data=data[:found.start()]+replacement+data[found.end():]
+                          ET.fromstring(data)
+                          assert b"VACATED BY 12A.M." not in data
+                      dest.writestr(entry,data)
+              with zipfile.ZipFile(temp) as check:
+                  assert check.testzip() is None
+                  doc=check.read("word/document.xml")
+                  assert b"THE PARTY/RENTAL MUST END" in doc and b"This includes all cleaning." in doc
+              os.replace(temp,path)
+          finally:
+              if os.path.exists(temp): os.unlink(temp)
+          print("Corrected rental agreement saved:",len(old),"->",path.stat().st_size)
+          PY
+      - name: Commit corrected form and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add documents/2026-indoor-rental-agreement.docx
+          git rm .github/workflows/gshm-rental-update-once.yml
+          git commit -m "Replace rental agreement with Caitlin's corrected 11pm checkout rule"
+          git push origin HEAD:review/gshm-caitlin-nov21
